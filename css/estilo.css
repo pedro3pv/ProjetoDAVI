@@ -1,17 +1,23 @@
 h1{
     color: crimson;
+    margin: 50px;
     position: relative;
+    left: 400px;
 }
 h2{
+    margin: 50px;
     position: relative;
+    left: 525px;
 }
 input[type="number"]{
     height: 20px;
     width: 30px;
 }
 table {
+    border-collapse: collapse;
  }
  table.center{
-     position: relative;
-     left: 120px;
+     margin-left: 800px;
+     margin-right: auto;
+     margin-top: -250px;
  }
