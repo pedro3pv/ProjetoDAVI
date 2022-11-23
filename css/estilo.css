@@ -1,0 +1,17 @@
+h1{
+    color: crimson;
+    position: relative;
+}
+h2{
+    position: relative;
+}
+input[type="number"]{
+    height: 20px;
+    width: 30px;
+}
+table {
+ }
+ table.center{
+     position: relative;
+     left: 120px;
+ }
