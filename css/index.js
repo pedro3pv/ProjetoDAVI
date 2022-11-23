@@ -1,10 +1,14 @@
 // javascript desenvolvido por pedro augusto
 
 let jogos = [];
+let jogosj = [0,0,0,0];
+let vitorias = [0,0,0,0];
+let empates = [0,0,0,0];
+let derrota = [0,0,0,0];
 
 let times = [];
-let pontos = [0,0,0,0]
-let n = [0,0,0,0]
+let pontos = [0,0,0,0];
+let n = [0,0,0,0];
 
 let qatar = [];
 let equador = [];
@@ -43,45 +47,45 @@ document.getElementById("21/11H").onchange = function () {
 document.getElementById("25/11Q").onchange = function () {
     qatar[1] = document.getElementById("25/11Q").value;
     console.log(qatar[1])
-    calc(qatar[1], senegal[1], 1, 0, 2);
+    calc(qatar[1], senegal[1], 2, 0, 2);
 }
 document.getElementById("25/11S").onchange = function () {
     senegal[1] = document.getElementById("25/11S").value;
     console.log(senegal[1])
-    calc(qatar[1], senegal[1], 1, 0, 2);
+    calc(qatar[1], senegal[1], 2, 0, 2);
 }
 // 25/11 2
 document.getElementById("25/11H").onchange = function () {
     holanda[1] = document.getElementById("25/11H").value;
     console.log(holanda[1])
-    calc(holanda[1], equador[1], 2, 3, 1);
+    calc(holanda[1], equador[1], 3, 3, 1);
 }
 document.getElementById("25/11E").onchange = function () {
     equador[1] = document.getElementById("25/11E").value;
     console.log(equador[1])
-    calc(holanda[1], equador[1], 2, 3, 1);
+    calc(holanda[1], equador[1], 3, 3, 1);
 }
 // 29/11
 document.getElementById("29/11H").onchange = function () {
     holanda[2] = document.getElementById("29/11H").value;
     console.log(holanda[2])
-    calc(holanda[2], qatar[2], 3, 3, 0);
+    calc(holanda[2], qatar[2], 4, 3, 0);
 }
 document.getElementById("29/11Q").onchange = function () {
     qatar[2] = document.getElementById("29/11Q").value;
     console.log(qatar[2])
-    calc(holanda[2], qatar[2], 3, 3, 0);
+    calc(holanda[2], qatar[2], 4, 3, 0);
 }
 // 29/11 2
 document.getElementById("29/11E").onchange = function () {
     equador[2] = document.getElementById("29/11E").value;
     console.log(equador[2])
-    calc(equador[2], senegal[2], 4, 1, 2);
+    calc(equador[2], senegal[2], 5, 1, 2);
 }
 document.getElementById("29/11S").onchange = function () {
     senegal[2] = document.getElementById("29/11S").value;
     console.log(senegal[2])
-    calc(equador[2], senegal[2], 4, 1, 2);
+    calc(equador[2], senegal[2], 5, 1, 2);
 }
 
 function calc(x, y, j, i, i2) {
@@ -92,15 +96,27 @@ function calc(x, y, j, i, i2) {
     if (jogos[j] == 1) {
         pontos[i] = pontos[i] - 3
         jogos[j] = 0
+        jogosj[i] = jogosj[i] - 1
+        jogosj[i2] = jogosj[i2] - 1
+        vitorias[i] = vitorias[i] - 1
+        vitorias[i2] = vitorias[i2] - 1
     }
     if (jogos[j] == 2) {
         pontos[i2] = pontos[i2] - 3
         jogos[j] = 0
+        jogosj[i] = jogosj[i] - 1
+        jogosj[i2] = jogosj[i2] - 1
+        vitorias[i] = vitorias[i] - 1
+        vitorias[i2] = vitorias[i2] - 1
     }
     if (jogos[j] == 3) {
         pontos[i] = pontos[i] - 1
         pontos[i2] = pontos[i2] - 1
         jogos[j] = 0
+        jogosj[i] = jogosj[i] - 1
+        jogosj[i2] = jogosj[i2] - 1
+        empates[i] = empates[i] - 1
+        empates[i2] = empates[i2] - 1
     }
     if (x != null && y != null && x != "" && y != "" && jogos[j] == 0) {
         if (x > y) {
@@ -108,9 +124,17 @@ function calc(x, y, j, i, i2) {
                 pontos[i] = parseInt(pontos[i])
                 pontos[i] = pontos[i] + 3
                 jogos[j] = 1
+                jogosj[i] = jogosj[i] + 1
+                jogosj[i2] = jogosj[i2] + 1
+                vitorias[i] = vitorias[i] + 1
+                derrota[i2] = derrota[i2] + 1
             } else {
                 pontos[i] = 3
                 jogos[j] = 1
+                jogosj[i] = jogosj[i] + 1
+                jogosj[i2] = jogosj[i2] + 1
+                vitorias[i] = vitorias[i] + 1
+                derrota[i2] = derrota[i2] + 1
             }
             console.log(pontos[i])
         } else if (y > x) {
@@ -118,27 +142,39 @@ function calc(x, y, j, i, i2) {
                 pontos[i2] = parseInt(pontos[i2])
                 pontos[i2] = pontos[i2] + 3
                 jogos[j] = 2
+                jogosj[i] = jogosj[i] + 1
+                jogosj[i2] = jogosj[i2] + 1
+                vitorias[i2] = vitorias[i2] + 1
+                derrota[i] = derrota[i] + 1
             } else {
                 pontos[i2] = 3
                 jogos[j] = 2
+                jogosj[i] = jogosj[i] + 1
+                jogosj[i2] = jogosj[i2] + 1
+                vitorias[i2] = vitorias[i2] + 1
+                derrota[i] = derrota[i] + 1
             }
             console.log(pontos[i2])
         } else if (x == y) {
             if (pontos[i] >= 0) {
                 pontos[i] = pontos[i] + 1
-                jogos[j] = 1
+                jogosj[i] = jogosj[i] + 1
+                empates[i] = empates[i] + 1
             } else {
                 pontos[i] = 1
-                jogos[j] = 1
+                jogosj[i] = jogosj[i] + 1
+                empates[i] = empates[i] + 1
             }
             console.log(pontos[i])
 
             if (pontos[i2] >= 0) {
                 pontos[i2] = pontos[i2] + 1
-                jogos[j] = 2
+                jogosj[i2] = jogosj[i2] + 1
+                empates[i2] = empates[i2] + 1
             } else {
                 pontos[i2] = 1
-                jogos[j] = 2
+                jogosj[i2] = jogosj[i2] + 1
+                empates[i2] = empates[i2] + 1
             }
             console.log(pontos[i2])
             jogos[j] = 3
@@ -153,6 +189,10 @@ function calc(x, y, j, i, i2) {
         times[2] = "Senegal"
         times[3] = "Holanda"
         let aux2 = 0
+        let aux3 = 0
+        let aux4 = 0
+        let aux5 = 0
+        let aux6 = 0
         var l = 0;
         var k = 0;
         while (k < 4) {
@@ -162,10 +202,22 @@ function calc(x, y, j, i, i2) {
                 if (n[l] < n[l + 1]) {
                     aux = n[l + 1]
                     aux2 = times[l + 1]
+                    aux3 = jogosj[l + 1]
+                    aux4 = vitorias[l + 1]
+                    aux5 = empates[l + 1]
+                    aux6 = derrota[l + 1]
                     n[l + 1] = n[l]
                     times[l + 1] = times[l]
+                    jogosj[l + 1] = jogosj[l]
+                    vitorias[l + 1] = vitorias[l]
+                    empates[l + 1] = empates[l]
+                    derrota[l + 1] = derrota[l]
                     n[l] = aux
                     times[l] = aux2
+                    jogosj[l] = aux3
+                    vitorias[l] = aux4
+                    empates[l] = aux5
+                    derrota[l] = aux6
                 }
                 l++
             }
@@ -179,5 +231,21 @@ function calc(x, y, j, i, i2) {
         document.getElementById("P2").innerHTML = n[1]
         document.getElementById("P3").innerHTML = n[2]
         document.getElementById("P4").innerHTML = n[3]
+        document.getElementById("P1J").innerHTML = jogosj[0]
+        document.getElementById("P2J").innerHTML = jogosj[1]
+        document.getElementById("P3J").innerHTML = jogosj[2]
+        document.getElementById("P4J").innerHTML = jogosj[3]
+        document.getElementById("P1V").innerHTML = vitorias[0]
+        document.getElementById("P2V").innerHTML = vitorias[1]
+        document.getElementById("P3V").innerHTML = vitorias[2]
+        document.getElementById("P4V").innerHTML = vitorias[3]
+        document.getElementById("P1E").innerHTML = empates[0]
+        document.getElementById("P2E").innerHTML = empates[1]
+        document.getElementById("P3E").innerHTML = empates[2]
+        document.getElementById("P4E").innerHTML = empates[3]
+        document.getElementById("P1D").innerHTML = derrota[0]
+        document.getElementById("P2D").innerHTML = derrota[1]
+        document.getElementById("P3D").innerHTML = derrota[2]
+        document.getElementById("P4D").innerHTML = derrota[3]
     }
 }
