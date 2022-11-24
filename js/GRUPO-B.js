@@ -13,19 +13,13 @@ let SG = [0, 0, 0, 0];
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
 //sequencia     0        1          2         3
-let times = ["Qatar","Equador","Senegal","Holanda"];
+let times = ["Inglaterra","Irã","Estados Unidos","País de Gales"];
 gols = [];
 gols2 = [];
 
 let pontos = [0, 0, 0, 0];
 
-let entrada = 0
-let entrada2 = 0
-
-let qatar = [];
-let equador = [];
-let senegal = [];
-let holanda = [];
+let entrada = [];
 
 //qatar é 0
 //equador é 1
@@ -33,74 +27,63 @@ let holanda = [];
 //holanda é 3
 // j é o numero do jogo, acada novo jogo, aumentar em 1
 
-// 20/11
-document.getElementById("20/11Q").oninput = function () {
-    qatar[0] = document.getElementById("20/11Q").value;
-    console.log(qatar[0])
-    calc(qatar[0], equador[0], 0, 0, 1);
+// 21/11
+document.getElementById("21/11IB").oninput = function () {
+    entrada[0] = document.getElementById("21/11IB").value;
+    console.log(entrada[0])
+    calcB(entrada[0], entrada[1], 0, 0, 1);
 }
-document.getElementById("20/11E").oninput = function () {
-    equador[0] = document.getElementById("20/11E").value;
-    console.log(equador[0])
-    calc(qatar[0], equador[0], 0, 0, 1);
+document.getElementById("21/11IRB").oninput = function () {
+    entrada[1] = document.getElementById("21/11IRB").value;
+    console.log(entrada[1])
+    calcB(entrada[0], entrada[1], 0, 0, 1);
 }
 // 21/11
-document.getElementById("21/11S").oninput = function () {
-    senegal[0] = document.getElementById("21/11S").value;
-    console.log(senegal[0])
-    calc(senegal[0], holanda[0], 1, 2, 3);
+document.getElementById("21/11EB").oninput = function () {
+    entrada[2] = document.getElementById("21/11EB").value;
+    console.log(entrada[2])
+    calcB(entrada[2], entrada[3], 1, 2, 3);
 }
-document.getElementById("21/11H").oninput = function () {
-    holanda[0] = document.getElementById("21/11H").value;
-    console.log(holanda[0])
-    calc(senegal[0], holanda[0], 1, 2, 3);
+document.getElementById("21/11PB").oninput = function () {
+    entrada[3] = document.getElementById("21/11PB").value;
+    console.log(entrada[3])
+    calcB(entrada[2], entrada[3], 1, 2, 3);
 }
 // 25/11
-document.getElementById("25/11Q").oninput = function () {
-    qatar[1] = document.getElementById("25/11Q").value;
-    console.log(qatar[1])
-    calc(qatar[1], senegal[1], 2, 0, 2);
+document.getElementById("25/11PB").oninput = function () {
+    entrada[4] = document.getElementById("25/11PB").value;
+    console.log(entrada[4])
+    calcB(entrada[4], entrada[5], 2, 0, 2);
 }
-document.getElementById("25/11S").oninput = function () {
-    senegal[1] = document.getElementById("25/11S").value;
-    console.log(senegal[1])
-    calc(qatar[1], senegal[1], 2, 0, 2);
+document.getElementById("25/11IRB").oninput = function () {
+    entrada[5] = document.getElementById("25/11IRB").value;
+    console.log(entrada[5])
+    calcB(entrada[4], entrada[5], 2, 0, 2);
 }
 // 25/11 2
-document.getElementById("25/11H").oninput = function () {
-    holanda[1] = document.getElementById("25/11H").value;
-    console.log(holanda[1])
-    calc(holanda[1], equador[1], 3, 3, 1);
+document.getElementById("25/11IB").oninput = function () {
+    entrada[6] = document.getElementById("25/11IB").value;
+    console.log(entrada[6])
+    calcB(entrada[6], entrada[7], 3, 3, 1);
 }
-document.getElementById("25/11E").oninput = function () {
-    equador[1] = document.getElementById("25/11E").value;
-    console.log(equador[1])
-    calc(holanda[1], equador[1], 3, 3, 1);
+document.getElementById("25/11EB").oninput = function () {
+    entrada[7] = document.getElementById("25/11EB").value;
+    console.log(entrada[7])
+    calcB(entrada[6], entrada[7], 3, 3, 1);
 }
 // 29/11
-document.getElementById("29/11H").oninput = function () {
-    holanda[2] = document.getElementById("29/11H").value;
-    console.log(holanda[2])
-    calc(holanda[2], qatar[2], 4, 3, 0);
+document.getElementById("29/11PB").oninput = function () {
+    entrada[8] = document.getElementById("29/11PB").value;
+    console.log(entrada[8])
+    calcB(entrada[8], entrada[9], 4, 3, 0);
 }
-document.getElementById("29/11Q").oninput = function () {
-    qatar[2] = document.getElementById("29/11Q").value;
-    console.log(qatar[2])
-    calc(holanda[2], qatar[2], 4, 3, 0);
-}
-// 29/11 2
-document.getElementById("29/11E").oninput = function () {
-    equador[2] = document.getElementById("29/11E").value;
-    console.log(equador[2])
-    calc(equador[2], senegal[2], 5, 1, 2);
-}
-document.getElementById("29/11S").oninput = function () {
-    senegal[2] = document.getElementById("29/11S").value;
-    console.log(senegal[2])
-    calc(equador[2], senegal[2], 5, 1, 2);
+document.getElementById("29/11EB").oninput = function () {
+    entrada[9] = document.getElementById("29/11EB").value;
+    console.log(entrada[9])
+    calcB(entrada[8], entrada[9], 4, 3, 0);
 }
 
-function calc(x, y, j, i, i2) {
+function calcB(x, y, j, i, i2) {
     x = parseInt(x)
     y = parseInt(y)
     if(x != "" && y != "" || x === 0 || y === 0){
@@ -266,15 +249,15 @@ function calc(x, y, j, i, i2) {
             }
         }
         for (let t = 0; t < times.length; t++) {
-            document.getElementById("P" + t + "-text").innerHTML = ts[t]
-            document.getElementById("P" + t).innerHTML = n[t]
-            document.getElementById("P" + t + "J").innerHTML = jj[t]
-            document.getElementById("P" + t + "V").innerHTML = v[t]
-            document.getElementById("P" + t + "E").innerHTML = ep[t]
-            document.getElementById("P" + t + "D").innerHTML = derr[t]
-            document.getElementById("P" + t + "GP").innerHTML = GP2[t]
-            document.getElementById("P" + t + "GC").innerHTML = GC2[t]
-            document.getElementById("P" + t + "SG").innerHTML = SG2[t]
+            document.getElementById("P" + t + "-textB").innerHTML = ts[t]
+            document.getElementById("P" + t + "B").innerHTML = n[t]
+            document.getElementById("P" + t + "JB").innerHTML = jj[t]
+            document.getElementById("P" + t + "VB").innerHTML = v[t]
+            document.getElementById("P" + t + "EB").innerHTML = ep[t]
+            document.getElementById("P" + t + "DB").innerHTML = derr[t]
+            document.getElementById("P" + t + "GPB").innerHTML = GP2[t]
+            document.getElementById("P" + t + "GCB").innerHTML = GC2[t]
+            document.getElementById("P" + t + "SGB").innerHTML = SG2[t]
         }
     }
 }

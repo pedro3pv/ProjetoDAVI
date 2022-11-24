@@ -2,12 +2,12 @@ h1{
     color: crimson;
     margin: 50px;
     position: relative;
-    left: 400px;
+    left: 150px;
 }
 h2{
     margin: 50px;
     position: relative;
-    left: 525px;
+    left: 275px;
 }
 input[type="number"]{
     height: 20px;
@@ -17,7 +17,7 @@ table {
     border-collapse: collapse;
  }
  table.center{
-     margin-left: 800px;
+     margin-left: 550px;
      margin-right: auto;
      margin-top: -250px;
  }
