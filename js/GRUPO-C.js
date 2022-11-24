@@ -14,8 +14,8 @@ let SGC = [0, 0, 0, 0];
 
 //sequencia     0        1          2         3
 let timesC = ["Argentina","Arábia Saudita","México","Polônia"];
-gols = [];
-gols2 = [];
+golsC = [];
+golsC2 = [];
 
 let pontosC = [0, 0, 0, 0];
 
@@ -27,7 +27,7 @@ let entradaC = [];
 //holanda é 3
 // j é o numero do jogo, acada novo jogo, aumentar em 1
 
-// 20/11
+// 22/11
 document.getElementById("22/11AC").oninput = function () {
     entradaC[0] = document.getElementById("22/11AC").value;
     console.log(entradaC[0])
@@ -38,58 +38,58 @@ document.getElementById("22/11ARC").oninput = function () {
     console.log(entradaC[1])
     calcC(entradaC[0], entradaC[1], 0, 0, 1);
 }
-// 21/11
-document.getElementById("21/11S").oninput = function () {
-    entradaC[2] = document.getElementById("21/11S").value;
+// 22/11 2
+document.getElementById("22/11MC").oninput = function () {
+    entradaC[2] = document.getElementById("22/11MC").value;
     console.log(entradaC[2])
     calcC(entradaC[2], entradaC[3], 1, 2, 3);
 }
-document.getElementById("21/11H").oninput = function () {
-    entradaC[3] = document.getElementById("21/11H").value;
+document.getElementById("22/11PC").oninput = function () {
+    entradaC[3] = document.getElementById("22/11PC").value;
     console.log(entradaC[3])
     calcC(entradaC[2], entradaC[3], 1, 2, 3);
 }
-// 25/11
-document.getElementById("25/11Q").oninput = function () {
-    entradaC[4] = document.getElementById("25/11Q").value;
+// 26/11
+document.getElementById("26/11PC").oninput = function () {
+    entradaC[4] = document.getElementById("26/11PC").value;
     console.log(entradaC[4])
-    calcC(entradaC[4], entradaC[5], 2, 0, 2);
+    calcC(entradaC[4], entradaC[5], 2, 1, 3);
 }
-document.getElementById("25/11S").oninput = function () {
-    entradaC[5] = document.getElementById("25/11S").value;
+document.getElementById("26/11ARC").oninput = function () {
+    entradaC[5] = document.getElementById("26/11ARC").value;
     console.log(entradaC[5])
-    calcC(entradaC[4], entradaC[5], 2, 0, 2);
+    calcC(entradaC[4], entradaC[5], 2, 1, 3);
 }
-// 25/11 2
-document.getElementById("25/11H").oninput = function () {
-    entradaC[6] = document.getElementById("25/11H").value;
+// 26/11 2
+document.getElementById("26/11AC").oninput = function () {
+    entradaC[6] = document.getElementById("26/11AC").value;
     console.log(entradaC[6])
-    calcC(entradaC[6], entradaC[7], 3, 3, 1);
+    calcC(entradaC[6], entradaC[7], 3, 0, 2);
 }
-document.getElementById("25/11E").oninput = function () {
-    entradaC[7] = document.getElementById("25/11E").value;
+document.getElementById("26/11MC").oninput = function () {
+    entradaC[7] = document.getElementById("26/11MC").value;
     console.log(entradaC[7])
-    calcC(entradaC[6], entradaC[7], 3, 3, 1);
+    calcC(entradaC[6], entradaC[7], 3, 0, 2);
 }
-// 29/11
-document.getElementById("29/11H").oninput = function () {
-    entradaC[8] = document.getElementById("29/11H").value;
+// 30/11
+document.getElementById("30/11PC").oninput = function () {
+    entradaC[8] = document.getElementById("30/11PC").value;
     console.log(entradaC[8])
     calcC(entradaC[8], entradaC[9], 4, 3, 0);
 }
-document.getElementById("29/11Q").oninput = function () {
-    entradaC[9] = document.getElementById("29/11Q").value;
+document.getElementById("30/11AC").oninput = function () {
+    entradaC[9] = document.getElementById("30/11AC").value;
     console.log(entradaC[9])
     calcC(entradaC[8], entradaC[9], 4, 3, 0);
 }
-// 29/11 2
-document.getElementById("29/11E").oninput = function () {
-    entradaC[10] = document.getElementById("29/11E").value;
+// 30/11 2
+document.getElementById("30/11ARC").oninput = function () {
+    entradaC[10] = document.getElementById("30/11ARC").value;
     console.log(entradaC[10])
     calcC(entradaC[10], entradaC[11], 5, 1, 2);
 }
-document.getElementById("29/11S").oninput = function () {
-    entradaC[11] = document.getElementById("29/11S").value;
+document.getElementById("30/11MC").oninput = function () {
+    entradaC[11] = document.getElementById("30/11MC").value;
     console.log(entradaC[11])
     calcC(entradaC[10], entradaC[11], 5, 1, 2);
 }
@@ -107,10 +107,10 @@ function calcC(x, y, j, i, i2) {
         jogosCj[i2] = jogosCj[i2] - 1
         vitoriasC[i] = vitoriasC[i] - 1
         derrotaC[i2] = derrotaC[i2] - 1
-        GPC[i] = GPC[i] - gols[j]
-        GCC[i] = GCC[i] - gols2[j]
-        GPC[i2] = GPC[i2] - gols2[j]
-        GCC[i2] = GCC[i2] - gols[j]
+        GPC[i] = GPC[i] - golsC[j]
+        GCC[i] = GCC[i] - golsC2[j]
+        GPC[i2] = GPC[i2] - golsC2[j]
+        GCC[i2] = GCC[i2] - golsC[j]
         jogosC[j] = 0
     }
     if (jogosC[j] == 2) {
@@ -119,10 +119,10 @@ function calcC(x, y, j, i, i2) {
         jogosCj[i2] = jogosCj[i2] - 1
         vitoriasC[i2] = vitoriasC[i2] - 1
         derrotaC[i] = derrotaC[i] - 1
-        GPC[i] = GPC[i] - gols[j]
-        GCC[i] = GCC[i] - gols2[j]
-        GPC[i2] = GPC[i2] - gols2[j]
-        GCC[i2] = GCC[i2] - gols[j]
+        GPC[i] = GPC[i] - golsC[j]
+        GCC[i] = GCC[i] - golsC2[j]
+        GPC[i2] = GPC[i2] - golsC2[j]
+        GCC[i2] = GCC[i2] - golsC[j]
         jogosC[j] = 0
     }
     if (jogosC[j] == 3) {
@@ -133,14 +133,14 @@ function calcC(x, y, j, i, i2) {
         empatesC[i] = empatesC[i] - 1
         jogosCj[i2] = jogosCj[i2] - 1
         empatesC[i2] = empatesC[i2] - 1
-        GPC[i] = GPC[i] - gols[j]
-        GCC[i] = GCC[i] - gols2[j]
-        GPC[i2] = GPC[i2] - gols2[j]
-        GCC[i2] = GCC[i2] - gols[j]
+        GPC[i] = GPC[i] - golsC[j]
+        GCC[i] = GCC[i] - golsC2[j]
+        GPC[i2] = GPC[i2] - golsC2[j]
+        GCC[i2] = GCC[i2] - golsC[j]
     }
     if (x != null && y != null && jogosC[j] == 0) {
-        gols[j] = x
-        gols2[j] = y
+        golsC[j] = x
+        golsC2[j] = y
         if (x > y) {
             if (pontosC[i] >= 0) {
                 pontosC[i] = parseInt(pontosC[i])

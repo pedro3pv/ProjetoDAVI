@@ -53,23 +53,23 @@ document.getElementById("21/11PB").oninput = function () {
 document.getElementById("25/11PB").oninput = function () {
     entrada[4] = document.getElementById("25/11PB").value;
     console.log(entrada[4])
-    calcB(entrada[4], entrada[5], 2, 0, 2);
+    calcB(entrada[4], entrada[5], 2, 3, 1);
 }
 document.getElementById("25/11IRB").oninput = function () {
     entrada[5] = document.getElementById("25/11IRB").value;
     console.log(entrada[5])
-    calcB(entrada[4], entrada[5], 2, 0, 2);
+    calcB(entrada[4], entrada[5], 2, 3, 1);
 }
 // 25/11 2
 document.getElementById("25/11IB").oninput = function () {
     entrada[6] = document.getElementById("25/11IB").value;
     console.log(entrada[6])
-    calcB(entrada[6], entrada[7], 3, 3, 1);
+    calcB(entrada[6], entrada[7], 3, 0, 2);
 }
 document.getElementById("25/11EB").oninput = function () {
     entrada[7] = document.getElementById("25/11EB").value;
     console.log(entrada[7])
-    calcB(entrada[6], entrada[7], 3, 3, 1);
+    calcB(entrada[6], entrada[7], 3, 0, 2);
 }
 // 29/11
 document.getElementById("29/11PB").oninput = function () {
@@ -77,10 +77,21 @@ document.getElementById("29/11PB").oninput = function () {
     console.log(entrada[8])
     calcB(entrada[8], entrada[9], 4, 3, 0);
 }
-document.getElementById("29/11EB").oninput = function () {
-    entrada[9] = document.getElementById("29/11EB").value;
+document.getElementById("29/11IB").oninput = function () {
+    entrada[9] = document.getElementById("29/11IB").value;
     console.log(entrada[9])
     calcB(entrada[8], entrada[9], 4, 3, 0);
+}
+// 29/11 2
+document.getElementById("29/11IRB").oninput = function () {
+    entrada[10] = document.getElementById("29/11IRB").value;
+    console.log(entrada[10])
+    calcB(entrada[10], entrada[11], 5, 1, 2);
+}
+document.getElementById("29/11EB").oninput = function () {
+    entrada[11] = document.getElementById("29/11EB").value;
+    console.log(entrada[11])
+    calcB(entrada[10], entrada[11], 5, 1, 2);
 }
 
 function calcB(x, y, j, i, i2) {
