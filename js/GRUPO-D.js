@@ -21,75 +21,93 @@ let pontosD = [0, 0, 0, 0];
 
 let entradaD = [];
 
+window.onload = function() {
+    for(let z = 0; z <= 11;z++){
+        entradaA[z] = sessionStorage.getItem("entradaA["+z+"]")
+        }
+        document.getElementById("20/11QA").value = entradaA[0]
+        document.getElementById("20/11EA").value = entradaA[1] 
+        document.getElementById("21/11SA").value = entradaA[2] 
+        document.getElementById("21/11HA").value = entradaA[3] 
+        document.getElementById("25/11QA").value = entradaA[4] 
+        document.getElementById("25/11SA").value = entradaA[5] 
+        document.getElementById("25/11HA").value = entradaA[6] 
+        document.getElementById("25/11EA").value = entradaA[7] 
+        document.getElementById("29/11HA").value = entradaA[8] 
+        document.getElementById("29/11QA").value = entradaA[9] 
+        document.getElementById("29/11EA").value = entradaA[10] 
+        document.getElementById("29/11SA").value = entradaA[11] 
+}
+
 //qatar é 0
 //equador é 1
 //senegal é 2
 //holanda é 3
 // j é o numero do jogo, acada novo jogo, aumentar em 1
 
-// 20/11
-document.getElementById("20/11Q").oninput = function () {
-    entradaD[0] = document.getElementById("20/11Q").value;
+// 22/11
+document.getElementById("22/11DD").oninput = function () {
+    entradaD[0] = document.getElementById("22/11DD").value;
     console.log(entradaD[0])
-    calcD(entradaD[0], entradaD[1], 0, 0, 1);
+    calcD(entradaD[0], entradaD[1], 0, 2, 3);
 }
-document.getElementById("20/11E").oninput = function () {
-    entradaD[1] = document.getElementById("20/11E").value;
+document.getElementById("22/11TD").oninput = function () {
+    entradaD[1] = document.getElementById("22/11TD").value;
     console.log(entradaD[1])
-    calcD(entradaD[0], entradaD[1], 0, 0, 1);
+    calcD(entradaD[0], entradaD[1], 0, 2, 3);
 }
-// 21/11
-document.getElementById("21/11S").oninput = function () {
-    entradaD[2] = document.getElementById("21/11S").value;
+// 22/11 2
+document.getElementById("22/11FD").oninput = function () {
+    entradaD[2] = document.getElementById("22/11FD").value;
     console.log(entradaD[2])
-    calcD(entradaD[2], entradaD[3], 1, 2, 3);
+    calcD(entradaD[2], entradaD[3], 1, 0, 1);
 }
-document.getElementById("21/11H").oninput = function () {
-    entradaD[3] = document.getElementById("21/11H").value;
+document.getElementById("22/11AD").oninput = function () {
+    entradaD[3] = document.getElementById("22/11AD").value;
     console.log(entradaD[3])
-    calcD(entradaD[2], entradaD[3], 1, 2, 3);
+    calcD(entradaD[2], entradaD[3], 1, 0, 1);
 }
-// 25/11
-document.getElementById("25/11Q").oninput = function () {
-    entradaD[4] = document.getElementById("25/11Q").value;
+// 26/11
+document.getElementById("26/11TD").oninput = function () {
+    entradaD[4] = document.getElementById("26/11TD").value;
     console.log(entradaD[4])
-    calcD(entradaD[4], entradaD[5], 2, 0, 2);
+    calcD(entradaD[4], entradaD[5], 2, 3, 1);
 }
-document.getElementById("25/11S").oninput = function () {
-    entradaD[5] = document.getElementById("25/11S").value;
+document.getElementById("26/11AD").oninput = function () {
+    entradaD[5] = document.getElementById("25/11AD").value;
     console.log(entradaD[5])
-    calcD(entradaD[4], entradaD[5], 2, 0, 2);
+    calcD(entradaD[4], entradaD[5], 2, 3, 1);
 }
-// 25/11 2
-document.getElementById("25/11H").oninput = function () {
-    entradaD[6] = document.getElementById("25/11H").value;
+// 26/11 2
+document.getElementById("26/11FD").oninput = function () {
+    entradaD[6] = document.getElementById("26/11FD").value;
     console.log(entradaD[6])
-    calcD(entradaD[6], entradaD[7], 3, 3, 1);
+    calcD(entradaD[6], entradaD[7], 3, 0, 2);
 }
-document.getElementById("25/11E").oninput = function () {
-    entradaD[7] = document.getElementById("25/11E").value;
+document.getElementById("26/11DD").oninput = function () {
+    entradaD[7] = document.getElementById("26/11DD").value;
     console.log(entradaD[7])
-    calcD(entradaD[6], entradaD[7], 3, 3, 1);
+    calcD(entradaD[6], entradaD[7], 3, 0, 2);
 }
-// 29/11
-document.getElementById("29/11H").oninput = function () {
-    entradaD[8] = document.getElementById("29/11H").value;
+// 30/11
+document.getElementById("30/11TD").oninput = function () {
+    entradaD[8] = document.getElementById("30/11TD").value;
     console.log(entradaD[8])
     calcD(entradaD[8], entradaD[9], 4, 3, 0);
 }
-document.getElementById("29/11Q").oninput = function () {
-    entradaD[9] = document.getElementById("29/11Q").value;
+document.getElementById("30/11FD").oninput = function () {
+    entradaD[9] = document.getElementById("30/11FD").value;
     console.log(entradaD[9])
     calcD(entradaD[8], entradaD[9], 4, 3, 0);
 }
-// 29/11 2
-document.getElementById("29/11E").oninput = function () {
-    entradaD[10] = document.getElementById("29/11E").value;
+// 30/11 2
+document.getElementById("30/11AD").oninput = function () {
+    entradaD[10] = document.getElementById("30/11AD").value;
     console.log(entradaD[10])
     calcD(entradaD[10], entradaD[11], 5, 1, 2);
 }
-document.getElementById("29/11S").oninput = function () {
-    entradaD[11] = document.getElementById("29/11S").value;
+document.getElementById("30/11DD").oninput = function () {
+    entradaD[11] = document.getElementById("30/11DD").value;
     console.log(entradaD[11])
     calcD(entradaD[10], entradaD[11], 5, 1, 2);
 }
@@ -244,7 +262,7 @@ function calcD(x, y, j, i, i2) {
                     aux = derr[l + 1]
                     derr[l + 1] = derr[l]
                     derr[l] = aux
-
+                    
                     aux = GPD2[l + 1]
                     GPD2[l + 1] = GPD2[l]
                     GPD2[l] = aux
@@ -272,4 +290,7 @@ function calcD(x, y, j, i, i2) {
         }
     }
 }
+for(let r = 0; r <= 11;r++){
+    sessionStorage.setItem("entradaA["+r+"]",entradaA[r])
+    }
 }

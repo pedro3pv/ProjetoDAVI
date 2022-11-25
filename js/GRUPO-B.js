@@ -19,7 +19,28 @@ gols2 = [];
 
 let pontos = [0, 0, 0, 0];
 
-let entrada = [];
+let entradaB = [];
+
+window.onload = function() {
+    for(let z = 0; z <= 11;z++){
+        entradaB[z] = sessionStorage.getItem("entradaB["+z+"]")
+        }
+        let str = entradaB.join(",")
+        console.log("B")
+        console.log(str)
+        document.getElementById("21/11IB").value = entradaB[0]
+        document.getElementById("21/11IRB").value = entradaB[1] 
+        document.getElementById("21/11EB").value = entradaB[2] 
+        document.getElementById("21/11PB").value = entradaB[3] 
+        document.getElementById("25/11PB").value = entradaB[4] 
+        document.getElementById("25/11IRB").value = entradaB[5] 
+        document.getElementById("25/11IB").value = entradaB[6] 
+        document.getElementById("25/11EB").value = entradaB[7] 
+        document.getElementById("29/11PB").value = entradaB[8] 
+        document.getElementById("29/11IB").value = entradaB[9] 
+        document.getElementById("29/11IRB").value = entradaB[10] 
+        document.getElementById("29/11EB").value = entradaB[11] 
+}
 
 //qatar é 0
 //equador é 1
@@ -29,69 +50,69 @@ let entrada = [];
 
 // 21/11
 document.getElementById("21/11IB").oninput = function () {
-    entrada[0] = document.getElementById("21/11IB").value;
-    console.log(entrada[0])
-    calcB(entrada[0], entrada[1], 0, 0, 1);
+    entradaB[0] = document.getElementById("21/11IB").value;
+    console.log(entradaB[0])
+    calcB(entradaB[0], entradaB[1], 0, 0, 1);
 }
 document.getElementById("21/11IRB").oninput = function () {
-    entrada[1] = document.getElementById("21/11IRB").value;
-    console.log(entrada[1])
-    calcB(entrada[0], entrada[1], 0, 0, 1);
+    entradaB[1] = document.getElementById("21/11IRB").value;
+    console.log(entradaB[1])
+    calcB(entradaB[0], entradaB[1], 0, 0, 1);
 }
 // 21/11
 document.getElementById("21/11EB").oninput = function () {
-    entrada[2] = document.getElementById("21/11EB").value;
-    console.log(entrada[2])
-    calcB(entrada[2], entrada[3], 1, 2, 3);
+    entradaB[2] = document.getElementById("21/11EB").value;
+    console.log(entradaB[2])
+    calcB(entradaB[2], entradaB[3], 1, 2, 3);
 }
 document.getElementById("21/11PB").oninput = function () {
-    entrada[3] = document.getElementById("21/11PB").value;
-    console.log(entrada[3])
-    calcB(entrada[2], entrada[3], 1, 2, 3);
+    entradaB[3] = document.getElementById("21/11PB").value;
+    console.log(entradaB[3])
+    calcB(entradaB[2], entradaB[3], 1, 2, 3);
 }
 // 25/11
 document.getElementById("25/11PB").oninput = function () {
-    entrada[4] = document.getElementById("25/11PB").value;
-    console.log(entrada[4])
-    calcB(entrada[4], entrada[5], 2, 3, 1);
+    entradaB[4] = document.getElementById("25/11PB").value;
+    console.log(entradaB[4])
+    calcB(entradaB[4], entradaB[5], 2, 3, 1);
 }
 document.getElementById("25/11IRB").oninput = function () {
-    entrada[5] = document.getElementById("25/11IRB").value;
-    console.log(entrada[5])
-    calcB(entrada[4], entrada[5], 2, 3, 1);
+    entradaB[5] = document.getElementById("25/11IRB").value;
+    console.log(entradaB[5])
+    calcB(entradaB[4], entradaB[5], 2, 3, 1);
 }
 // 25/11 2
 document.getElementById("25/11IB").oninput = function () {
-    entrada[6] = document.getElementById("25/11IB").value;
-    console.log(entrada[6])
-    calcB(entrada[6], entrada[7], 3, 0, 2);
+    entradaB[6] = document.getElementById("25/11IB").value;
+    console.log(entradaB[6])
+    calcB(entradaB[6], entradaB[7], 3, 0, 2);
 }
 document.getElementById("25/11EB").oninput = function () {
-    entrada[7] = document.getElementById("25/11EB").value;
-    console.log(entrada[7])
-    calcB(entrada[6], entrada[7], 3, 0, 2);
+    entradaB[7] = document.getElementById("25/11EB").value;
+    console.log(entradaB[7])
+    calcB(entradaB[6], entradaB[7], 3, 0, 2);
 }
 // 29/11
 document.getElementById("29/11PB").oninput = function () {
-    entrada[8] = document.getElementById("29/11PB").value;
-    console.log(entrada[8])
-    calcB(entrada[8], entrada[9], 4, 3, 0);
+    entradaB[8] = document.getElementById("29/11PB").value;
+    console.log(entradaB[8])
+    calcB(entradaB[8], entradaB[9], 4, 3, 0);
 }
 document.getElementById("29/11IB").oninput = function () {
-    entrada[9] = document.getElementById("29/11IB").value;
-    console.log(entrada[9])
-    calcB(entrada[8], entrada[9], 4, 3, 0);
+    entradaB[9] = document.getElementById("29/11IB").value;
+    console.log(entradaB[9])
+    calcB(entradaB[8], entradaB[9], 4, 3, 0);
 }
 // 29/11 2
 document.getElementById("29/11IRB").oninput = function () {
-    entrada[10] = document.getElementById("29/11IRB").value;
-    console.log(entrada[10])
-    calcB(entrada[10], entrada[11], 5, 1, 2);
+    entradaB[10] = document.getElementById("29/11IRB").value;
+    console.log(entradaB[10])
+    calcB(entradaB[10], entradaB[11], 5, 1, 2);
 }
 document.getElementById("29/11EB").oninput = function () {
-    entrada[11] = document.getElementById("29/11EB").value;
-    console.log(entrada[11])
-    calcB(entrada[10], entrada[11], 5, 1, 2);
+    entradaB[11] = document.getElementById("29/11EB").value;
+    console.log(entradaB[11])
+    calcB(entradaB[10], entradaB[11], 5, 1, 2);
 }
 
 function calcB(x, y, j, i, i2) {
@@ -272,4 +293,7 @@ function calcB(x, y, j, i, i2) {
         }
     }
 }
+for(let r = 0; r <= 11;r++){
+    sessionStorage.setItem("entradaB["+r+"]",entradaB[r])
+    }
 }

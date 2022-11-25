@@ -21,6 +21,24 @@ let pontos = [0, 0, 0, 0];
 
 let entrada = [];
 
+window.onload = function() {
+    for(let z = 0; z <= 11;z++){
+        entradaA[z] = sessionStorage.getItem("entradaA["+z+"]")
+        }
+        document.getElementById("20/11QA").value = entradaA[0]
+        document.getElementById("20/11EA").value = entradaA[1] 
+        document.getElementById("21/11SA").value = entradaA[2] 
+        document.getElementById("21/11HA").value = entradaA[3] 
+        document.getElementById("25/11QA").value = entradaA[4] 
+        document.getElementById("25/11SA").value = entradaA[5] 
+        document.getElementById("25/11HA").value = entradaA[6] 
+        document.getElementById("25/11EA").value = entradaA[7] 
+        document.getElementById("29/11HA").value = entradaA[8] 
+        document.getElementById("29/11QA").value = entradaA[9] 
+        document.getElementById("29/11EA").value = entradaA[10] 
+        document.getElementById("29/11SA").value = entradaA[11] 
+}
+
 //qatar é 0
 //equador é 1
 //senegal é 2
@@ -272,4 +290,7 @@ function calc(x, y, j, i, i2) {
         }
     }
 }
+for(let r = 0; r <= 11;r++){
+    sessionStorage.setItem("entradaA["+r+"]",entradaA[r])
+    }
 }

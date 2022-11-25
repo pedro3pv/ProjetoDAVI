@@ -1,25 +1,43 @@
 // javascript desenvolvido por pedro augusto
 
-let jogos = [];
-let jogosj = [0, 0, 0, 0];
-let vitorias = [0, 0, 0, 0];
-let empates = [0, 0, 0, 0];
-let derrota = [0, 0, 0, 0];
-let GP = [0, 0, 0, 0];
-let GC = [0, 0, 0, 0];
-let SG = [0, 0, 0, 0];
-//para mais times coloque os nomes dos times na array times
+let jogosE = [];
+let jogosEj = [0, 0, 0, 0];
+let vitoriasE = [0, 0, 0, 0];
+let empatesE = [0, 0, 0, 0];
+let derrotaE = [0, 0, 0, 0];
+let GPE = [0, 0, 0, 0];
+let GCE = [0, 0, 0, 0];
+let SGE = [0, 0, 0, 0];
+//para mais timesE coloque os nomes dos timesE na array timesE
 
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
 //sequencia     0        1          2         3
-let times = ["Espanha","Costa Rica","Alemanha","Japão"];
-gols = [];
-gols2 = [];
+let timesE = ["Espanha","Costa Rica","Alemanha","Japão"];
+golsE = [];
+golsE2 = [];
 
-let pontos = [0, 0, 0, 0];
+let pontosE = [0, 0, 0, 0];
 
-let entrada = [];
+let entradaE = [];
+
+window.onload = function() {
+    for(let z = 0; z <= 11;z++){
+        entradaA[z] = sessionStorage.getItem("entradaA["+z+"]")
+        }
+        document.getElementById("20/11QA").value = entradaA[0]
+        document.getElementById("20/11EA").value = entradaA[1] 
+        document.getElementById("21/11SA").value = entradaA[2] 
+        document.getElementById("21/11HA").value = entradaA[3] 
+        document.getElementById("25/11QA").value = entradaA[4] 
+        document.getElementById("25/11SA").value = entradaA[5] 
+        document.getElementById("25/11HA").value = entradaA[6] 
+        document.getElementById("25/11EA").value = entradaA[7] 
+        document.getElementById("29/11HA").value = entradaA[8] 
+        document.getElementById("29/11QA").value = entradaA[9] 
+        document.getElementById("29/11EA").value = entradaA[10] 
+        document.getElementById("29/11SA").value = entradaA[11] 
+}
 
 //qatar é 0
 //equador é 1
@@ -27,173 +45,173 @@ let entrada = [];
 //holanda é 3
 // j é o numero do jogo, acada novo jogo, aumentar em 1
 
-// 20/11
-document.getElementById("20/11Q").oninput = function () {
-    entrada[0] = document.getElementById("20/11Q").value;
-    console.log(entrada[0])
-    calc(entrada[0], entrada[1], 0, 0, 1);
+// 23/11
+document.getElementById("23/11AE").oninput = function () {
+    entradaE[0] = document.getElementById("23/11AE").value;
+    console.log(entradaE[0])
+    calcE(entradaE[0], entradaE[1], 0, 2, 3);
 }
-document.getElementById("20/11E").oninput = function () {
-    entrada[1] = document.getElementById("20/11E").value;
-    console.log(entrada[1])
-    calc(entrada[0], entrada[1], 0, 0, 1);
+document.getElementById("23/11JE").oninput = function () {
+    entradaE[1] = document.getElementById("23/11JE").value;
+    console.log(entradaE[1])
+    calcE(entradaE[0], entradaE[1], 0, 2, 3);
 }
-// 21/11
-document.getElementById("21/11S").oninput = function () {
-    entrada[2] = document.getElementById("21/11S").value;
-    console.log(entrada[2])
-    calc(entrada[2], entrada[3], 1, 2, 3);
+// 23/11 2
+document.getElementById("23/11EE").oninput = function () {
+    entradaE[2] = document.getElementById("23/11EE").value;
+    console.log(entradaE[2])
+    calcE(entradaE[2], entradaE[3], 1, 0, 1);
 }
-document.getElementById("21/11H").oninput = function () {
-    entrada[3] = document.getElementById("21/11H").value;
-    console.log(entrada[3])
-    calc(entrada[2], entrada[3], 1, 2, 3);
+document.getElementById("23/11CE").oninput = function () {
+    entradaE[3] = document.getElementById("23/11CE").value;
+    console.log(entradaE[3])
+    calcE(entradaE[2], entradaE[3], 1, 0, 1);
 }
-// 25/11
-document.getElementById("25/11Q").oninput = function () {
-    entrada[4] = document.getElementById("25/11Q").value;
-    console.log(entrada[4])
-    calc(entrada[4], entrada[5], 2, 0, 2);
+// 27/11
+document.getElementById("27/11JE").oninput = function () {
+    entradaE[4] = document.getElementById("27/11JE").value;
+    console.log(entradaE[4])
+    calcE(entradaE[4], entradaE[5], 2, 3, 1);
 }
-document.getElementById("25/11S").oninput = function () {
-    entrada[5] = document.getElementById("25/11S").value;
-    console.log(entrada[5])
-    calc(entrada[4], entrada[5], 2, 0, 2);
+document.getElementById("27/11CE").oninput = function () {
+    entradaE[5] = document.getElementById("27/11CE").value;
+    console.log(entradaE[5])
+    calcE(entradaE[4], entradaE[5], 2, 3, 1);
 }
-// 25/11 2
-document.getElementById("25/11H").oninput = function () {
-    entrada[6] = document.getElementById("25/11H").value;
-    console.log(entrada[6])
-    calc(entrada[6], entrada[7], 3, 3, 1);
+// 27/11 2
+document.getElementById("27/11EE").oninput = function () {
+    entradaE[6] = document.getElementById("27/11EE").value;
+    console.log(entradaE[6])
+    calcE(entradaE[6], entradaE[7], 3, 0, 2);
 }
-document.getElementById("25/11E").oninput = function () {
-    entrada[7] = document.getElementById("25/11E").value;
-    console.log(entrada[7])
-    calc(entrada[6], entrada[7], 3, 3, 1);
+document.getElementById("27/11AE").oninput = function () {
+    entradaE[7] = document.getElementById("27/11AE").value;
+    console.log(entradaE[7])
+    calcE(entradaE[6], entradaE[7], 3, 0, 2);
 }
-// 29/11
-document.getElementById("29/11H").oninput = function () {
-    entrada[8] = document.getElementById("29/11H").value;
-    console.log(entrada[8])
-    calc(entrada[8], entrada[9], 4, 3, 0);
+// 01/12
+document.getElementById("01/12JE").oninput = function () {
+    entradaE[8] = document.getElementById("01/12JE").value;
+    console.log(entradaE[8])
+    calcE(entradaE[8], entradaE[9], 4, 3, 0);
 }
-document.getElementById("29/11Q").oninput = function () {
-    entrada[9] = document.getElementById("29/11Q").value;
-    console.log(entrada[9])
-    calc(entrada[8], entrada[9], 4, 3, 0);
+document.getElementById("01/12EE").oninput = function () {
+    entradaE[9] = document.getElementById("01/12EE").value;
+    console.log(entradaE[9])
+    calcE(entradaE[8], entradaE[9], 4, 3, 0);
 }
-// 29/11 2
-document.getElementById("29/11E").oninput = function () {
-    entrada[10] = document.getElementById("29/11E").value;
-    console.log(entrada[10])
-    calc(entrada[10], entrada[11], 5, 1, 2);
+// 01/12 2
+document.getElementById("01/12CE").oninput = function () {
+    entradaE[10] = document.getElementById("01/12CE").value;
+    console.log(entradaE[10])
+    calcE(entradaE[10], entradaE[11], 5, 1, 2);
 }
-document.getElementById("29/11S").oninput = function () {
-    entrada[11] = document.getElementById("29/11S").value;
-    console.log(entrada[11])
-    calc(entrada[10], entrada[11], 5, 1, 2);
+document.getElementById("01/12AE").oninput = function () {
+    entradaE[11] = document.getElementById("01/12AE").value;
+    console.log(entradaE[11])
+    calcE(entradaE[10], entradaE[11], 5, 1, 2);
 }
 
-function calc(x, y, j, i, i2) {
+function calcE(x, y, j, i, i2) {
     x = parseInt(x)
     y = parseInt(y)
     if(x != "" && y != "" || x === 0 || y === 0){
-    if (jogos[j] == null) {
-        jogos[j] = 0
+    if (jogosE[j] == null) {
+        jogosE[j] = 0
     }
-    if (jogos[j] == 1) {
-        pontos[i] = pontos[i] - 3
-        jogosj[i] = jogosj[i] - 1
-        jogosj[i2] = jogosj[i2] - 1
-        vitorias[i] = vitorias[i] - 1
-        derrota[i2] = derrota[i2] - 1
-        GP[i] = GP[i] - gols[j]
-        GC[i] = GC[i] - gols2[j]
-        GP[i2] = GP[i2] - gols2[j]
-        GC[i2] = GC[i2] - gols[j]
-        jogos[j] = 0
+    if (jogosE[j] == 1) {
+        pontosE[i] = pontosE[i] - 3
+        jogosEj[i] = jogosEj[i] - 1
+        jogosEj[i2] = jogosEj[i2] - 1
+        vitoriasE[i] = vitoriasE[i] - 1
+        derrotaE[i2] = derrotaE[i2] - 1
+        GPE[i] = GPE[i] - golsE[j]
+        GCE[i] = GCE[i] - golsE2[j]
+        GPE[i2] = GPE[i2] - golsE2[j]
+        GCE[i2] = GCE[i2] - golsE[j]
+        jogosE[j] = 0
     }
-    if (jogos[j] == 2) {
-        pontos[i2] = pontos[i2] - 3
-        jogosj[i] = jogosj[i] - 1
-        jogosj[i2] = jogosj[i2] - 1
-        vitorias[i2] = vitorias[i2] - 1
-        derrota[i] = derrota[i] - 1
-        GP[i] = GP[i] - gols[j]
-        GC[i] = GC[i] - gols2[j]
-        GP[i2] = GP[i2] - gols2[j]
-        GC[i2] = GC[i2] - gols[j]
-        jogos[j] = 0
+    if (jogosE[j] == 2) {
+        pontosE[i2] = pontosE[i2] - 3
+        jogosEj[i] = jogosEj[i] - 1
+        jogosEj[i2] = jogosEj[i2] - 1
+        vitoriasE[i2] = vitoriasE[i2] - 1
+        derrotaE[i] = derrotaE[i] - 1
+        GPE[i] = GPE[i] - golsE[j]
+        GCE[i] = GCE[i] - golsE2[j]
+        GPE[i2] = GPE[i2] - golsE2[j]
+        GCE[i2] = GCE[i2] - golsE[j]
+        jogosE[j] = 0
     }
-    if (jogos[j] == 3) {
-        pontos[i] = pontos[i] - 1
-        pontos[i2] = pontos[i2] - 1
-        jogos[j] = 0
-        jogosj[i] = jogosj[i] - 1
-        empates[i] = empates[i] - 1
-        jogosj[i2] = jogosj[i2] - 1
-        empates[i2] = empates[i2] - 1
-        GP[i] = GP[i] - gols[j]
-        GC[i] = GC[i] - gols2[j]
-        GP[i2] = GP[i2] - gols2[j]
-        GC[i2] = GC[i2] - gols[j]
+    if (jogosE[j] == 3) {
+        pontosE[i] = pontosE[i] - 1
+        pontosE[i2] = pontosE[i2] - 1
+        jogosE[j] = 0
+        jogosEj[i] = jogosEj[i] - 1
+        empatesE[i] = empatesE[i] - 1
+        jogosEj[i2] = jogosEj[i2] - 1
+        empatesE[i2] = empatesE[i2] - 1
+        GPE[i] = GPE[i] - golsE[j]
+        GCE[i] = GCE[i] - golsE2[j]
+        GPE[i2] = GPE[i2] - golsE2[j]
+        GCE[i2] = GCE[i2] - golsE[j]
     }
-    if (x != null && y != null && jogos[j] == 0) {
-        gols[j] = x
-        gols2[j] = y
+    if (x != null && y != null && jogosE[j] == 0) {
+        golsE[j] = x
+        golsE2[j] = y
         if (x > y) {
-            if (pontos[i] >= 0) {
-                pontos[i] = parseInt(pontos[i])
-                pontos[i] = pontos[i] + 3
-                jogosj[i] = jogosj[i] + 1
-                jogosj[i2] = jogosj[i2] + 1
-                vitorias[i] = vitorias[i] + 1
-                derrota[i2] = derrota[i2] + 1
-                GP[i] = GP[i] + x
-                GC[i] = GC[i] + y
-                GP[i2] = GP[i2] + y
-                GC[i2] = GC[i2] + x
-                jogos[j] = 1
+            if (pontosE[i] >= 0) {
+                pontosE[i] = parseInt(pontosE[i])
+                pontosE[i] = pontosE[i] + 3
+                jogosEj[i] = jogosEj[i] + 1
+                jogosEj[i2] = jogosEj[i2] + 1
+                vitoriasE[i] = vitoriasE[i] + 1
+                derrotaE[i2] = derrotaE[i2] + 1
+                GPE[i] = GPE[i] + x
+                GCE[i] = GCE[i] + y
+                GPE[i2] = GPE[i2] + y
+                GCE[i2] = GCE[i2] + x
+                jogosE[j] = 1
             }
-            console.log(pontos[i])
+            console.log(pontosE[i])
         } else if (y > x) {
-            if (pontos[i2] >= 0) {
-                pontos[i2] = parseInt(pontos[i2])
-                pontos[i2] = pontos[i2] + 3
-                jogosj[i] = jogosj[i] + 1
-                jogosj[i2] = jogosj[i2] + 1
-                vitorias[i2] = vitorias[i2] + 1
-                derrota[i] = derrota[i] + 1
-                jogos[j] = 2
-                GP[i] = GP[i] + x
-                GC[i] = GC[i] + y
-                GP[i2] = GP[i2] + y
-                GC[i2] = GC[i2] + x
+            if (pontosE[i2] >= 0) {
+                pontosE[i2] = parseInt(pontosE[i2])
+                pontosE[i2] = pontosE[i2] + 3
+                jogosEj[i] = jogosEj[i] + 1
+                jogosEj[i2] = jogosEj[i2] + 1
+                vitoriasE[i2] = vitoriasE[i2] + 1
+                derrotaE[i] = derrotaE[i] + 1
+                jogosE[j] = 2
+                GPE[i] = GPE[i] + x
+                GCE[i] = GCE[i] + y
+                GPE[i2] = GPE[i2] + y
+                GCE[i2] = GCE[i2] + x
             }
-            console.log(pontos[i2])
+            console.log(pontosE[i2])
         } else if (x == y) {
-            if (pontos[i] >= 0) {
-                pontos[i] = pontos[i] + 1
-                jogosj[i] = jogosj[i] + 1
-                empates[i] = empates[i] + 1
-                GP[i] = GP[i] + x
-                GC[i] = GC[i] + y
+            if (pontosE[i] >= 0) {
+                pontosE[i] = pontosE[i] + 1
+                jogosEj[i] = jogosEj[i] + 1
+                empatesE[i] = empatesE[i] + 1
+                GPE[i] = GPE[i] + x
+                GCE[i] = GCE[i] + y
             }
-            console.log(pontos[i])
+            console.log(pontosE[i])
 
-            if (pontos[i2] >= 0) {
-                pontos[i2] = pontos[i2] + 1
-                jogosj[i2] = jogosj[i2] + 1
-                empates[i2] = empates[i2] + 1
-                GP[i2] = GP[i2] + y
-                GC[i2] = GC[i2] + x
+            if (pontosE[i2] >= 0) {
+                pontosE[i2] = pontosE[i2] + 1
+                jogosEj[i2] = jogosEj[i2] + 1
+                empatesE[i2] = empatesE[i2] + 1
+                GPE[i2] = GPE[i2] + y
+                GCE[i2] = GCE[i2] + x
             }
-            console.log(pontos[i2])
-            jogos[j] = 3
+            console.log(pontosE[i2])
+            jogosE[j] = 3
         }
 
-        SG[i] = GP[i] - GC[i]
-        SG[i2] = GP[i2] - GC[i2]
+        SGE[i] = GPE[i] - GCE[i]
+        SGE[i2] = GPE[i2] - GCE[i2]
 
         let n = [];
         let ts = [];
@@ -201,24 +219,24 @@ function calc(x, y, j, i, i2) {
         let v = [];
         let ep = [];
         let derr = [];
-        let GP2 = [];
-        let GC2 = [];
-        let SG2 = [];
+        let GPE2 = [];
+        let GCE2 = [];
+        let SGE2 = [];
         let aux = 0
 
-        for (let q = 0; q < times.length; q++) {
-            n[q] = pontos[q];
-            ts[q] = times[q];
-            jj[q] = jogosj[q];
-            v[q] = vitorias[q];
-            ep[q] = empates[q]
-            derr[q] = derrota[q]
-            GP2[q] = GP[q]
-            GC2[q] = GC[q]
-            SG2[q] = SG[q]
+        for (let q = 0; q < timesE.length; q++) {
+            n[q] = pontosE[q];
+            ts[q] = timesE[q];
+            jj[q] = jogosEj[q];
+            v[q] = vitoriasE[q];
+            ep[q] = empatesE[q]
+            derr[q] = derrotaE[q]
+            GPE2[q] = GPE[q]
+            GCE2[q] = GCE[q]
+            SGE2[q] = SGE[q]
         }
-        for (let k = 0; k < times.length; k++) {
-            for (let l = 0; l < times.length; l++) {
+        for (let k = 0; k < timesE.length; k++) {
+            for (let l = 0; l < timesE.length; l++) {
                 n[l] = parseInt(n[l])
                 if (n[l] < n[l + 1]) {
                     aux = n[l + 1]
@@ -245,31 +263,34 @@ function calc(x, y, j, i, i2) {
                     derr[l + 1] = derr[l]
                     derr[l] = aux
 
-                    aux = GP2[l + 1]
-                    GP2[l + 1] = GP2[l]
-                    GP2[l] = aux
+                    aux = GPE2[l + 1]
+                    GPE2[l + 1] = GPE2[l]
+                    GPE2[l] = aux
 
-                    aux = GC2[l + 1]
-                    GC2[l + 1] = GC2[l]
-                    GC2[l] = aux
+                    aux = GCE2[l + 1]
+                    GCE2[l + 1] = GCE2[l]
+                    GCE2[l] = aux
 
-                    aux = SG2[l + 1]
-                    SG2[l + 1] = SG2[l]
-                    SG2[l] = aux
+                    aux = SGE2[l + 1]
+                    SGE2[l + 1] = SGE2[l]
+                    SGE2[l] = aux
                 }
             }
         }
-        for (let t = 0; t < times.length; t++) {
+        for (let t = 0; t < timesE.length; t++) {
             document.getElementById("P" + t + "-textE").innerHTML = ts[t]
             document.getElementById("P" + t + "E").innerHTML = n[t]
             document.getElementById("P" + t + "JE").innerHTML = jj[t]
             document.getElementById("P" + t + "VE").innerHTML = v[t]
             document.getElementById("P" + t + "EE").innerHTML = ep[t]
             document.getElementById("P" + t + "DE").innerHTML = derr[t]
-            document.getElementById("P" + t + "GPE").innerHTML = GP2[t]
-            document.getElementById("P" + t + "GCE").innerHTML = GC2[t]
-            document.getElementById("P" + t + "SGE").innerHTML = SG2[t]
+            document.getElementById("P" + t + "GPE").innerHTML = GPE2[t]
+            document.getElementById("P" + t + "GCE").innerHTML = GCE2[t]
+            document.getElementById("P" + t + "SGE").innerHTML = SGE2[t]
         }
     }
 }
+for(let r = 0; r <= 11;r++){
+    sessionStorage.setItem("entradaA["+r+"]",entradaA[r])
+    }
 }
