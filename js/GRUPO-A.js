@@ -1,4 +1,6 @@
-// javascript desenvolvido por pedro augusto
+// javascript desenvolvido por pedro augusto e João Pedro Monteiro
+
+let vencedores = []
 
 let jogosA = [];
 let jogosJA = [0, 0, 0, 0];
@@ -13,7 +15,7 @@ let SGA = [0, 0, 0, 0];
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
 //sequencia     0        1          2         3
-let timesA = ["Qatar","Equador","Senegal","Holanda"];
+let timesA = ["Qatar", "Equador", "Senegal", "Holanda"];
 golsA = [];
 golsA2 = [];
 
@@ -21,29 +23,26 @@ let pontosA = [0, 0, 0, 0];
 
 let entradaA = [];
 
-window.onload = function() {
-    for(let z = 0; z <= 11;z++){
-        entradaA[z] = sessionStorage.getItem("entradaA["+z+"]")
-        }
-        calcA(entradaA[0], entradaA[1], 0, 0, 1);
-        calcA(entradaA[2], entradaA[3], 1, 2, 3);
-        calcA(entradaA[4], entradaA[5], 2, 0, 2);
-        calcA(entradaA[6], entradaA[7], 3, 3, 1);
-        calcA(entradaA[8], entradaA[9], 4, 3, 0);
-        calcA(entradaA[10], entradaA[11], 5, 1, 2);
-        document.getElementById("20/11QA").value = entradaA[0]
-        document.getElementById("20/11EA").value = entradaA[1] 
-        document.getElementById("21/11SA").value = entradaA[2] 
-        document.getElementById("21/11HA").value = entradaA[3] 
-        document.getElementById("25/11QA").value = entradaA[4] 
-        document.getElementById("25/11SA").value = entradaA[5] 
-        document.getElementById("25/11HA").value = entradaA[6] 
-        document.getElementById("25/11EA").value = entradaA[7] 
-        document.getElementById("29/11HA").value = entradaA[8] 
-        document.getElementById("29/11QA").value = entradaA[9] 
-        document.getElementById("29/11EA").value = entradaA[10] 
-        document.getElementById("29/11SA").value = entradaA[11] 
-}
+for (let z = 0; z <= 11; z++) { entradaA[z] = sessionStorage.getItem("entradaA[" + z + "]") }
+document.getElementById("20/11QA").value = entradaA[0]
+document.getElementById("20/11EA").value = entradaA[1]
+document.getElementById("21/11SA").value = entradaA[2]
+document.getElementById("21/11HA").value = entradaA[3]
+document.getElementById("25/11QA").value = entradaA[4]
+document.getElementById("25/11SA").value = entradaA[5]
+document.getElementById("25/11HA").value = entradaA[6]
+document.getElementById("25/11EA").value = entradaA[7]
+document.getElementById("29/11HA").value = entradaA[8]
+document.getElementById("29/11QA").value = entradaA[9]
+document.getElementById("29/11EA").value = entradaA[10]
+document.getElementById("29/11SA").value = entradaA[11]
+calcA(entradaA[0], entradaA[1], 0, 0, 1);
+calcA(entradaA[2], entradaA[3], 1, 2, 3);
+calcA(entradaA[4], entradaA[5], 2, 0, 2);
+calcA(entradaA[6], entradaA[7], 3, 3, 1);
+calcA(entradaA[8], entradaA[9], 4, 3, 0);
+calcA(entradaA[10], entradaA[11], 5, 1, 2);
+
 
 
 
@@ -123,182 +122,184 @@ document.getElementById("29/11SA").oninput = function () {
 function calcA(x, y, j, i, i2) {
     x = parseInt(x)
     y = parseInt(y)
-    if(x != "" && y != "" || x === 0 || y === 0){
-    if (jogosA[j] == null) {
-        jogosA[j] = 0
-    }
-    if (jogosA[j] == 1) {
-        pontosA[i] = pontosA[i] - 3
-        jogosJA[i] = jogosJA[i] - 1
-        jogosJA[i2] = jogosJA[i2] - 1
-        vitoriasA[i] = vitoriasA[i] - 1
-        derrotaA[i2] = derrotaA[i2] - 1
-        GPA[i] = GPA[i] - golsA[j]
-        GCA[i] = GCA[i] - golsA2[j]
-        GPA[i2] = GPA[i2] - golsA2[j]
-        GCA[i2] = GCA[i2] - golsA[j]
-        jogosA[j] = 0
-    }
-    if (jogosA[j] == 2) {
-        pontosA[i2] = pontosA[i2] - 3
-        jogosJA[i] = jogosJA[i] - 1
-        jogosJA[i2] = jogosJA[i2] - 1
-        vitoriasA[i2] = vitoriasA[i2] - 1
-        derrotaA[i] = derrotaA[i] - 1
-        GPA[i] = GPA[i] - golsA[j]
-        GCA[i] = GCA[i] - golsA2[j]
-        GPA[i2] = GPA[i2] - golsA2[j]
-        GCA[i2] = GCA[i2] - golsA[j]
-        jogosA[j] = 0
-    }
-    if (jogosA[j] == 3) {
-        pontosA[i] = pontosA[i] - 1
-        pontosA[i2] = pontosA[i2] - 1
-        jogosA[j] = 0
-        jogosJA[i] = jogosJA[i] - 1
-        empatesA[i] = empatesA[i] - 1
-        jogosJA[i2] = jogosJA[i2] - 1
-        empatesA[i2] = empatesA[i2] - 1
-        GPA[i] = GPA[i] - golsA[j]
-        GCA[i] = GCA[i] - golsA2[j]
-        GPA[i2] = GPA[i2] - golsA2[j]
-        GCA[i2] = GCA[i2] - golsA[j]
-    }
-    if (x != null && y != null && jogosA[j] == 0) {
-        golsA[j] = x
-        golsA2[j] = y
-        if (x > y) {
-            if (pontosA[i] >= 0) {
-                pontosA[i] = parseInt(pontosA[i])
-                pontosA[i] = pontosA[i] + 3
-                jogosJA[i] = jogosJA[i] + 1
-                jogosJA[i2] = jogosJA[i2] + 1
-                vitoriasA[i] = vitoriasA[i] + 1
-                derrotaA[i2] = derrotaA[i2] + 1
-                GPA[i] = GPA[i] + x
-                GCA[i] = GCA[i] + y
-                GPA[i2] = GPA[i2] + y
-                GCA[i2] = GCA[i2] + x
-                jogosA[j] = 1
-            }
-            console.log(pontosA[i])
-        } else if (y > x) {
-            if (pontosA[i2] >= 0) {
-                pontosA[i2] = parseInt(pontosA[i2])
-                pontosA[i2] = pontosA[i2] + 3
-                jogosJA[i] = jogosJA[i] + 1
-                jogosJA[i2] = jogosJA[i2] + 1
-                vitoriasA[i2] = vitoriasA[i2] + 1
-                derrotaA[i] = derrotaA[i] + 1
-                jogosA[j] = 2
-                GPA[i] = GPA[i] + x
-                GCA[i] = GCA[i] + y
-                GPA[i2] = GPA[i2] + y
-                GCA[i2] = GCA[i2] + x
-            }
-            console.log(pontosA[i2])
-        } else if (x == y) {
-            if (pontosA[i] >= 0) {
-                pontosA[i] = pontosA[i] + 1
-                jogosJA[i] = jogosJA[i] + 1
-                empatesA[i] = empatesA[i] + 1
-                GPA[i] = GPA[i] + x
-                GCA[i] = GCA[i] + y
-            }
-            console.log(pontosA[i])
-
-            if (pontosA[i2] >= 0) {
-                pontosA[i2] = pontosA[i2] + 1
-                jogosJA[i2] = jogosJA[i2] + 1
-                empatesA[i2] = empatesA[i2] + 1
-                GPA[i2] = GPA[i2] + y
-                GCA[i2] = GCA[i2] + x
-            }
-            console.log(pontosA[i2])
-            jogosA[j] = 3
+    if (x != "" && y != "" || x === 0 || y === 0) {
+        if (jogosA[j] == null) {
+            jogosA[j] = 0
         }
-
-        SGA[i] = GPA[i] - GCA[i]
-        SGA[i2] = GPA[i2] - GCA[i2]
-
-        let nA = [];
-        let tsA = [];
-        let jjA = [];
-        let vA = [];
-        let epA = [];
-        let derrA = [];
-        let GPA2A = [];
-        let GCA2A = [];
-        let SGA2A = [];
-        let auxA = 0
-
-        for (let q = 0; q < timesA.length; q++) {
-            nA[q] = pontosA[q];
-            tsA[q] = timesA[q];
-            jjA[q] = jogosJA[q];
-            vA[q] = vitoriasA[q];
-            epA[q] = empatesA[q]
-            derrA[q] = derrotaA[q]
-            GPA2A[q] = GPA[q]
-            GCA2A[q] = GCA[q]
-            SGA2A[q] = SGA[q]
+        if (jogosA[j] == 1) {
+            pontosA[i] = pontosA[i] - 3
+            jogosJA[i] = jogosJA[i] - 1
+            jogosJA[i2] = jogosJA[i2] - 1
+            vitoriasA[i] = vitoriasA[i] - 1
+            derrotaA[i2] = derrotaA[i2] - 1
+            GPA[i] = GPA[i] - golsA[j]
+            GCA[i] = GCA[i] - golsA2[j]
+            GPA[i2] = GPA[i2] - golsA2[j]
+            GCA[i2] = GCA[i2] - golsA[j]
+            jogosA[j] = 0
         }
-        for (let k = 0; k < timesA.length; k++) {
-            for (let l = 0; l < timesA.length; l++) {
-                nA[l] = parseInt(nA[l])
-                if (nA[l] < nA[l + 1]) {
-                    auxA = nA[l + 1]
-                    nA[l + 1] = nA[l]
-                    nA[l] = auxA
+        if (jogosA[j] == 2) {
+            pontosA[i2] = pontosA[i2] - 3
+            jogosJA[i] = jogosJA[i] - 1
+            jogosJA[i2] = jogosJA[i2] - 1
+            vitoriasA[i2] = vitoriasA[i2] - 1
+            derrotaA[i] = derrotaA[i] - 1
+            GPA[i] = GPA[i] - golsA[j]
+            GCA[i] = GCA[i] - golsA2[j]
+            GPA[i2] = GPA[i2] - golsA2[j]
+            GCA[i2] = GCA[i2] - golsA[j]
+            jogosA[j] = 0
+        }
+        if (jogosA[j] == 3) {
+            pontosA[i] = pontosA[i] - 1
+            pontosA[i2] = pontosA[i2] - 1
+            jogosA[j] = 0
+            jogosJA[i] = jogosJA[i] - 1
+            empatesA[i] = empatesA[i] - 1
+            jogosJA[i2] = jogosJA[i2] - 1
+            empatesA[i2] = empatesA[i2] - 1
+            GPA[i] = GPA[i] - golsA[j]
+            GCA[i] = GCA[i] - golsA2[j]
+            GPA[i2] = GPA[i2] - golsA2[j]
+            GCA[i2] = GCA[i2] - golsA[j]
+        }
+        if (x != null && y != null && jogosA[j] == 0) {
+            golsA[j] = x
+            golsA2[j] = y
+            if (x > y) {
+                if (pontosA[i] >= 0) {
+                    pontosA[i] = parseInt(pontosA[i])
+                    pontosA[i] = pontosA[i] + 3
+                    jogosJA[i] = jogosJA[i] + 1
+                    jogosJA[i2] = jogosJA[i2] + 1
+                    vitoriasA[i] = vitoriasA[i] + 1
+                    derrotaA[i2] = derrotaA[i2] + 1
+                    GPA[i] = GPA[i] + x
+                    GCA[i] = GCA[i] + y
+                    GPA[i2] = GPA[i2] + y
+                    GCA[i2] = GCA[i2] + x
+                    jogosA[j] = 1
+                }
+                console.log(pontosA[i])
+            } else if (y > x) {
+                if (pontosA[i2] >= 0) {
+                    pontosA[i2] = parseInt(pontosA[i2])
+                    pontosA[i2] = pontosA[i2] + 3
+                    jogosJA[i] = jogosJA[i] + 1
+                    jogosJA[i2] = jogosJA[i2] + 1
+                    vitoriasA[i2] = vitoriasA[i2] + 1
+                    derrotaA[i] = derrotaA[i] + 1
+                    jogosA[j] = 2
+                    GPA[i] = GPA[i] + x
+                    GCA[i] = GCA[i] + y
+                    GPA[i2] = GPA[i2] + y
+                    GCA[i2] = GCA[i2] + x
+                }
+                console.log(pontosA[i2])
+            } else if (x == y) {
+                if (pontosA[i] >= 0) {
+                    pontosA[i] = pontosA[i] + 1
+                    jogosJA[i] = jogosJA[i] + 1
+                    empatesA[i] = empatesA[i] + 1
+                    GPA[i] = GPA[i] + x
+                    GCA[i] = GCA[i] + y
+                }
+                console.log(pontosA[i])
 
-                    auxA = tsA[l + 1]
-                    tsA[l + 1] = tsA[l]
-                    tsA[l] = auxA
+                if (pontosA[i2] >= 0) {
+                    pontosA[i2] = pontosA[i2] + 1
+                    jogosJA[i2] = jogosJA[i2] + 1
+                    empatesA[i2] = empatesA[i2] + 1
+                    GPA[i2] = GPA[i2] + y
+                    GCA[i2] = GCA[i2] + x
+                }
+                console.log(pontosA[i2])
+                jogosA[j] = 3
+            }
 
-                    auxA = jjA[l + 1]
-                    jjA[l + 1] = jjA[l]
-                    jjA[l] = auxA
+            SGA[i] = GPA[i] - GCA[i]
+            SGA[i2] = GPA[i2] - GCA[i2]
 
-                    auxA = vA[l + 1]
-                    vA[l + 1] = vA[l]
-                    vA[l] = auxA
+            let nA = [];
+            let tsA = [];
+            let jjA = [];
+            let vA = [];
+            let epA = [];
+            let derrA = [];
+            let GPA2A = [];
+            let GCA2A = [];
+            let SGA2A = [];
+            let auxA = 0
 
-                    auxA = epA[l + 1]
-                    epA[l + 1] = epA[l]
-                    epA[l] = auxA
+            for (let q = 0; q < timesA.length; q++) {
+                nA[q] = pontosA[q];
+                tsA[q] = timesA[q];
+                jjA[q] = jogosJA[q];
+                vA[q] = vitoriasA[q];
+                epA[q] = empatesA[q]
+                derrA[q] = derrotaA[q]
+                GPA2A[q] = GPA[q]
+                GCA2A[q] = GCA[q]
+                SGA2A[q] = SGA[q]
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    nA[l] = parseInt(nA[l])
+                    if (nA[l] < nA[l + 1]) {
+                        auxA = nA[l + 1]
+                        nA[l + 1] = nA[l]
+                        nA[l] = auxA
 
-                    auxA = derrA[l + 1]
-                    derrA[l + 1] = derrA[l]
-                    derrA[l] = auxA
+                        auxA = tsA[l + 1]
+                        tsA[l + 1] = tsA[l]
+                        tsA[l] = auxA
 
-                    auxA = GPA2A[l + 1]
-                    GPA2A[l + 1] = GPA2A[l]
-                    GPA2A[l] = auxA
+                        auxA = jjA[l + 1]
+                        jjA[l + 1] = jjA[l]
+                        jjA[l] = auxA
 
-                    auxA = GCA2A[l + 1]
-                    GCA2A[l + 1] = GCA2A[l]
-                    GCA2A[l] = auxA
+                        auxA = vA[l + 1]
+                        vA[l + 1] = vA[l]
+                        vA[l] = auxA
 
-                    auxA = SGA2A[l + 1]
-                    SGA2A[l + 1] = SGA2A[l]
-                    SGA2A[l] = auxA
+                        auxA = epA[l + 1]
+                        epA[l + 1] = epA[l]
+                        epA[l] = auxA
+
+                        auxA = derrA[l + 1]
+                        derrA[l + 1] = derrA[l]
+                        derrA[l] = auxA
+
+                        auxA = GPA2A[l + 1]
+                        GPA2A[l + 1] = GPA2A[l]
+                        GPA2A[l] = auxA
+
+                        auxA = GCA2A[l + 1]
+                        GCA2A[l + 1] = GCA2A[l]
+                        GCA2A[l] = auxA
+
+                        auxA = SGA2A[l + 1]
+                        SGA2A[l + 1] = SGA2A[l]
+                        SGA2A[l] = auxA
+                    }
                 }
             }
-        }
-        for (let t = 0; t < timesA.length; t++) {
-            document.getElementById("P" + t + "-textA").innerHTML = tsA[t]
-            document.getElementById("P" + t + "A").innerHTML = nA[t]
-            document.getElementById("P" + t + "JA").innerHTML = jjA[t]
-            document.getElementById("P" + t + "VA").innerHTML = vA[t]
-            document.getElementById("P" + t + "EA").innerHTML = epA[t]
-            document.getElementById("P" + t + "DA").innerHTML = derrA[t]
-            document.getElementById("P" + t + "GPA").innerHTML = GPA2A[t]
-            document.getElementById("P" + t + "GCA").innerHTML = GCA2A[t]
-            document.getElementById("P" + t + "SGA").innerHTML = SGA2A[t]
+            for (let t = 0; t < timesA.length; t++) {
+                document.getElementById("P" + t + "-textA").innerHTML = tsA[t]
+                document.getElementById("P" + t + "A").innerHTML = nA[t]
+                document.getElementById("P" + t + "JA").innerHTML = jjA[t]
+                document.getElementById("P" + t + "VA").innerHTML = vA[t]
+                document.getElementById("P" + t + "EA").innerHTML = epA[t]
+                document.getElementById("P" + t + "DA").innerHTML = derrA[t]
+                document.getElementById("P" + t + "GPA").innerHTML = GPA2A[t]
+                document.getElementById("P" + t + "GCA").innerHTML = GCA2A[t]
+                document.getElementById("P" + t + "SGA").innerHTML = SGA2A[t]
+            }
+            vencedores[0] = tsA[0]
+            vencedores[1] = tsA[1]
         }
     }
-}
-for(let r = 0; r <= 11;r++){
-    sessionStorage.setItem("entradaA["+r+"]",entradaA[r])
+    for (let r = 0; r <= 11; r++) {
+        sessionStorage.setItem("entradaA[" + r + "]", entradaA[r])
     }
 }

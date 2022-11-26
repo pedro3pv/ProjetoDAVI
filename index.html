@@ -1,1309 +1,1321 @@
 <!DOCTYPE html>
-<html lang="pt/br" style="display: flex; align-self: center; justify-content: center; align-content: center;">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tabela Copa do Mundo 2022</title>
-        <link rel="stylesheet" href="css/estilo.css">
-        <style>
-            input::-webkit-outer-spin-button,
-            input::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-            }
-        </style>
-    </head>
+<html lang="pt/br" style="display: flex; align-self: center; justify-content: center; align-content: center; background-color: rgba(204, 19, 72, 0.836);">
 
-    <body>
-        <h1> Projeto Copa do Mundo 2022 </h1>
-        <h2> Fase de Grupos</h2>
-        <!--A-->
-        <table border="1" style="margin-left: 50px;">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px;">PRIMEIRA FASE ---
-                GRUPO A</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>20/11/2022</td>
-                    <td>13:00</td>
-                    <td>Qatar</td>
-                    <td>
-                        <input id="20/11QA" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="20/11EA" type="number">
-                    </td>
-                    <td>Equador</td>
-                </tr>
-                <tr>
-                    <td>21/11/2022</td>
-                    <td>13:00</td>
-                    <td>Senegal</td>
-                    <td>
-                        <input id="21/11SA" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="21/11HA" type="number">
-                    </td>
-                    <td>Holanda</td>
-                </tr>
-                <tr>
-                    <td>25/11/2022</td>
-                    <td>10:00</td>
-                    <td>Qatar</td>
-                    <td>
-                        <input id="25/11QA" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="25/11SA" type="number">
-                    </td>
-                    <td>Senegal</td>
-                </tr>
-                <tr>
-                    <td>25/11/2022</td>
-                    <td>13:00</td>
-                    <td>Holanda</td>
-                    <td>
-                        <input id="25/11HA" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="25/11EA" type="number">
-                    </td>
-                    <td>Equador</td>
-                </tr>
-                <tr>
-                    <td>29/11/2022</td>
-                    <td>12:00</td>
-                    <td>Holanda</td>
-                    <td>
-                        <input id="29/11HA" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="29/11QA" type="number">
-                    </td>
-                    <td>Qatar</td>
-                </tr>
-                <tr>
-                    <td>29/11/2022</td>
-                    <td>12:00</td>
-                    <td>Equador</td>
-                    <td>
-                        <input id="29/11EA" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="29/11SA" type="number">
-                    </td>
-                    <td>Senegal</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO A</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textA">Catar</a></td>
-                    <td><a id="P0A">0</a></td>
-                    <td><a id="P0JA">0</a></td>
-                    <td><a id="P0VA">0</a></td>
-                    <td><a id="P0EA">0</a></td>
-                    <td><a id="P0DA">0</a></td>
-                    <td><a id="P0GPA">0</a></td>
-                    <td><a id="P0GCA">0</a></td>
-                    <td><a id="P0SGA">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textA">Equador</a></td>
-                    <td><a id="P1A">0</a></td>
-                    <td><a id="P1JA">0</a></td>
-                    <td><a id="P1VA">0</a></td>
-                    <td><a id="P1EA">0</a></td>
-                    <td><a id="P1DA">0</a></td>
-                    <td><a id="P1GPA">0</a></td>
-                    <td><a id="P1GCA">0</a></td>
-                    <td><a id="P1SGA">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textA">Senegal</a></td>
-                    <td><a id="P2A">0</a></td>
-                    <td><a id="P2JA">0</a></td>
-                    <td><a id="P2VA">0</a></td>
-                    <td><a id="P2EA">0</a></td>
-                    <td><a id="P2DA">0</a></td>
-                    <td><a id="P2GPA">0</a></td>
-                    <td><a id="P2GCA">0</a></td>
-                    <td><a id="P2SGA">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textA">Equador</a></td>
-                    <td><a id="P3A">0</a></td>
-                    <td><a id="P3JA">0</a></td>
-                    <td><a id="P3VA">0</a></td>
-                    <td><a id="P3EA">0</a></td>
-                    <td><a id="P3DA">0</a></td>
-                    <td><a id="P3GPA">0</a></td>
-                    <td><a id="P3GCA">0</a></td>
-                    <td><a id="P3SGA">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--B-->
-        <table border="1">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO B</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>21/11/2022</td>
-                    <td>10:00</td>
-                    <td>Inglaterra</td>
-                    <td>
-                        <input id="21/11IB" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="21/11IRB" type="number">
-                    </td>
-                    <td>Irã</td>
-                </tr>
-                <tr>
-                    <td>21/11/2022</td>
-                    <td>16:00</td>
-                    <td>Estados Unidos</td>
-                    <td>
-                        <input id="21/11EB" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="21/11PB" type="number">
-                    </td>
-                    <td>País de Gales</td>
-                </tr>
-                <tr>
-                    <td>25/11/2022</td>
-                    <td>07:00</td>
-                    <td>País de Gales</td>
-                    <td>
-                        <input id="25/11PB" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="25/11IRB" type="number">
-                    </td>
-                    <td>Irã</td>
-                </tr>
-                <tr>
-                    <td>25/11/2022</td>
-                    <td>13:00</td>
-                    <td>Inglaterra</td>
-                    <td>
-                        <input id="25/11IB" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="25/11EB" type="number">
-                    </td>
-                    <td>Estados Unidos</td>
-                </tr>
-                <tr>
-                    <td>29/11/2022</td>
-                    <td>16:00</td>
-                    <td>País de Gales</td>
-                    <td>
-                        <input id="29/11PB" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="29/11IB" type="number">
-                    </td>
-                    <td>Inglaterra</td>
-                </tr>
-                <tr>
-                    <td>29/11/2022</td>
-                    <td>16:00</td>
-                    <td>Irã</td>
-                    <td>
-                        <input id="29/11IRB" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="29/11EB" type="number">
-                    </td>
-                    <td>Estados Unidos</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO B</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textB">Inglaterra</a></td>
-                    <td><a id="P0B">0</a></td>
-                    <td><a id="P0JB">0</a></td>
-                    <td><a id="P0VB">0</a></td>
-                    <td><a id="P0EB">0</a></td>
-                    <td><a id="P0DB">0</a></td>
-                    <td><a id="P0GPB">0</a></td>
-                    <td><a id="P0GCB">0</a></td>
-                    <td><a id="P0SGB">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textB">Irã</a></td>
-                    <td><a id="P1B">0</a></td>
-                    <td><a id="P1JB">0</a></td>
-                    <td><a id="P1VB">0</a></td>
-                    <td><a id="P1EB">0</a></td>
-                    <td><a id="P1DB">0</a></td>
-                    <td><a id="P1GPB">0</a></td>
-                    <td><a id="P1GCB">0</a></td>
-                    <td><a id="P1SGB">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textB">Estados Unidos</a></td>
-                    <td><a id="P2B">0</a></td>
-                    <td><a id="P2JB">0</a></td>
-                    <td><a id="P2VB">0</a></td>
-                    <td><a id="P2EB">0</a></td>
-                    <td><a id="P2DB">0</a></td>
-                    <td><a id="P2GPB">0</a></td>
-                    <td><a id="P2GCB">0</a></td>
-                    <td><a id="P2SGB">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textB">País de Gales</a></td>
-                    <td><a id="P3B">0</a></td>
-                    <td><a id="P3JB">0</a></td>
-                    <td><a id="P3VB">0</a></td>
-                    <td><a id="P3EB">0</a></td>
-                    <td><a id="P3DB">0</a></td>
-                    <td><a id="P3GPB">0</a></td>
-                    <td><a id="P3GCB">0</a></td>
-                    <td><a id="P3SGB">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--C-->
-        <table border="1"" style = " margin-left: 10px;">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO C</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>22/11/2022</td>
-                    <td>07:00</td>
-                    <td>Argentina</td>
-                    <td>
-                        <input id="22/11AC" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="22/11ARC" type="number">
-                    </td>
-                    <td>Arábia Saudita</td>
-                </tr>
-                <tr>
-                    <td>22/11/2022</td>
-                    <td>13:00</td>
-                    <td>México</td>
-                    <td>
-                        <input id="22/11MC" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="22/11PC" type="number">
-                    </td>
-                    <td>Polônia</td>
-                </tr>
-                <tr>
-                    <td>26/11/2022</td>
-                    <td>10:00</td>
-                    <td>Polônia</td>
-                    <td>
-                        <input id="26/11PC" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="26/11ARC" type="number">
-                    </td>
-                    <td>Arábia Saudita</td>
-                </tr>
-                <tr>
-                    <td>26/11/2022</td>
-                    <td>16:00</td>
-                    <td>Argentina</td>
-                    <td>
-                        <input id="26/11AC" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="26/11MC" type="number">
-                    </td>
-                    <td>México</td>
-                </tr>
-                <tr>
-                    <td>30/11/2022</td>
-                    <td>16:00</td>
-                    <td>Polônia</td>
-                    <td>
-                        <input id="30/11PC" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="30/11AC" type="number">
-                    </td>
-                    <td>Argentina</td>
-                </tr>
-                <tr>
-                    <td>30/11/2022</td>
-                    <td>16:00</td>
-                    <td>Arábia Saudita</td>
-                    <td>
-                        <input id="30/11ARC" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="30/11MC" type="number">
-                    </td>
-                    <td>México</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO C</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textC">Argentina</a></td>
-                    <td><a id="P0C">0</a></td>
-                    <td><a id="P0JC">0</a></td>
-                    <td><a id="P0VC">0</a></td>
-                    <td><a id="P0EC">0</a></td>
-                    <td><a id="P0DC">0</a></td>
-                    <td><a id="P0GPC">0</a></td>
-                    <td><a id="P0GCC">0</a></td>
-                    <td><a id="P0SGC">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textC">Arábia Saudita</a></td>
-                    <td><a id="P1C">0</a></td>
-                    <td><a id="P1JC">0</a></td>
-                    <td><a id="P1VC">0</a></td>
-                    <td><a id="P1EC">0</a></td>
-                    <td><a id="P1DC">0</a></td>
-                    <td><a id="P1GPC">0</a></td>
-                    <td><a id="P1GCC">0</a></td>
-                    <td><a id="P1SGC">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textC">México</a></td>
-                    <td><a id="P2C">0</a></td>
-                    <td><a id="P2JC">0</a></td>
-                    <td><a id="P2VC">0</a></td>
-                    <td><a id="P2EC">0</a></td>
-                    <td><a id="P2DC">0</a></td>
-                    <td><a id="P2GPC">0</a></td>
-                    <td><a id="P2GCC">0</a></td>
-                    <td><a id="P2SGC">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textC">Polônia</a></td>
-                    <td><a id="P3C">0</a></td>
-                    <td><a id="P3JC">0</a></td>
-                    <td><a id="P3VC">0</a></td>
-                    <td><a id="P3EC">0</a></td>
-                    <td><a id="P3DC">0</a></td>
-                    <td><a id="P3GPC">0</a></td>
-                    <td><a id="P3GCC">0</a></td>
-                    <td><a id="P3SGC">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--D-->
-        <table border="1"" style = " margin-left: 20px;">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO D</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>22/11/2022</td>
-                    <td>10:00</td>
-                    <td>Dinamarca</td>
-                    <td>
-                        <input id="22/11DD" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="22/11TD" type="number">
-                    </td>
-                    <td>Tunísia</td>
-                </tr>
-                <tr>
-                    <td>22/11/2022</td>
-                    <td>16:00</td>
-                    <td>França</td>
-                    <td>
-                        <input id="22/11FD" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="22/11AD" type="number">
-                    </td>
-                    <td>Austrália</td>
-                </tr>
-                <tr>
-                    <td>26/11/2022</td>
-                    <td>07:00</td>
-                    <td>Tunísia</td>
-                    <td>
-                        <input id="26/11TD" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="26/11AD" type="number">
-                    </td>
-                    <td>Austrália</td>
-                </tr>
-                <tr>
-                    <td>26/11/2022</td>
-                    <td>13:00</td>
-                    <td>França</td>
-                    <td>
-                        <input id="26/11FD" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="26/11DD" type="number">
-                    </td>
-                    <td>Dinamarca</td>
-                </tr>
-                <tr>
-                    <td>30/11/2022</td>
-                    <td>12:00</td>
-                    <td>Tunísia</td>
-                    <td>
-                        <input id="30/11TD" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="30/11FD" type="number">
-                    </td>
-                    <td>França</td>
-                </tr>
-                <tr>
-                    <td>30/11/2022</td>
-                    <td>12:00</td>
-                    <td>Austrália</td>
-                    <td>
-                        <input id="30/11AD" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="30/11DD" type="number">
-                    </td>
-                    <td>Dinamarca</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO D</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textD">França</a></td>
-                    <td><a id="P0D">0</a></td>
-                    <td><a id="P0JD">0</a></td>
-                    <td><a id="P0VD">0</a></td>
-                    <td><a id="P0ED">0</a></td>
-                    <td><a id="P0DD">0</a></td>
-                    <td><a id="P0GPD">0</a></td>
-                    <td><a id="P0GCD">0</a></td>
-                    <td><a id="P0SGD">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textD">Austrália</a></td>
-                    <td><a id="P1D">0</a></td>
-                    <td><a id="P1JD">0</a></td>
-                    <td><a id="P1VD">0</a></td>
-                    <td><a id="P1ED">0</a></td>
-                    <td><a id="P1DD">0</a></td>
-                    <td><a id="P1GPD">0</a></td>
-                    <td><a id="P1GCD">0</a></td>
-                    <td><a id="P1SGD">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textD">Dinamarca</a></td>
-                    <td><a id="P2D">0</a></td>
-                    <td><a id="P2JD">0</a></td>
-                    <td><a id="P2VD">0</a></td>
-                    <td><a id="P2ED">0</a></td>
-                    <td><a id="P2DD">0</a></td>
-                    <td><a id="P2GPD">0</a></td>
-                    <td><a id="P2GCD">0</a></td>
-                    <td><a id="P2SGD">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textD">Tunísia</a></td>
-                    <td><a id="P3D">0</a></td>
-                    <td><a id="P3JD">0</a></td>
-                    <td><a id="P3VD">0</a></td>
-                    <td><a id="P3ED">0</a></td>
-                    <td><a id="P3DD">0</a></td>
-                    <td><a id="P3GPD">0</a></td>
-                    <td><a id="P3GCD">0</a></td>
-                    <td><a id="P3SGD">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--E-->
-        <table border="1"" style = " margin-left: 20px;">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO E</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>23/11/2022</td>
-                    <td>10:00</td>
-                    <td>Alemanha</td>
-                    <td>
-                        <input id="23/11AE" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="23/11JE" type="number">
-                    </td>
-                    <td>Japão</td>
-                </tr>
-                <tr>
-                    <td>23/11/2022</td>
-                    <td>13:00</td>
-                    <td>Espanha</td>
-                    <td>
-                        <input id="23/11EE" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="23/11CE" type="number">
-                    </td>
-                    <td>Costa Rica</td>
-                </tr>
-                <tr>
-                    <td>27/11/2022</td>
-                    <td>07:00</td>
-                    <td>Japão</td>
-                    <td>
-                        <input id="27/11JE" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="27/11CE" type="number">
-                    </td>
-                    <td>Costa Rica</td>
-                </tr>
-                <tr>
-                    <td>27/11/2022</td>
-                    <td>16:00</td>
-                    <td>Espanha</td>
-                    <td>
-                        <input id="27/11EE" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="27/11AE" type="number">
-                    </td>
-                    <td>Alemanha</td>
-                </tr>
-                <tr>
-                    <td>01/12/2022</td>
-                    <td>16h00</td>
-                    <td>Japão</td>
-                    <td>
-                        <input id="01/12JE" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="01/12EE" type="number">
-                    </td>
-                    <td>Espanha</td>
-                </tr>
-                <tr>
-                    <td>01/12/2022</td>
-                    <td>16h00</td>
-                    <td>Costa Rica</td>
-                    <td>
-                        <input id="01/12CE" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="01/12AE" type="number">
-                    </td>
-                    <td>Alemanha</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO E</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textE">Espanha</a></td>
-                    <td><a id="P0E">0</a></td>
-                    <td><a id="P0JE">0</a></td>
-                    <td><a id="P0VE">0</a></td>
-                    <td><a id="P0EE">0</a></td>
-                    <td><a id="P0DE">0</a></td>
-                    <td><a id="P0GPE">0</a></td>
-                    <td><a id="P0GCE">0</a></td>
-                    <td><a id="P0SGE">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textE">Costa Rica</a></td>
-                    <td><a id="P1E">0</a></td>
-                    <td><a id="P1JE">0</a></td>
-                    <td><a id="P1VE">0</a></td>
-                    <td><a id="P1EE">0</a></td>
-                    <td><a id="P1DE">0</a></td>
-                    <td><a id="P1GPE">0</a></td>
-                    <td><a id="P1GCE">0</a></td>
-                    <td><a id="P1SGE">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textE">Alemanha</a></td>
-                    <td><a id="P2E">0</a></td>
-                    <td><a id="P2JE">0</a></td>
-                    <td><a id="P2VE">0</a></td>
-                    <td><a id="P2EE">0</a></td>
-                    <td><a id="P2DE">0</a></td>
-                    <td><a id="P2GPE">0</a></td>
-                    <td><a id="P2GCE">0</a></td>
-                    <td><a id="P2SGE">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textE">Japão</a></td>
-                    <td><a id="P3E">0</a></td>
-                    <td><a id="P3JE">0</a></td>
-                    <td><a id="P3VE">0</a></td>
-                    <td><a id="P3EE">0</a></td>
-                    <td><a id="P3DE">0</a></td>
-                    <td><a id="P3GPE">0</a></td>
-                    <td><a id="P3GCE">0</a></td>
-                    <td><a id="P3SGE">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--F-->
-        <table border="1"" style = " margin-left: 25px;">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO F</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>23/11/2022</td>
-                    <td>07:00</td>
-                    <td>Marrocos</td>
-                    <td>
-                        <input id="23/11MF" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="23/11MF" type="number">
-                    </td>
-                    <td>Croácia</td>
-                </tr>
-                <tr>
-                    <td>23/11/2022</td>
-                    <td>16:00</td>
-                    <td>Bélgica</td>
-                    <td>
-                        <input id="23/11BF" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="23/11CF" type="number">
-                    </td>
-                    <td>Canadá</td>
-                </tr>
-                <tr>
-                    <td>27/11/2022</td>
-                    <td>10:00</td>
-                    <td>Bélgica</td>
-                    <td>
-                        <input id="27/11BF" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="27/11MF" type="number">
-                    </td>
-                    <td>Marrocos</td>
-                </tr>
-                <tr>
-                    <td>27/11/2022</td>
-                    <td>13:00</td>
-                    <td>Croácia</td>
-                    <td>
-                        <input id="27/11CF" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="27/11CAF" type="number">
-                    </td>
-                    <td>Canadá</td>
-                </tr>
-                <tr>
-                    <td>01/12/2022</td>
-                    <td>12h00</td>
-                    <td>Croácia</td>
-                    <td>
-                        <input id="01/12CF" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="01/12BF" type="number">
-                    </td>
-                    <td>Bélgica</td>
-                </tr>
-                <tr>
-                    <td>01/12/2022</td>
-                    <td>12h00</td>
-                    <td>Canadá</td>
-                    <td>
-                        <input id="01/12CAF" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="01/12MF" type="number">
-                    </td>
-                    <td>Marrocos</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO F</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textF">Bélgica</a></td>
-                    <td><a id="P0F">0</a></td>
-                    <td><a id="P0JF">0</a></td>
-                    <td><a id="P0VF">0</a></td>
-                    <td><a id="P0EF">0</a></td>
-                    <td><a id="P0DF">0</a></td>
-                    <td><a id="P0GPF">0</a></td>
-                    <td><a id="P0GCF">0</a></td>
-                    <td><a id="P0SGF">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textF">Canadá</a></td>
-                    <td><a id="P1F">0</a></td>
-                    <td><a id="P1JF">0</a></td>
-                    <td><a id="P1VF">0</a></td>
-                    <td><a id="P1EF">0</a></td>
-                    <td><a id="P1DF">0</a></td>
-                    <td><a id="P1GPF">0</a></td>
-                    <td><a id="P1GCF">0</a></td>
-                    <td><a id="P1SGF">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textF">Marrocos</a></td>
-                    <td><a id="P2F">0</a></td>
-                    <td><a id="P2JF">0</a></td>
-                    <td><a id="P2VF">0</a></td>
-                    <td><a id="P2EF">0</a></td>
-                    <td><a id="P2DF">0</a></td>
-                    <td><a id="P2GPF">0</a></td>
-                    <td><a id="P2GCF">0</a></td>
-                    <td><a id="P2SGF">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textF">Croácia</a></td>
-                    <td><a id="P3F">0</a></td>
-                    <td><a id="P3JF">0</a></td>
-                    <td><a id="P3VF">0</a></td>
-                    <td><a id="P3EF">0</a></td>
-                    <td><a id="P3DF">0</a></td>
-                    <td><a id="P3GPF">0</a></td>
-                    <td><a id="P3GCF">0</a></td>
-                    <td><a id="P3SGF">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--G-->
-        <table border="1"" style = " margin-left: 20px;">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO G</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>24/11/2022</td>
-                    <td>07:00</td>
-                    <td>Suíça</td>
-                    <td>
-                        <input id="24/11SUG" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="24/11CG" type="number">
-                    </td>
-                    <td>Camarões</td>
-                </tr>
-                <tr>
-                    <td>24/11/2022</td>
-                    <td>16:00</td>
-                    <td>Brasil</td>
-                    <td>
-                        <input id="24/11BG" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="24/11SEG" type="number">
-                    </td>
-                    <td>Sérvia</td>
-                </tr>
-                <tr>
-                    <td>28/11/2022</td>
-                    <td>07:00</td>
-                    <td>Camarões</td>
-                    <td>
-                        <input id="28/11CG" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="28/11SEG" type="number">
-                    </td>
-                    <td>Sérvia</td>
-                </tr>
-                <tr>
-                    <td>28/11/2022</td>
-                    <td>13:00</td>
-                    <td>Brasil</td>
-                    <td>
-                        <input id="28/11BG" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="28/11SUG" type="number">
-                    </td>
-                    <td>Suíça</td>
-                </tr>
-                <tr>
-                    <td>02/12/2022</td>
-                    <td>16h00</td>
-                    <td>Camarões</td>
-                    <td>
-                        <input id="02/12CG" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="02/12BG" type="number">
-                    </td>
-                    <td>Brasil</td>
-                </tr>
-                <tr>
-                    <td>02/12/2022</td>
-                    <td>16h00</td>
-                    <td>Sérvia</td>
-                    <td>
-                        <input id="02/12SEG" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="02/12SUG" type="number">
-                    </td>
-                    <td>Suíça</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO G</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textG">Brasil</a></td>
-                    <td><a id="P0G">0</a></td>
-                    <td><a id="P0JG">0</a></td>
-                    <td><a id="P0VG">0</a></td>
-                    <td><a id="P0EG">0</a></td>
-                    <td><a id="P0DG">0</a></td>
-                    <td><a id="P0GPG">0</a></td>
-                    <td><a id="P0GCG">0</a></td>
-                    <td><a id="P0SGG">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textG">Sérvia</a></td>
-                    <td><a id="P1G">0</a></td>
-                    <td><a id="P1JG">0</a></td>
-                    <td><a id="P1VG">0</a></td>
-                    <td><a id="P1EG">0</a></td>
-                    <td><a id="P1DG">0</a></td>
-                    <td><a id="P1GPG">0</a></td>
-                    <td><a id="P1GCG">0</a></td>
-                    <td><a id="P1SGG">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textG">Suíça</a></td>
-                    <td><a id="P2G">0</a></td>
-                    <td><a id="P2JG">0</a></td>
-                    <td><a id="P2VG">0</a></td>
-                    <td><a id="P2EG">0</a></td>
-                    <td><a id="P2DG">0</a></td>
-                    <td><a id="P2GPG">0</a></td>
-                    <td><a id="P2GCG">0</a></td>
-                    <td><a id="P2SGG">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textG">Camarões</a></td>
-                    <td><a id="P3G">0</a></td>
-                    <td><a id="P3JG">0</a></td>
-                    <td><a id="P3VG">0</a></td>
-                    <td><a id="P3EG">0</a></td>
-                    <td><a id="P3DG">0</a></td>
-                    <td><a id="P3GPG">0</a></td>
-                    <td><a id="P3GCG">0</a></td>
-                    <td><a id="P3SGG">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--H-->
-        <table border="1"">
-            <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
-                PRIMEIRA FASE --- GRUPO H</caption>
-            <thead>
-                <tr>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                    <th>TIME 1</th>
-                    <th>GOLS</th>
-                    <th>X</th>
-                    <th>GOLS</th>
-                    <th>TIME 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>24/11/2022</td>
-                    <td>10:00</td>
-                    <td>Uruguai</td>
-                    <td>
-                        <input id="24/11UH" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="24/11CH" type="number">
-                    </td>
-                    <td>Coreia do Sul</td>
-                </tr>
-                <tr>
-                    <td>24/11/2022</td>
-                    <td>13:00</td>
-                    <td>Portugal</td>
-                    <td>
-                        <input id="24/11PH" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="24/11GH" type="number">
-                    </td>
-                    <td>Gana</td>
-                </tr>
-                <tr>
-                    <td>28/11/2022</td>
-                    <td>10:00</td>
-                    <td>Coreia do Sul </td>
-                    <td>
-                        <input id="28/11CH" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="28/11GH" type="number">
-                    </td>
-                    <td>Gana</td>
-                </tr>
-                <tr>
-                    <td>28/11/2022</td>
-                    <td>16:00</td>
-                    <td>Portugal</td>
-                    <td>
-                        <input id="28/11PH" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="28/11UH" type="number">
-                    </td>
-                    <td>Uruguai</td>
-                </tr>
-                <tr>
-                    <td>02/12/2022</td>
-                    <td>12h00</td>
-                    <td>Coreia do Sul</td>
-                    <td>
-                        <input id="02/12CH" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="02/12PH" type="number">
-                    </td>
-                    <td>Portugal</td>
-                </tr>
-                <tr>
-                    <td>02/12/2022</td>
-                    <td>12h00</td>
-                    <td>Gana</td>
-                    <td>
-                        <input id="02/12GH" type="number">
-                    </td>
-                    <td>X</td>
-                    <td>
-                        <input id="02/12UH" type="number">
-                    </td>
-                    <td>Uruguai</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="center" ; border="1">
-            <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
-                GRUPO H</caption>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th style="width: 8%;">PT</th>
-                    <th style="width: 8%;">J</th>
-                    <th style="width: 8%;">V</th>
-                    <th style="width: 8%;">E</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">D</th>
-                    <th style="width: 8%;">GP</th>
-                    <th style="width: 8%;">GC</th>
-                    <th style="width: 8%;">SG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a id="P0-textH">Portugal</a></td>
-                    <td><a id="P0H">0</a></td>
-                    <td><a id="P0JH">0</a></td>
-                    <td><a id="P0VH">0</a></td>
-                    <td><a id="P0EH">0</a></td>
-                    <td><a id="P0DH">0</a></td>
-                    <td><a id="P0GPH">0</a></td>
-                    <td><a id="P0GCH">0</a></td>
-                    <td><a id="P0SGH">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P1-textH">Gana</a></td>
-                    <td><a id="P1H">0</a></td>
-                    <td><a id="P1JH">0</a></td>
-                    <td><a id="P1VH">0</a></td>
-                    <td><a id="P1EH">0</a></td>
-                    <td><a id="P1DH">0</a></td>
-                    <td><a id="P1GPH">0</a></td>
-                    <td><a id="P1GCH">0</a></td>
-                    <td><a id="P1SGH">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P2-textH">Uruguai</a></td>
-                    <td><a id="P2H">0</a></td>
-                    <td><a id="P2JH">0</a></td>
-                    <td><a id="P2VH">0</a></td>
-                    <td><a id="P2EH">0</a></td>
-                    <td><a id="P2DH">0</a></td>
-                    <td><a id="P2GPH">0</a></td>
-                    <td><a id="P2GCH">0</a></td>
-                    <td><a id="P2SGH">0</a></td>
-                </tr>
-                <tr>
-                    <td><a id="P3-textH">Coreia do Sul</a></td>
-                    <td><a id="P3H">0</a></td>
-                    <td><a id="P3JH">0</a></td>
-                    <td><a id="P3VH">0</a></td>
-                    <td><a id="P3EH">0</a></td>
-                    <td><a id="P3DH">0</a></td>
-                    <td><a id="P3GPH">0</a></td>
-                    <td><a id="P3GCH">0</a></td>
-                    <td><a id="P3SGH">0</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="margin-top:150px ;">
-            By, João Pedro Monteiro e Pedro Augusto.
-        <address>
-            Fortaleza, <strong>CE</strong>
-        </address>
-        </p>
-        <p style="margin-left: 600px; margin-top: -30px;">
-            Avançar para as oitavas de final <a href="oitavas.html">Clicando aqui</a>
-        </p>
-        <script src="js/GRUPO-A.js"></script>
-        <script src="js/GRUPO-B.js"></script>
-        <script src="js/GRUPO-C.js"></script>
-        <script src="js/GRUPO-D.js"></script>
-        <script src="js/GRUPO-E.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Copa do Mundo 2022</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Projeto Copa do Mundo 2022 </h1>
+    <h2> Fase de Grupos</h2>
+    <!--A-->
+    <table border="1" style="margin-left: 50px;">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px;">PRIMEIRA FASE ---
+            GRUPO A</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>20/11/2022</td>
+                <td>13:00</td>
+                <td>
+                    <img src="img/qatar.png" style="height:20px; width: 40px; margin-top: 3px; margin-left: 2px;">
+                     <a>Qatar</a>
+                </td>
+                <td>
+                    <input id="20/11QA" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="20/11EA" type="number">
+                </td>
+                <td>
+                    <img src="img/equador.gif"  style="height:20px; width: 40px; margin-top: 3px; margin-left: 2px;">
+                    <a>Equador</a>
+                </td>
+            </tr>
+            <tr>
+                <td>21/11/2022</td>
+                <td>13:00</td>
+                <td>Senegal</td>
+                <td>
+                    <input id="21/11SA" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="21/11HA" type="number">
+                </td>
+                <td>Holanda</td>
+            </tr>
+            <tr>
+                <td>25/11/2022</td>
+                <td>10:00</td>
+                <td>Qatar</td>
+                <td>
+                    <input id="25/11QA" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="25/11SA" type="number">
+                </td>
+                <td>Senegal</td>
+            </tr>
+            <tr>
+                <td>25/11/2022</td>
+                <td>13:00</td>
+                <td>Holanda</td>
+                <td>
+                    <input id="25/11HA" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="25/11EA" type="number">
+                </td>
+                <td>Equador</td>
+            </tr>
+            <tr>
+                <td>29/11/2022</td>
+                <td>12:00</td>
+                <td>Holanda</td>
+                <td>
+                    <input id="29/11HA" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="29/11QA" type="number">
+                </td>
+                <td>Qatar</td>
+            </tr>
+            <tr>
+                <td>29/11/2022</td>
+                <td>12:00</td>
+                <td>Equador</td>
+                <td>
+                    <input id="29/11EA" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="29/11SA" type="number">
+                </td>
+                <td>Senegal</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO A</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textA">Catar</a></td>
+                <td><a id="P0A">0</a></td>
+                <td><a id="P0JA">0</a></td>
+                <td><a id="P0VA">0</a></td>
+                <td><a id="P0EA">0</a></td>
+                <td><a id="P0DA">0</a></td>
+                <td><a id="P0GPA">0</a></td>
+                <td><a id="P0GCA">0</a></td>
+                <td><a id="P0SGA">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textA">Equador</a></td>
+                <td><a id="P1A">0</a></td>
+                <td><a id="P1JA">0</a></td>
+                <td><a id="P1VA">0</a></td>
+                <td><a id="P1EA">0</a></td>
+                <td><a id="P1DA">0</a></td>
+                <td><a id="P1GPA">0</a></td>
+                <td><a id="P1GCA">0</a></td>
+                <td><a id="P1SGA">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textA">Senegal</a></td>
+                <td><a id="P2A">0</a></td>
+                <td><a id="P2JA">0</a></td>
+                <td><a id="P2VA">0</a></td>
+                <td><a id="P2EA">0</a></td>
+                <td><a id="P2DA">0</a></td>
+                <td><a id="P2GPA">0</a></td>
+                <td><a id="P2GCA">0</a></td>
+                <td><a id="P2SGA">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textA">Equador</a></td>
+                <td><a id="P3A">0</a></td>
+                <td><a id="P3JA">0</a></td>
+                <td><a id="P3VA">0</a></td>
+                <td><a id="P3EA">0</a></td>
+                <td><a id="P3DA">0</a></td>
+                <td><a id="P3GPA">0</a></td>
+                <td><a id="P3GCA">0</a></td>
+                <td><a id="P3SGA">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--B-->
+    <table border="1">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
+            PRIMEIRA FASE --- GRUPO B</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>21/11/2022</td>
+                <td>10:00</td>
+                <td>Inglaterra</td>
+                <td>
+                    <input id="21/11IB" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="21/11IRB" type="number">
+                </td>
+                <td>Irã</td>
+            </tr>
+            <tr>
+                <td>21/11/2022</td>
+                <td>16:00</td>
+                <td>Estados Unidos</td>
+                <td>
+                    <input id="21/11EB" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="21/11PB" type="number">
+                </td>
+                <td>País de Gales</td>
+            </tr>
+            <tr>
+                <td>25/11/2022</td>
+                <td>07:00</td>
+                <td>País de Gales</td>
+                <td>
+                    <input id="25/11PB" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="25/11IRB" type="number">
+                </td>
+                <td>Irã</td>
+            </tr>
+            <tr>
+                <td>25/11/2022</td>
+                <td>13:00</td>
+                <td>Inglaterra</td>
+                <td>
+                    <input id="25/11IB" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="25/11EB" type="number">
+                </td>
+                <td>Estados Unidos</td>
+            </tr>
+            <tr>
+                <td>29/11/2022</td>
+                <td>16:00</td>
+                <td>País de Gales</td>
+                <td>
+                    <input id="29/11PB" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="29/11IB" type="number">
+                </td>
+                <td>Inglaterra</td>
+            </tr>
+            <tr>
+                <td>29/11/2022</td>
+                <td>16:00</td>
+                <td>Irã</td>
+                <td>
+                    <input id="29/11IRB" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="29/11EB" type="number">
+                </td>
+                <td>Estados Unidos</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO B</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textB">Inglaterra</a></td>
+                <td><a id="P0B">0</a></td>
+                <td><a id="P0JB">0</a></td>
+                <td><a id="P0VB">0</a></td>
+                <td><a id="P0EB">0</a></td>
+                <td><a id="P0DB">0</a></td>
+                <td><a id="P0GPB">0</a></td>
+                <td><a id="P0GCB">0</a></td>
+                <td><a id="P0SGB">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textB">Irã</a></td>
+                <td><a id="P1B">0</a></td>
+                <td><a id="P1JB">0</a></td>
+                <td><a id="P1VB">0</a></td>
+                <td><a id="P1EB">0</a></td>
+                <td><a id="P1DB">0</a></td>
+                <td><a id="P1GPB">0</a></td>
+                <td><a id="P1GCB">0</a></td>
+                <td><a id="P1SGB">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textB">Estados Unidos</a></td>
+                <td><a id="P2B">0</a></td>
+                <td><a id="P2JB">0</a></td>
+                <td><a id="P2VB">0</a></td>
+                <td><a id="P2EB">0</a></td>
+                <td><a id="P2DB">0</a></td>
+                <td><a id="P2GPB">0</a></td>
+                <td><a id="P2GCB">0</a></td>
+                <td><a id="P2SGB">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textB">País de Gales</a></td>
+                <td><a id="P3B">0</a></td>
+                <td><a id="P3JB">0</a></td>
+                <td><a id="P3VB">0</a></td>
+                <td><a id="P3EB">0</a></td>
+                <td><a id="P3DB">0</a></td>
+                <td><a id="P3GPB">0</a></td>
+                <td><a id="P3GCB">0</a></td>
+                <td><a id="P3SGB">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--C-->
+    <table border="1"" style = " margin-left: 10px;">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
+            PRIMEIRA FASE --- GRUPO C</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22/11/2022</td>
+                <td>07:00</td>
+                <td>Argentina</td>
+                <td>
+                    <input id="22/11AC" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="22/11ARC" type="number">
+                </td>
+                <td>Arábia Saudita</td>
+            </tr>
+            <tr>
+                <td>22/11/2022</td>
+                <td>13:00</td>
+                <td>México</td>
+                <td>
+                    <input id="22/11MC" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="22/11PC" type="number">
+                </td>
+                <td>Polônia</td>
+            </tr>
+            <tr>
+                <td>26/11/2022</td>
+                <td>10:00</td>
+                <td>Polônia</td>
+                <td>
+                    <input id="26/11PC" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="26/11ARC" type="number">
+                </td>
+                <td>Arábia Saudita</td>
+            </tr>
+            <tr>
+                <td>26/11/2022</td>
+                <td>16:00</td>
+                <td>Argentina</td>
+                <td>
+                    <input id="26/11AC" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="26/11MC" type="number">
+                </td>
+                <td>México</td>
+            </tr>
+            <tr>
+                <td>30/11/2022</td>
+                <td>16:00</td>
+                <td>Polônia</td>
+                <td>
+                    <input id="30/11PC" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="30/11AC" type="number">
+                </td>
+                <td>Argentina</td>
+            </tr>
+            <tr>
+                <td>30/11/2022</td>
+                <td>16:00</td>
+                <td>Arábia Saudita</td>
+                <td>
+                    <input id="30/11ARC" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="30/11MC" type="number">
+                </td>
+                <td>México</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO C</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textC">Argentina</a></td>
+                <td><a id="P0C">0</a></td>
+                <td><a id="P0JC">0</a></td>
+                <td><a id="P0VC">0</a></td>
+                <td><a id="P0EC">0</a></td>
+                <td><a id="P0DC">0</a></td>
+                <td><a id="P0GPC">0</a></td>
+                <td><a id="P0GCC">0</a></td>
+                <td><a id="P0SGC">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textC">Arábia Saudita</a></td>
+                <td><a id="P1C">0</a></td>
+                <td><a id="P1JC">0</a></td>
+                <td><a id="P1VC">0</a></td>
+                <td><a id="P1EC">0</a></td>
+                <td><a id="P1DC">0</a></td>
+                <td><a id="P1GPC">0</a></td>
+                <td><a id="P1GCC">0</a></td>
+                <td><a id="P1SGC">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textC">México</a></td>
+                <td><a id="P2C">0</a></td>
+                <td><a id="P2JC">0</a></td>
+                <td><a id="P2VC">0</a></td>
+                <td><a id="P2EC">0</a></td>
+                <td><a id="P2DC">0</a></td>
+                <td><a id="P2GPC">0</a></td>
+                <td><a id="P2GCC">0</a></td>
+                <td><a id="P2SGC">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textC">Polônia</a></td>
+                <td><a id="P3C">0</a></td>
+                <td><a id="P3JC">0</a></td>
+                <td><a id="P3VC">0</a></td>
+                <td><a id="P3EC">0</a></td>
+                <td><a id="P3DC">0</a></td>
+                <td><a id="P3GPC">0</a></td>
+                <td><a id="P3GCC">0</a></td>
+                <td><a id="P3SGC">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--D-->
+    <table border="1"" style = " margin-left: 20px;">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
+            PRIMEIRA FASE --- GRUPO D</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>22/11/2022</td>
+                <td>10:00</td>
+                <td>Dinamarca</td>
+                <td>
+                    <input id="22/11DD" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="22/11TD" type="number">
+                </td>
+                <td>Tunísia</td>
+            </tr>
+            <tr>
+                <td>22/11/2022</td>
+                <td>16:00</td>
+                <td>França</td>
+                <td>
+                    <input id="22/11FD" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="22/11AD" type="number">
+                </td>
+                <td>Austrália</td>
+            </tr>
+            <tr>
+                <td>26/11/2022</td>
+                <td>07:00</td>
+                <td>Tunísia</td>
+                <td>
+                    <input id="26/11TD" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="26/11AD" type="number">
+                </td>
+                <td>Austrália</td>
+            </tr>
+            <tr>
+                <td>26/11/2022</td>
+                <td>13:00</td>
+                <td>França</td>
+                <td>
+                    <input id="26/11FD" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="26/11DD" type="number">
+                </td>
+                <td>Dinamarca</td>
+            </tr>
+            <tr>
+                <td>30/11/2022</td>
+                <td>12:00</td>
+                <td>Tunísia</td>
+                <td>
+                    <input id="30/11TD" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="30/11FD" type="number">
+                </td>
+                <td>França</td>
+            </tr>
+            <tr>
+                <td>30/11/2022</td>
+                <td>12:00</td>
+                <td>Austrália</td>
+                <td>
+                    <input id="30/11AD" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="30/11DD" type="number">
+                </td>
+                <td>Dinamarca</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO D</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textD">França</a></td>
+                <td><a id="P0D">0</a></td>
+                <td><a id="P0JD">0</a></td>
+                <td><a id="P0VD">0</a></td>
+                <td><a id="P0ED">0</a></td>
+                <td><a id="P0DD">0</a></td>
+                <td><a id="P0GPD">0</a></td>
+                <td><a id="P0GCD">0</a></td>
+                <td><a id="P0SGD">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textD">Austrália</a></td>
+                <td><a id="P1D">0</a></td>
+                <td><a id="P1JD">0</a></td>
+                <td><a id="P1VD">0</a></td>
+                <td><a id="P1ED">0</a></td>
+                <td><a id="P1DD">0</a></td>
+                <td><a id="P1GPD">0</a></td>
+                <td><a id="P1GCD">0</a></td>
+                <td><a id="P1SGD">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textD">Dinamarca</a></td>
+                <td><a id="P2D">0</a></td>
+                <td><a id="P2JD">0</a></td>
+                <td><a id="P2VD">0</a></td>
+                <td><a id="P2ED">0</a></td>
+                <td><a id="P2DD">0</a></td>
+                <td><a id="P2GPD">0</a></td>
+                <td><a id="P2GCD">0</a></td>
+                <td><a id="P2SGD">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textD">Tunísia</a></td>
+                <td><a id="P3D">0</a></td>
+                <td><a id="P3JD">0</a></td>
+                <td><a id="P3VD">0</a></td>
+                <td><a id="P3ED">0</a></td>
+                <td><a id="P3DD">0</a></td>
+                <td><a id="P3GPD">0</a></td>
+                <td><a id="P3GCD">0</a></td>
+                <td><a id="P3SGD">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--E-->
+    <table border="1"" style = " margin-left: 20px;">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
+            PRIMEIRA FASE --- GRUPO E</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>23/11/2022</td>
+                <td>10:00</td>
+                <td>Alemanha</td>
+                <td>
+                    <input id="23/11AE" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="23/11JE" type="number">
+                </td>
+                <td>Japão</td>
+            </tr>
+            <tr>
+                <td>23/11/2022</td>
+                <td>13:00</td>
+                <td>Espanha</td>
+                <td>
+                    <input id="23/11EE" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="23/11CE" type="number">
+                </td>
+                <td>Costa Rica</td>
+            </tr>
+            <tr>
+                <td>27/11/2022</td>
+                <td>07:00</td>
+                <td>Japão</td>
+                <td>
+                    <input id="27/11JE" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="27/11CE" type="number">
+                </td>
+                <td>Costa Rica</td>
+            </tr>
+            <tr>
+                <td>27/11/2022</td>
+                <td>16:00</td>
+                <td>Espanha</td>
+                <td>
+                    <input id="27/11EE" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="27/11AE" type="number">
+                </td>
+                <td>Alemanha</td>
+            </tr>
+            <tr>
+                <td>01/12/2022</td>
+                <td>16h00</td>
+                <td>Japão</td>
+                <td>
+                    <input id="01/12JE" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="01/12EE" type="number">
+                </td>
+                <td>Espanha</td>
+            </tr>
+            <tr>
+                <td>01/12/2022</td>
+                <td>16h00</td>
+                <td>Costa Rica</td>
+                <td>
+                    <input id="01/12CE" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="01/12AE" type="number">
+                </td>
+                <td>Alemanha</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO E</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textE">Espanha</a></td>
+                <td><a id="P0E">0</a></td>
+                <td><a id="P0JE">0</a></td>
+                <td><a id="P0VE">0</a></td>
+                <td><a id="P0EE">0</a></td>
+                <td><a id="P0DE">0</a></td>
+                <td><a id="P0GPE">0</a></td>
+                <td><a id="P0GCE">0</a></td>
+                <td><a id="P0SGE">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textE">Costa Rica</a></td>
+                <td><a id="P1E">0</a></td>
+                <td><a id="P1JE">0</a></td>
+                <td><a id="P1VE">0</a></td>
+                <td><a id="P1EE">0</a></td>
+                <td><a id="P1DE">0</a></td>
+                <td><a id="P1GPE">0</a></td>
+                <td><a id="P1GCE">0</a></td>
+                <td><a id="P1SGE">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textE">Alemanha</a></td>
+                <td><a id="P2E">0</a></td>
+                <td><a id="P2JE">0</a></td>
+                <td><a id="P2VE">0</a></td>
+                <td><a id="P2EE">0</a></td>
+                <td><a id="P2DE">0</a></td>
+                <td><a id="P2GPE">0</a></td>
+                <td><a id="P2GCE">0</a></td>
+                <td><a id="P2SGE">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textE">Japão</a></td>
+                <td><a id="P3E">0</a></td>
+                <td><a id="P3JE">0</a></td>
+                <td><a id="P3VE">0</a></td>
+                <td><a id="P3EE">0</a></td>
+                <td><a id="P3DE">0</a></td>
+                <td><a id="P3GPE">0</a></td>
+                <td><a id="P3GCE">0</a></td>
+                <td><a id="P3SGE">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--F-->
+    <table border="1"" style = " margin-left: 25px;">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
+            PRIMEIRA FASE --- GRUPO F</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>23/11/2022</td>
+                <td>07:00</td>
+                <td>Marrocos</td>
+                <td>
+                    <input id="23/11MF" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="23/11CRF" type="number">
+                </td>
+                <td>Croácia</td>
+            </tr>
+            <tr>
+                <td>23/11/2022</td>
+                <td>16:00</td>
+                <td>Bélgica</td>
+                <td>
+                    <input id="23/11BF" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="23/11CAF" type="number">
+                </td>
+                <td>Canadá</td>
+            </tr>
+            <tr>
+                <td>27/11/2022</td>
+                <td>10:00</td>
+                <td>Bélgica</td>
+                <td>
+                    <input id="27/11BF" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="27/11MF" type="number">
+                </td>
+                <td>Marrocos</td>
+            </tr>
+            <tr>
+                <td>27/11/2022</td>
+                <td>13:00</td>
+                <td>Croácia</td>
+                <td>
+                    <input id="27/11CRF" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="27/11CAF" type="number">
+                </td>
+                <td>Canadá</td>
+            </tr>
+            <tr>
+                <td>01/12/2022</td>
+                <td>12h00</td>
+                <td>Croácia</td>
+                <td>
+                    <input id="01/12CRF" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="01/12BF" type="number">
+                </td>
+                <td>Bélgica</td>
+            </tr>
+            <tr>
+                <td>01/12/2022</td>
+                <td>12h00</td>
+                <td>Canadá</td>
+                <td>
+                    <input id="01/12CAF" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="01/12MF" type="number">
+                </td>
+                <td>Marrocos</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO F</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textF">Bélgica</a></td>
+                <td><a id="P0F">0</a></td>
+                <td><a id="P0JF">0</a></td>
+                <td><a id="P0VF">0</a></td>
+                <td><a id="P0EF">0</a></td>
+                <td><a id="P0DF">0</a></td>
+                <td><a id="P0GPF">0</a></td>
+                <td><a id="P0GCF">0</a></td>
+                <td><a id="P0SGF">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textF">Canadá</a></td>
+                <td><a id="P1F">0</a></td>
+                <td><a id="P1JF">0</a></td>
+                <td><a id="P1VF">0</a></td>
+                <td><a id="P1EF">0</a></td>
+                <td><a id="P1DF">0</a></td>
+                <td><a id="P1GPF">0</a></td>
+                <td><a id="P1GCF">0</a></td>
+                <td><a id="P1SGF">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textF">Marrocos</a></td>
+                <td><a id="P2F">0</a></td>
+                <td><a id="P2JF">0</a></td>
+                <td><a id="P2VF">0</a></td>
+                <td><a id="P2EF">0</a></td>
+                <td><a id="P2DF">0</a></td>
+                <td><a id="P2GPF">0</a></td>
+                <td><a id="P2GCF">0</a></td>
+                <td><a id="P2SGF">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textF">Croácia</a></td>
+                <td><a id="P3F">0</a></td>
+                <td><a id="P3JF">0</a></td>
+                <td><a id="P3VF">0</a></td>
+                <td><a id="P3EF">0</a></td>
+                <td><a id="P3DF">0</a></td>
+                <td><a id="P3GPF">0</a></td>
+                <td><a id="P3GCF">0</a></td>
+                <td><a id="P3SGF">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--G-->
+    <table border="1"" style = " margin-left: 20px;">
+        <caption style="background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top: 100px;">
+            PRIMEIRA FASE --- GRUPO G</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>24/11/2022</td>
+                <td>07:00</td>
+                <td>Suíça</td>
+                <td>
+                    <input id="24/11SUG" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="24/11CG" type="number">
+                </td>
+                <td>Camarões</td>
+            </tr>
+            <tr>
+                <td>24/11/2022</td>
+                <td>16:00</td>
+                <td>Brasil</td>
+                <td>
+                    <input id="24/11BG" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="24/11SEG" type="number">
+                </td>
+                <td>Sérvia</td>
+            </tr>
+            <tr>
+                <td>28/11/2022</td>
+                <td>07:00</td>
+                <td>Camarões</td>
+                <td>
+                    <input id="28/11CG" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="28/11SEG" type="number">
+                </td>
+                <td>Sérvia</td>
+            </tr>
+            <tr>
+                <td>28/11/2022</td>
+                <td>13:00</td>
+                <td>Brasil</td>
+                <td>
+                    <input id="28/11BG" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="28/11SUG" type="number">
+                </td>
+                <td>Suíça</td>
+            </tr>
+            <tr>
+                <td>02/12/2022</td>
+                <td>16h00</td>
+                <td>Camarões</td>
+                <td>
+                    <input id="02/12CG" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="02/12BG" type="number">
+                </td>
+                <td>Brasil</td>
+            </tr>
+            <tr>
+                <td>02/12/2022</td>
+                <td>16h00</td>
+                <td>Sérvia</td>
+                <td>
+                    <input id="02/12SEG" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="02/12SUG" type="number">
+                </td>
+                <td>Suíça</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO G</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textG">Brasil</a></td>
+                <td><a id="P0G">0</a></td>
+                <td><a id="P0JG">0</a></td>
+                <td><a id="P0VG">0</a></td>
+                <td><a id="P0EG">0</a></td>
+                <td><a id="P0DG">0</a></td>
+                <td><a id="P0GPG">0</a></td>
+                <td><a id="P0GCG">0</a></td>
+                <td><a id="P0SGG">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textG">Sérvia</a></td>
+                <td><a id="P1G">0</a></td>
+                <td><a id="P1JG">0</a></td>
+                <td><a id="P1VG">0</a></td>
+                <td><a id="P1EG">0</a></td>
+                <td><a id="P1DG">0</a></td>
+                <td><a id="P1GPG">0</a></td>
+                <td><a id="P1GCG">0</a></td>
+                <td><a id="P1SGG">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textG">Suíça</a></td>
+                <td><a id="P2G">0</a></td>
+                <td><a id="P2JG">0</a></td>
+                <td><a id="P2VG">0</a></td>
+                <td><a id="P2EG">0</a></td>
+                <td><a id="P2DG">0</a></td>
+                <td><a id="P2GPG">0</a></td>
+                <td><a id="P2GCG">0</a></td>
+                <td><a id="P2SGG">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textG">Camarões</a></td>
+                <td><a id="P3G">0</a></td>
+                <td><a id="P3JG">0</a></td>
+                <td><a id="P3VG">0</a></td>
+                <td><a id="P3EG">0</a></td>
+                <td><a id="P3DG">0</a></td>
+                <td><a id="P3GPG">0</a></td>
+                <td><a id="P3GCG">0</a></td>
+                <td><a id="P3SGG">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <!--H-->
+    <table border="1"">
+            <caption style=" background-color:crimson; color: silver; font-size:20px; margin: 20px; margin-top:
+        100px;">
+        PRIMEIRA FASE --- GRUPO H</caption>
+        <thead>
+            <tr>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>TIME 1</th>
+                <th>GOLS</th>
+                <th>X</th>
+                <th>GOLS</th>
+                <th>TIME 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>24/11/2022</td>
+                <td>10:00</td>
+                <td>Uruguai</td>
+                <td>
+                    <input id="24/11UH" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="24/11CH" type="number">
+                </td>
+                <td>Coreia do Sul</td>
+            </tr>
+            <tr>
+                <td>24/11/2022</td>
+                <td>13:00</td>
+                <td>Portugal</td>
+                <td>
+                    <input id="24/11PH" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="24/11GH" type="number">
+                </td>
+                <td>Gana</td>
+            </tr>
+            <tr>
+                <td>28/11/2022</td>
+                <td>10:00</td>
+                <td>Coreia do Sul </td>
+                <td>
+                    <input id="28/11CH" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="28/11GH" type="number">
+                </td>
+                <td>Gana</td>
+            </tr>
+            <tr>
+                <td>28/11/2022</td>
+                <td>16:00</td>
+                <td>Portugal</td>
+                <td>
+                    <input id="28/11PH" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="28/11UH" type="number">
+                </td>
+                <td>Uruguai</td>
+            </tr>
+            <tr>
+                <td>02/12/2022</td>
+                <td>12h00</td>
+                <td>Coreia do Sul</td>
+                <td>
+                    <input id="02/12CH" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="02/12PH" type="number">
+                </td>
+                <td>Portugal</td>
+            </tr>
+            <tr>
+                <td>02/12/2022</td>
+                <td>12h00</td>
+                <td>Gana</td>
+                <td>
+                    <input id="02/12GH" type="number">
+                </td>
+                <td>X</td>
+                <td>
+                    <input id="02/12UH" type="number">
+                </td>
+                <td>Uruguai</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="center" ; border="1">
+        <caption style="background-color: blue; color: silver; font-size:20px; margin: 20px;"> CLASSIFICAÇÃO DO
+            GRUPO H</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th style="width: 8%;">PT</th>
+                <th style="width: 8%;">J</th>
+                <th style="width: 8%;">V</th>
+                <th style="width: 8%;">E</th>
+                <th style="width: 8%;">D</th>
+                <th style="width: 8%;">GP</th>
+                <th style="width: 8%;">GC</th>
+                <th style="width: 8%;">SG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a id="P0-textH">Portugal</a></td>
+                <td><a id="P0H">0</a></td>
+                <td><a id="P0JH">0</a></td>
+                <td><a id="P0VH">0</a></td>
+                <td><a id="P0EH">0</a></td>
+                <td><a id="P0DH">0</a></td>
+                <td><a id="P0GPH">0</a></td>
+                <td><a id="P0GCH">0</a></td>
+                <td><a id="P0SGH">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P1-textH">Gana</a></td>
+                <td><a id="P1H">0</a></td>
+                <td><a id="P1JH">0</a></td>
+                <td><a id="P1VH">0</a></td>
+                <td><a id="P1EH">0</a></td>
+                <td><a id="P1DH">0</a></td>
+                <td><a id="P1GPH">0</a></td>
+                <td><a id="P1GCH">0</a></td>
+                <td><a id="P1SGH">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P2-textH">Uruguai</a></td>
+                <td><a id="P2H">0</a></td>
+                <td><a id="P2JH">0</a></td>
+                <td><a id="P2VH">0</a></td>
+                <td><a id="P2EH">0</a></td>
+                <td><a id="P2DH">0</a></td>
+                <td><a id="P2GPH">0</a></td>
+                <td><a id="P2GCH">0</a></td>
+                <td><a id="P2SGH">0</a></td>
+            </tr>
+            <tr>
+                <td><a id="P3-textH">Coreia do Sul</a></td>
+                <td><a id="P3H">0</a></td>
+                <td><a id="P3JH">0</a></td>
+                <td><a id="P3VH">0</a></td>
+                <td><a id="P3EH">0</a></td>
+                <td><a id="P3DH">0</a></td>
+                <td><a id="P3GPH">0</a></td>
+                <td><a id="P3GCH">0</a></td>
+                <td><a id="P3SGH">0</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-left: 44%; margin-top: -30px; margin-top:90px;">
+        <img>
+        <button type="button" onclick="oitavas()">Avançar para o Mata-Mata</button>
+    </p>
+    <p style="margin-top:90px ;">
+        By, João Pedro Monteiro e Pedro Augusto.
+    <address>
+        Fortaleza, <strong>CE</strong>
+    </address>
+    </p>
+    <script src="js/GRUPO-A.js"></script>
+    <script src="js/GRUPO-B.js"></script>
+    <script src="js/GRUPO-C.js"></script>
+    <script src="js/GRUPO-D.js"></script>
+    <script src="js/GRUPO-E.js"></script>
+    <script src="js/GRUPO-F.js"></script>
+    <script src="js/GRUPO-G.js"></script>
+    <script src="js/GRUPO-H.js"></script>
+</body>
+
 </html>

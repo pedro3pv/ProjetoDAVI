@@ -1,4 +1,4 @@
-// javascript desenvolvido por pedro augusto
+// javascript desenvolvido por pedro augusto e João Pedro Monteiro
 
 let jogosC = [];
 let jogosCj = [0, 0, 0, 0];
@@ -21,23 +21,27 @@ let pontosC = [0, 0, 0, 0];
 
 let entradaC = [];
 
-window.onload = function() {
-    for(let z = 0; z <= 11;z++){
-        entradaA[z] = sessionStorage.getItem("entradaA["+z+"]")
-        }
-        document.getElementById("20/11QA").value = entradaA[0]
-        document.getElementById("20/11EA").value = entradaA[1] 
-        document.getElementById("21/11SA").value = entradaA[2] 
-        document.getElementById("21/11HA").value = entradaA[3] 
-        document.getElementById("25/11QA").value = entradaA[4] 
-        document.getElementById("25/11SA").value = entradaA[5] 
-        document.getElementById("25/11HA").value = entradaA[6] 
-        document.getElementById("25/11EA").value = entradaA[7] 
-        document.getElementById("29/11HA").value = entradaA[8] 
-        document.getElementById("29/11QA").value = entradaA[9] 
-        document.getElementById("29/11EA").value = entradaA[10] 
-        document.getElementById("29/11SA").value = entradaA[11] 
-}
+for(let z = 0; z <= 11;z++){
+    entradaC[z] = sessionStorage.getItem("entradaC["+z+"]")
+    }
+    document.getElementById("22/11AC").value = entradaC[0]
+    document.getElementById("22/11ARC").value = entradaC[1] 
+    document.getElementById("22/11MC").value = entradaC[2] 
+    document.getElementById("22/11PC").value = entradaC[3] 
+    document.getElementById("26/11PC").value = entradaC[4] 
+    document.getElementById("26/11ARC").value = entradaC[5] 
+    document.getElementById("26/11AC").value = entradaC[6] 
+    document.getElementById("26/11MC").value = entradaC[7] 
+    document.getElementById("30/11PC").value = entradaC[8] 
+    document.getElementById("30/11AC").value = entradaC[9] 
+    document.getElementById("30/11ARC").value = entradaC[10] 
+    document.getElementById("30/11MC").value = entradaC[11] 
+    calcC(entradaC[0], entradaC[1], 0, 0, 1);
+    calcC(entradaC[2], entradaC[3], 1, 2, 3);
+    calcC(entradaC[4], entradaC[5], 2, 3, 1);
+    calcC(entradaC[6], entradaC[7], 3, 0, 2);
+    calcC(entradaC[8], entradaC[9], 4, 3, 0);
+    calcC(entradaC[10], entradaC[11], 5, 1, 2);
 
 //qatar é 0
 //equador é 1
@@ -288,9 +292,11 @@ function calcC(x, y, j, i, i2) {
             document.getElementById("P" + t + "GCC").innerHTML = GCC2[t]
             document.getElementById("P" + t + "SGC").innerHTML = SGC2[t]
         }
+        vencedores[4] = ts[0]
+        vencedores[5] = ts[1]
     }
 }
 for(let r = 0; r <= 11;r++){
-    sessionStorage.setItem("entradaA["+r+"]",entradaA[r])
+    sessionStorage.setItem("entradaC["+r+"]",entradaC[r])
     }
 }

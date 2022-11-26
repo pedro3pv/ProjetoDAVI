@@ -1,4 +1,4 @@
-// javascript desenvolvido por pedro augusto
+// javascript desenvolvido por pedro augusto e João Pedro Monteiro
 
 let jogos = [];
 let jogosj = [0, 0, 0, 0];
@@ -21,13 +21,9 @@ let pontos = [0, 0, 0, 0];
 
 let entradaB = [];
 
-window.onload = function() {
     for(let z = 0; z <= 11;z++){
         entradaB[z] = sessionStorage.getItem("entradaB["+z+"]")
         }
-        let str = entradaB.join(",")
-        console.log("B")
-        console.log(str)
         document.getElementById("21/11IB").value = entradaB[0]
         document.getElementById("21/11IRB").value = entradaB[1] 
         document.getElementById("21/11EB").value = entradaB[2] 
@@ -40,7 +36,12 @@ window.onload = function() {
         document.getElementById("29/11IB").value = entradaB[9] 
         document.getElementById("29/11IRB").value = entradaB[10] 
         document.getElementById("29/11EB").value = entradaB[11] 
-}
+        calcB(entradaB[0], entradaB[1], 0, 0, 1);
+        calcB(entradaB[2], entradaB[3], 1, 2, 3);
+        calcB(entradaB[4], entradaB[5], 2, 3, 1);
+        calcB(entradaB[6], entradaB[7], 3, 0, 2);
+        calcB(entradaB[8], entradaB[9], 4, 3, 0);
+        calcB(entradaB[10], entradaB[11], 5, 1, 2);
 
 //qatar é 0
 //equador é 1
@@ -291,6 +292,8 @@ function calcB(x, y, j, i, i2) {
             document.getElementById("P" + t + "GCB").innerHTML = GC2[t]
             document.getElementById("P" + t + "SGB").innerHTML = SG2[t]
         }
+        vencedores[2] = ts[0]
+        vencedores[3] = ts[1]
     }
 }
 for(let r = 0; r <= 11;r++){

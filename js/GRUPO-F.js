@@ -1,43 +1,47 @@
-// javascript desenvolvido por pedro augusto
+// javascript desenvolvido por pedro augusto e João Pedro Monteiro
 
-let jogos = [];
-let jogosj = [0, 0, 0, 0];
-let vitorias = [0, 0, 0, 0];
-let empates = [0, 0, 0, 0];
-let derrota = [0, 0, 0, 0];
-let GP = [0, 0, 0, 0];
-let GC = [0, 0, 0, 0];
-let SG = [0, 0, 0, 0];
-//para mais times coloque os nomes dos times na array times
+let jogosF = [];
+let jogosFj = [0, 0, 0, 0];
+let vitoriasF = [0, 0, 0, 0];
+let empatesF = [0, 0, 0, 0];
+let derrotaF = [0, 0, 0, 0];
+let GPF = [0, 0, 0, 0];
+let GCF = [0, 0, 0, 0];
+let SGF = [0, 0, 0, 0];
+//para mais timesF coloque os nomes dos timesF na array timesF
 
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
 //sequencia     0        1          2         3
-let times = ["Bélgica","Canadá","Marrocos","Croácia"];
-gols = [];
-gols2 = [];
+let timesF = ["Bélgica", "Canadá", "Marrocos", "Croácia"];
+golsF = [];
+golsF2 = [];
 
-let pontos = [0, 0, 0, 0];
+let pontosF = [0, 0, 0, 0];
 
-let entrada = [];
+let entradaF = [];
 
-window.onload = function() {
-    for(let z = 0; z <= 11;z++){
-        entradaA[z] = sessionStorage.getItem("entradaA["+z+"]")
-        }
-        document.getElementById("20/11QA").value = entradaA[0]
-        document.getElementById("20/11EA").value = entradaA[1] 
-        document.getElementById("21/11SA").value = entradaA[2] 
-        document.getElementById("21/11HA").value = entradaA[3] 
-        document.getElementById("25/11QA").value = entradaA[4] 
-        document.getElementById("25/11SA").value = entradaA[5] 
-        document.getElementById("25/11HA").value = entradaA[6] 
-        document.getElementById("25/11EA").value = entradaA[7] 
-        document.getElementById("29/11HA").value = entradaA[8] 
-        document.getElementById("29/11QA").value = entradaA[9] 
-        document.getElementById("29/11EA").value = entradaA[10] 
-        document.getElementById("29/11SA").value = entradaA[11] 
+for (let z = 0; z <= 11; z++) {
+    entradaF[z] = sessionStorage.getItem("entradaF[" + z + "]")
 }
+document.getElementById("23/11MF").value = entradaF[0]
+document.getElementById("23/11CRF").value = entradaF[1]
+document.getElementById("23/11BF").value = entradaF[2]
+document.getElementById("23/11CAF").value = entradaF[3]
+document.getElementById("27/11BF").value = entradaF[4]
+document.getElementById("27/11MF").value = entradaF[5]
+document.getElementById("27/11CRF").value = entradaF[6]
+document.getElementById("27/11CAF").value = entradaF[7]
+document.getElementById("01/12CRF").value = entradaF[8]
+document.getElementById("01/12BF").value = entradaF[9]
+document.getElementById("01/12CAF").value = entradaF[10]
+document.getElementById("01/12MF").value = entradaF[11]
+calcF(entradaF[0], entradaF[1], 0, 2, 3);
+calcF(entradaF[2], entradaF[3], 1, 0, 1);
+calcF(entradaF[4], entradaF[5], 2, 0, 2);
+calcF(entradaF[6], entradaF[7], 3, 3, 1);
+calcF(entradaF[8], entradaF[9], 4, 3, 0);
+calcF(entradaF[10], entradaF[11], 5, 1, 2);
 
 //qatar é 0
 //equador é 1
@@ -45,252 +49,254 @@ window.onload = function() {
 //holanda é 3
 // j é o numero do jogo, acada novo jogo, aumentar em 1
 
-// 20/11
-document.getElementById("20/11Q").oninput = function () {
-    entrada[0] = document.getElementById("20/11Q").value;
-    console.log(entrada[0])
-    calc(entrada[0], entrada[1], 0, 0, 1);
+// 23/11
+document.getElementById("23/11MF").oninput = function () {
+    entradaF[0] = document.getElementById("23/11MF").value;
+    console.log(entradaF[0])
+    calcF(entradaF[0], entradaF[1], 0, 2, 3);
 }
-document.getElementById("20/11E").oninput = function () {
-    entrada[1] = document.getElementById("20/11E").value;
-    console.log(entrada[1])
-    calc(entrada[0], entrada[1], 0, 0, 1);
+document.getElementById("23/11CRF").oninput = function () {
+    entradaF[1] = document.getElementById("23/11CRF").value;
+    console.log(entradaF[1])
+    calcF(entradaF[0], entradaF[1], 0, 2, 3);
 }
-// 21/11
-document.getElementById("21/11S").oninput = function () {
-    entrada[2] = document.getElementById("21/11S").value;
-    console.log(entrada[2])
-    calc(entrada[2], entrada[3], 1, 2, 3);
+// 23/11 2
+document.getElementById("23/11BF").oninput = function () {
+    entradaF[2] = document.getElementById("23/11BF").value;
+    console.log(entradaF[2])
+    calcF(entradaF[2], entradaF[3], 1, 0, 1);
 }
-document.getElementById("21/11H").oninput = function () {
-    entrada[3] = document.getElementById("21/11H").value;
-    console.log(entrada[3])
-    calc(entrada[2], entrada[3], 1, 2, 3);
+document.getElementById("23/11CAF").oninput = function () {
+    entradaF[3] = document.getElementById("23/11CAF").value;
+    console.log(entradaF[3])
+    calcF(entradaF[2], entradaF[3], 1, 0, 1);
 }
-// 25/11
-document.getElementById("25/11Q").oninput = function () {
-    entrada[4] = document.getElementById("25/11Q").value;
-    console.log(entrada[4])
-    calc(entrada[4], entrada[5], 2, 0, 2);
+// 27/11
+document.getElementById("27/11BF").oninput = function () {
+    entradaF[4] = document.getElementById("27/11BF").value;
+    console.log(entradaF[4])
+    calcF(entradaF[4], entradaF[5], 2, 0, 2);
 }
-document.getElementById("25/11S").oninput = function () {
-    entrada[5] = document.getElementById("25/11S").value;
-    console.log(entrada[5])
-    calc(entrada[4], entrada[5], 2, 0, 2);
+document.getElementById("27/11MF").oninput = function () {
+    entradaF[5] = document.getElementById("27/11MF").value;
+    console.log(entradaF[5])
+    calcF(entradaF[4], entradaF[5], 2, 0, 2);
 }
-// 25/11 2
-document.getElementById("25/11H").oninput = function () {
-    entrada[6] = document.getElementById("25/11H").value;
-    console.log(entrada[6])
-    calc(entrada[6], entrada[7], 3, 3, 1);
+// 27/11 2
+document.getElementById("27/11CRF").oninput = function () {
+    entradaF[6] = document.getElementById("27/11CRF").value;
+    console.log(entradaF[6])
+    calcF(entradaF[6], entradaF[7], 3, 3, 1);
 }
-document.getElementById("25/11E").oninput = function () {
-    entrada[7] = document.getElementById("25/11E").value;
-    console.log(entrada[7])
-    calc(entrada[6], entrada[7], 3, 3, 1);
+document.getElementById("27/11CAF").oninput = function () {
+    entradaF[7] = document.getElementById("27/11CAF").value;
+    console.log(entradaF[7])
+    calcF(entradaF[6], entradaF[7], 3, 3, 1);
 }
-// 29/11
-document.getElementById("29/11H").oninput = function () {
-    entrada[8] = document.getElementById("29/11H").value;
-    console.log(entrada[8])
-    calc(entrada[8], entrada[9], 4, 3, 0);
+// 01/12
+document.getElementById("01/12CRF").oninput = function () {
+    entradaF[8] = document.getElementById("01/12CRF").value;
+    console.log(entradaF[8])
+    calcF(entradaF[8], entradaF[9], 4, 3, 0);
 }
-document.getElementById("29/11Q").oninput = function () {
-    entrada[9] = document.getElementById("29/11Q").value;
-    console.log(entrada[9])
-    calc(entrada[8], entrada[9], 4, 3, 0);
+document.getElementById("01/12BF").oninput = function () {
+    entradaF[9] = document.getElementById("01/12BF").value;
+    console.log(entradaF[9])
+    calcF(entradaF[8], entradaF[9], 4, 3, 0);
 }
-// 29/11 2
-document.getElementById("29/11E").oninput = function () {
-    entrada[10] = document.getElementById("29/11E").value;
-    console.log(entrada[10])
-    calc(entrada[10], entrada[11], 5, 1, 2);
+// 01/12 2
+document.getElementById("01/12CAF").oninput = function () {
+    entradaF[10] = document.getElementById("01/12CAF").value;
+    console.log(entradaF[10])
+    calcF(entradaF[10], entradaF[11], 5, 1, 2);
 }
-document.getElementById("29/11S").oninput = function () {
-    entrada[11] = document.getElementById("29/11S").value;
-    console.log(entrada[11])
-    calc(entrada[10], entrada[11], 5, 1, 2);
+document.getElementById("01/12MF").oninput = function () {
+    entradaF[11] = document.getElementById("01/12MF").value;
+    console.log(entradaF[11])
+    calcF(entradaF[10], entradaF[11], 5, 1, 2);
 }
 
-function calc(x, y, j, i, i2) {
+function calcF(x, y, j, i, i2) {
     x = parseInt(x)
     y = parseInt(y)
-    if(x != "" && y != "" || x === 0 || y === 0){
-    if (jogos[j] == null) {
-        jogos[j] = 0
-    }
-    if (jogos[j] == 1) {
-        pontos[i] = pontos[i] - 3
-        jogosj[i] = jogosj[i] - 1
-        jogosj[i2] = jogosj[i2] - 1
-        vitorias[i] = vitorias[i] - 1
-        derrota[i2] = derrota[i2] - 1
-        GP[i] = GP[i] - gols[j]
-        GC[i] = GC[i] - gols2[j]
-        GP[i2] = GP[i2] - gols2[j]
-        GC[i2] = GC[i2] - gols[j]
-        jogos[j] = 0
-    }
-    if (jogos[j] == 2) {
-        pontos[i2] = pontos[i2] - 3
-        jogosj[i] = jogosj[i] - 1
-        jogosj[i2] = jogosj[i2] - 1
-        vitorias[i2] = vitorias[i2] - 1
-        derrota[i] = derrota[i] - 1
-        GP[i] = GP[i] - gols[j]
-        GC[i] = GC[i] - gols2[j]
-        GP[i2] = GP[i2] - gols2[j]
-        GC[i2] = GC[i2] - gols[j]
-        jogos[j] = 0
-    }
-    if (jogos[j] == 3) {
-        pontos[i] = pontos[i] - 1
-        pontos[i2] = pontos[i2] - 1
-        jogos[j] = 0
-        jogosj[i] = jogosj[i] - 1
-        empates[i] = empates[i] - 1
-        jogosj[i2] = jogosj[i2] - 1
-        empates[i2] = empates[i2] - 1
-        GP[i] = GP[i] - gols[j]
-        GC[i] = GC[i] - gols2[j]
-        GP[i2] = GP[i2] - gols2[j]
-        GC[i2] = GC[i2] - gols[j]
-    }
-    if (x != null && y != null && jogos[j] == 0) {
-        gols[j] = x
-        gols2[j] = y
-        if (x > y) {
-            if (pontos[i] >= 0) {
-                pontos[i] = parseInt(pontos[i])
-                pontos[i] = pontos[i] + 3
-                jogosj[i] = jogosj[i] + 1
-                jogosj[i2] = jogosj[i2] + 1
-                vitorias[i] = vitorias[i] + 1
-                derrota[i2] = derrota[i2] + 1
-                GP[i] = GP[i] + x
-                GC[i] = GC[i] + y
-                GP[i2] = GP[i2] + y
-                GC[i2] = GC[i2] + x
-                jogos[j] = 1
-            }
-            console.log(pontos[i])
-        } else if (y > x) {
-            if (pontos[i2] >= 0) {
-                pontos[i2] = parseInt(pontos[i2])
-                pontos[i2] = pontos[i2] + 3
-                jogosj[i] = jogosj[i] + 1
-                jogosj[i2] = jogosj[i2] + 1
-                vitorias[i2] = vitorias[i2] + 1
-                derrota[i] = derrota[i] + 1
-                jogos[j] = 2
-                GP[i] = GP[i] + x
-                GC[i] = GC[i] + y
-                GP[i2] = GP[i2] + y
-                GC[i2] = GC[i2] + x
-            }
-            console.log(pontos[i2])
-        } else if (x == y) {
-            if (pontos[i] >= 0) {
-                pontos[i] = pontos[i] + 1
-                jogosj[i] = jogosj[i] + 1
-                empates[i] = empates[i] + 1
-                GP[i] = GP[i] + x
-                GC[i] = GC[i] + y
-            }
-            console.log(pontos[i])
-
-            if (pontos[i2] >= 0) {
-                pontos[i2] = pontos[i2] + 1
-                jogosj[i2] = jogosj[i2] + 1
-                empates[i2] = empates[i2] + 1
-                GP[i2] = GP[i2] + y
-                GC[i2] = GC[i2] + x
-            }
-            console.log(pontos[i2])
-            jogos[j] = 3
+    if (x != "" && y != "" || x === 0 || y === 0) {
+        if (jogosF[j] == null) {
+            jogosF[j] = 0
         }
-
-        SG[i] = GP[i] - GC[i]
-        SG[i2] = GP[i2] - GC[i2]
-
-        let n = [];
-        let ts = [];
-        let jj = [];
-        let v = [];
-        let ep = [];
-        let derr = [];
-        let GP2 = [];
-        let GC2 = [];
-        let SG2 = [];
-        let aux = 0
-
-        for (let q = 0; q < times.length; q++) {
-            n[q] = pontos[q];
-            ts[q] = times[q];
-            jj[q] = jogosj[q];
-            v[q] = vitorias[q];
-            ep[q] = empates[q]
-            derr[q] = derrota[q]
-            GP2[q] = GP[q]
-            GC2[q] = GC[q]
-            SG2[q] = SG[q]
+        if (jogosF[j] == 1) {
+            pontosF[i] = pontosF[i] - 3
+            jogosFj[i] = jogosFj[i] - 1
+            jogosFj[i2] = jogosFj[i2] - 1
+            vitoriasF[i] = vitoriasF[i] - 1
+            derrotaF[i2] = derrotaF[i2] - 1
+            GPF[i] = GPF[i] - golsF[j]
+            GCF[i] = GCF[i] - golsF2[j]
+            GPF[i2] = GPF[i2] - golsF2[j]
+            GCF[i2] = GCF[i2] - golsF[j]
+            jogosF[j] = 0
         }
-        for (let k = 0; k < times.length; k++) {
-            for (let l = 0; l < times.length; l++) {
-                n[l] = parseInt(n[l])
-                if (n[l] < n[l + 1]) {
-                    aux = n[l + 1]
-                    n[l + 1] = n[l]
-                    n[l] = aux
+        if (jogosF[j] == 2) {
+            pontosF[i2] = pontosF[i2] - 3
+            jogosFj[i] = jogosFj[i] - 1
+            jogosFj[i2] = jogosFj[i2] - 1
+            vitoriasF[i2] = vitoriasF[i2] - 1
+            derrotaF[i] = derrotaF[i] - 1
+            GPF[i] = GPF[i] - golsF[j]
+            GCF[i] = GCF[i] - golsF2[j]
+            GPF[i2] = GPF[i2] - golsF2[j]
+            GCF[i2] = GCF[i2] - golsF[j]
+            jogosF[j] = 0
+        }
+        if (jogosF[j] == 3) {
+            pontosF[i] = pontosF[i] - 1
+            pontosF[i2] = pontosF[i2] - 1
+            jogosF[j] = 0
+            jogosFj[i] = jogosFj[i] - 1
+            empatesF[i] = empatesF[i] - 1
+            jogosFj[i2] = jogosFj[i2] - 1
+            empatesF[i2] = empatesF[i2] - 1
+            GPF[i] = GPF[i] - golsF[j]
+            GCF[i] = GCF[i] - golsF2[j]
+            GPF[i2] = GPF[i2] - golsF2[j]
+            GCF[i2] = GCF[i2] - golsF[j]
+        }
+        if (x != null && y != null && jogosF[j] == 0) {
+            golsF[j] = x
+            golsF2[j] = y
+            if (x > y) {
+                if (pontosF[i] >= 0) {
+                    pontosF[i] = parseInt(pontosF[i])
+                    pontosF[i] = pontosF[i] + 3
+                    jogosFj[i] = jogosFj[i] + 1
+                    jogosFj[i2] = jogosFj[i2] + 1
+                    vitoriasF[i] = vitoriasF[i] + 1
+                    derrotaF[i2] = derrotaF[i2] + 1
+                    GPF[i] = GPF[i] + x
+                    GCF[i] = GCF[i] + y
+                    GPF[i2] = GPF[i2] + y
+                    GCF[i2] = GCF[i2] + x
+                    jogosF[j] = 1
+                }
+                console.log(pontosF[i])
+            } else if (y > x) {
+                if (pontosF[i2] >= 0) {
+                    pontosF[i2] = parseInt(pontosF[i2])
+                    pontosF[i2] = pontosF[i2] + 3
+                    jogosFj[i] = jogosFj[i] + 1
+                    jogosFj[i2] = jogosFj[i2] + 1
+                    vitoriasF[i2] = vitoriasF[i2] + 1
+                    derrotaF[i] = derrotaF[i] + 1
+                    jogosF[j] = 2
+                    GPF[i] = GPF[i] + x
+                    GCF[i] = GCF[i] + y
+                    GPF[i2] = GPF[i2] + y
+                    GCF[i2] = GCF[i2] + x
+                }
+                console.log(pontosF[i2])
+            } else if (x == y) {
+                if (pontosF[i] >= 0) {
+                    pontosF[i] = pontosF[i] + 1
+                    jogosFj[i] = jogosFj[i] + 1
+                    empatesF[i] = empatesF[i] + 1
+                    GPF[i] = GPF[i] + x
+                    GCF[i] = GCF[i] + y
+                }
+                console.log(pontosF[i])
 
-                    aux = ts[l + 1]
-                    ts[l + 1] = ts[l]
-                    ts[l] = aux
+                if (pontosF[i2] >= 0) {
+                    pontosF[i2] = pontosF[i2] + 1
+                    jogosFj[i2] = jogosFj[i2] + 1
+                    empatesF[i2] = empatesF[i2] + 1
+                    GPF[i2] = GPF[i2] + y
+                    GCF[i2] = GCF[i2] + x
+                }
+                console.log(pontosF[i2])
+                jogosF[j] = 3
+            }
 
-                    aux = jj[l + 1]
-                    jj[l + 1] = jj[l]
-                    jj[l] = aux
+            SGF[i] = GPF[i] - GCF[i]
+            SGF[i2] = GPF[i2] - GCF[i2]
 
-                    aux = v[l + 1]
-                    v[l + 1] = v[l]
-                    v[l] = aux
+            let n = [];
+            let ts = [];
+            let jj = [];
+            let v = [];
+            let ep = [];
+            let derr = [];
+            let GPF2 = [];
+            let GCF2 = [];
+            let SGF2 = [];
+            let aux = 0
 
-                    aux = ep[l + 1]
-                    ep[l + 1] = ep[l]
-                    ep[l] = aux
+            for (let q = 0; q < timesF.length; q++) {
+                n[q] = pontosF[q];
+                ts[q] = timesF[q];
+                jj[q] = jogosFj[q];
+                v[q] = vitoriasF[q];
+                ep[q] = empatesF[q]
+                derr[q] = derrotaF[q]
+                GPF2[q] = GPF[q]
+                GCF2[q] = GCF[q]
+                SGF2[q] = SGF[q]
+            }
+            for (let k = 0; k < timesF.length; k++) {
+                for (let l = 0; l < timesF.length; l++) {
+                    n[l] = parseInt(n[l])
+                    if (n[l] < n[l + 1]) {
+                        aux = n[l + 1]
+                        n[l + 1] = n[l]
+                        n[l] = aux
 
-                    aux = derr[l + 1]
-                    derr[l + 1] = derr[l]
-                    derr[l] = aux
+                        aux = ts[l + 1]
+                        ts[l + 1] = ts[l]
+                        ts[l] = aux
 
-                    aux = GP2[l + 1]
-                    GP2[l + 1] = GP2[l]
-                    GP2[l] = aux
+                        aux = jj[l + 1]
+                        jj[l + 1] = jj[l]
+                        jj[l] = aux
 
-                    aux = GC2[l + 1]
-                    GC2[l + 1] = GC2[l]
-                    GC2[l] = aux
+                        aux = v[l + 1]
+                        v[l + 1] = v[l]
+                        v[l] = aux
 
-                    aux = SG2[l + 1]
-                    SG2[l + 1] = SG2[l]
-                    SG2[l] = aux
+                        aux = ep[l + 1]
+                        ep[l + 1] = ep[l]
+                        ep[l] = aux
+
+                        aux = derr[l + 1]
+                        derr[l + 1] = derr[l]
+                        derr[l] = aux
+
+                        aux = GPF2[l + 1]
+                        GPF2[l + 1] = GPF2[l]
+                        GPF2[l] = aux
+
+                        aux = GCF2[l + 1]
+                        GCF2[l + 1] = GCF2[l]
+                        GCF2[l] = aux
+
+                        aux = SGF2[l + 1]
+                        SGF2[l + 1] = SGF2[l]
+                        SGF2[l] = aux
+                    }
                 }
             }
-        }
-        for (let t = 0; t < times.length; t++) {
-            document.getElementById("P" + t + "-textF").innerHTML = ts[t]
-            document.getElementById("P" + t + "F").innerHTML = n[t]
-            document.getElementById("P" + t + "JF").innerHTML = jj[t]
-            document.getElementById("P" + t + "VF").innerHTML = v[t]
-            document.getElementById("P" + t + "EF").innerHTML = ep[t]
-            document.getElementById("P" + t + "DF").innerHTML = derr[t]
-            document.getElementById("P" + t + "GPF").innerHTML = GP2[t]
-            document.getElementById("P" + t + "GCF").innerHTML = GC2[t]
-            document.getElementById("P" + t + "SGF").innerHTML = SG2[t]
+            for (let t = 0; t < timesF.length; t++) {
+                document.getElementById("P" + t + "-textF").innerHTML = ts[t]
+                document.getElementById("P" + t + "F").innerHTML = n[t]
+                document.getElementById("P" + t + "JF").innerHTML = jj[t]
+                document.getElementById("P" + t + "VF").innerHTML = v[t]
+                document.getElementById("P" + t + "EF").innerHTML = ep[t]
+                document.getElementById("P" + t + "DF").innerHTML = derr[t]
+                document.getElementById("P" + t + "GPF").innerHTML = GPF2[t]
+                document.getElementById("P" + t + "GCF").innerHTML = GCF2[t]
+                document.getElementById("P" + t + "SGF").innerHTML = SGF2[t]
+            }
+            vencedores[10] = ts[0]
+            vencedores[11] = ts[1]
         }
     }
-}
-for(let r = 0; r <= 11;r++){
-    sessionStorage.setItem("entradaA["+r+"]",entradaA[r])
+    for (let r = 0; r <= 11; r++) {
+        sessionStorage.setItem("entradaF[" + r + "]", entradaF[r])
     }
 }

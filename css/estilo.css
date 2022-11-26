@@ -1,5 +1,5 @@
 h1{
-    color: crimson;
+    color: black;
     margin: 50px;
     position: relative;
     left: 150px;
@@ -15,9 +15,18 @@ input[type="number"]{
 }
 table {
     border-collapse: collapse;
+    background-color: white;
  }
  table.center{
+    background-color: white;
      margin-left: 550px;
      margin-right: auto;
      margin-top: -250px;
+ }
+ button{
+    text-align: center;
+    border-radius: 10px;
+    border-color: black;
+    border-style: outset;
+    font-size: 15px;
  }
