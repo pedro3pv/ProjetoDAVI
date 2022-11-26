@@ -55,67 +55,55 @@ calcA(entradaA[10], entradaA[11], 5, 1, 2);
 // 20/11
 document.getElementById("20/11QA").oninput = function () {
     entradaA[0] = document.getElementById("20/11QA").value;
-    console.log(entradaA[0])
     calcA(entradaA[0], entradaA[1], 0, 0, 1);
 }
 document.getElementById("20/11EA").oninput = function () {
     entradaA[1] = document.getElementById("20/11EA").value;
-    console.log(entradaA[1])
     calcA(entradaA[0], entradaA[1], 0, 0, 1);
 }
 // 21/11
 document.getElementById("21/11SA").oninput = function () {
     entradaA[2] = document.getElementById("21/11SA").value;
-    console.log(entradaA[2])
     calcA(entradaA[2], entradaA[3], 1, 2, 3);
 }
 document.getElementById("21/11HA").oninput = function () {
     entradaA[3] = document.getElementById("21/11HA").value;
-    console.log(entradaA[3])
     calcA(entradaA[2], entradaA[3], 1, 2, 3);
 }
 // 25/11
 document.getElementById("25/11QA").oninput = function () {
     entradaA[4] = document.getElementById("25/11QA").value;
-    console.log(entradaA[4])
     calcA(entradaA[4], entradaA[5], 2, 0, 2);
 }
 document.getElementById("25/11SA").oninput = function () {
     entradaA[5] = document.getElementById("25/11SA").value;
-    console.log(entradaA[5])
     calcA(entradaA[4], entradaA[5], 2, 0, 2);
 }
 // 25/11 2
 document.getElementById("25/11HA").oninput = function () {
     entradaA[6] = document.getElementById("25/11HA").value;
-    console.log(entradaA[6])
     calcA(entradaA[6], entradaA[7], 3, 3, 1);
 }
 document.getElementById("25/11EA").oninput = function () {
     entradaA[7] = document.getElementById("25/11EA").value;
-    console.log(entradaA[7])
     calcA(entradaA[6], entradaA[7], 3, 3, 1);
 }
 // 29/11
 document.getElementById("29/11HA").oninput = function () {
     entradaA[8] = document.getElementById("29/11HA").value;
-    console.log(entradaA[8])
     calcA(entradaA[8], entradaA[9], 4, 3, 0);
 }
 document.getElementById("29/11QA").oninput = function () {
     entradaA[9] = document.getElementById("29/11QA").value;
-    console.log(entradaA[9])
     calcA(entradaA[8], entradaA[9], 4, 3, 0);
 }
 // 29/11 2
 document.getElementById("29/11EA").oninput = function () {
     entradaA[10] = document.getElementById("29/11EA").value;
-    console.log(entradaA[10])
     calcA(entradaA[10], entradaA[11], 5, 1, 2);
 }
 document.getElementById("29/11SA").oninput = function () {
     entradaA[11] = document.getElementById("29/11SA").value;
-    console.log(entradaA[11])
     calcA(entradaA[10], entradaA[11], 5, 1, 2);
 }
 
@@ -180,7 +168,6 @@ function calcA(x, y, j, i, i2) {
                     GCA[i2] = GCA[i2] + x
                     jogosA[j] = 1
                 }
-                console.log(pontosA[i])
             } else if (y > x) {
                 if (pontosA[i2] >= 0) {
                     pontosA[i2] = parseInt(pontosA[i2])
@@ -195,7 +182,6 @@ function calcA(x, y, j, i, i2) {
                     GPA[i2] = GPA[i2] + y
                     GCA[i2] = GCA[i2] + x
                 }
-                console.log(pontosA[i2])
             } else if (x == y) {
                 if (pontosA[i] >= 0) {
                     pontosA[i] = pontosA[i] + 1
@@ -204,7 +190,6 @@ function calcA(x, y, j, i, i2) {
                     GPA[i] = GPA[i] + x
                     GCA[i] = GCA[i] + y
                 }
-                console.log(pontosA[i])
 
                 if (pontosA[i2] >= 0) {
                     pontosA[i2] = pontosA[i2] + 1
@@ -213,7 +198,6 @@ function calcA(x, y, j, i, i2) {
                     GPA[i2] = GPA[i2] + y
                     GCA[i2] = GCA[i2] + x
                 }
-                console.log(pontosA[i2])
                 jogosA[j] = 3
             }
 
