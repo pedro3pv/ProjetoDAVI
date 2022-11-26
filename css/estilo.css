@@ -15,10 +15,8 @@ input[type="number"]{
 }
 table {
     border-collapse: collapse;
-    background-color: white;
  }
  table.center{
-    background-color: white;
      margin-left: 550px;
      margin-right: auto;
      margin-top: -250px;
