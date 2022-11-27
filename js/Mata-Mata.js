@@ -11,6 +11,7 @@ let quartas = []
 let semifinal = []
 let lugar3 = []
 let final = []
+let ganhador = 0
 
 let sequencia = [0,3,4,7,6,5,2,1,8,11,12,15,10,9,14,13]
 let sequencia2 = ["1A","2A","1B","2B","1C","2C","1D","2D","1E","2E","1F","2F","1G","2G","1H","2H"]
@@ -61,20 +62,46 @@ for (let z = 0; z < 4; z = z + 2) {
         verificadorS(z,z+1,contadorJ2)
         contadorJ2++
 }
+for (let z = 0; z <= 15; z++) {
+        document.getElementById("img"+z).src="img/"+vencedores[sequencia[z]]+".png"
+}
+for (let z = 0; z < 8; z++) {
+        document.getElementById("img"+z+"Q").src="img/"+quartas[z]+".png"
+}
+for (let z = 0; z < 4; z++) {
+        document.getElementById("img"+z+"S").src="img/"+semifinal[z]+".png"
+}
+for (let z = 0; z < 2; z++) {
+        document.getElementById("img"+z+"T").src="img/"+lugar3[z]+".png"
+        document.getElementById("img"+z+"F").src="img/"+final[z]+".png"
+}
 
 document.oninput = function () {
         for (let z = 0; z <= 7; z++) {
                 verificador(divisao[z],divisao2[z],z)
+        }
+        for (let z = 0; z <= 15; z++) {
+                document.getElementById("img"+z).src="img/"+vencedores[sequencia[z]]+".png"
         }
         let contadorJ = 0
         for (let z = 0; z < 8; z = z + 2) {
                 verificadorQ(z,z+1,contadorJ)
                 contadorJ++
         }
+        for (let z = 0; z < 8; z++) {
+                document.getElementById("img"+z+"Q").src="img/"+quartas[z]+".png"
+        }
         let contadorJ2 = 0
         for (let z = 0; z < 4; z = z + 2) {
                 verificadorS(z,z+1,contadorJ2)
                 contadorJ2++
+        }
+        for (let z = 0; z < 4; z++) {
+                document.getElementById("img"+z+"S").src="img/"+semifinal[z]+".png"
+        }
+        for (let z = 0; z < 2; z++) {
+                document.getElementById("img"+z+"T").src="img/"+lugar3[z]+".png"
+                document.getElementById("img"+z+"F").src="img/"+final[z]+".png"
         }
 }
 
@@ -114,6 +141,14 @@ function verificadorS(x,y,j){
                 document.getElementById("F"+j+"T").innerHTML = final[j]
         }
 }
+function verificadorF(x,y){
+        enter()
+        if (entradaF[x] > entradaF[y] && final[x] != undefined) {
+                ganhador = final[x]
+        } else if (entradaF[x] < entradaF[y] && final[y] != undefined) {
+                ganhador = final[y]
+        }
+}
 
 function enter() {
         for (let q = 0; q <= 15; q++) {
@@ -147,11 +182,10 @@ function enter() {
         }
 }
 function vencedor(){
+        verificadorF(0,1)
+        localStorage.setItem("ganhador",ganhador)
         window.location.href = "vencedor.html"
 }
 function voltarGrupo(){
         window.location.href = "index.html"  
-}
-function voltarMata(){
-        window.location.href = "oitavas.html"  
 }
