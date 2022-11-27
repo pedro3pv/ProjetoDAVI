@@ -2,7 +2,6 @@ let vencedores = []
 
 let entrada = []
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 let quartas = []
 
@@ -25,24 +24,11 @@ let temp2 = []
 let aux = 0
 let aux2 = 0
 >>>>>>> parent of 928cbb9 (javascript pronto)
-=======
-
-let quartas = []
-
-let jogo = []
-
-let cont = 0
-let cont2 = 0
-
->>>>>>> parent of 869fe3e (Merge branch 'main' of https://github.com/pedro3pv/ProjetoDAVI)
 // 0 3 4 7 6 5 2 1 8 11 12 15 10 9 14 13
 
 for (let u = 0; u <= 15; u++) {
         vencedores[u] = localStorage.getItem("vencedores[" + u + "]")
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 869fe3e (Merge branch 'main' of https://github.com/pedro3pv/ProjetoDAVI)
 }
 document.getElementById("1A").innerHTML = vencedores[0]
 document.getElementById("2A").innerHTML = vencedores[1]
@@ -61,7 +47,6 @@ document.getElementById("2G").innerHTML = vencedores[13]
 document.getElementById("1H").innerHTML = vencedores[14]
 document.getElementById("2H").innerHTML = vencedores[15]
 
-<<<<<<< HEAD
 =======
         entrada2[u] = sessionStorage.getItem("oitavas"+u)
         document.getElementById("O"+u).value = entrada2[u]
@@ -91,8 +76,6 @@ function verificador(x, y, j) {
         }
 }
 >>>>>>> parent of 928cbb9 (javascript pronto)
-=======
->>>>>>> parent of 869fe3e (Merge branch 'main' of https://github.com/pedro3pv/ProjetoDAVI)
 function enter() {
         for (let q = 0; q <= 15; q++) {
                 if (document.getElementById("O" + q).value != null) {
@@ -100,9 +83,6 @@ function enter() {
                 }
         }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 869fe3e (Merge branch 'main' of https://github.com/pedro3pv/ProjetoDAVI)
 }
 
 document.getElementById("O0").oninput = function () {
@@ -202,13 +182,10 @@ function verificador(x, y, j) {
                 document.getElementById("Q"+g+"T").innerHTML = quartas[g]
                         }
                 }
-<<<<<<< HEAD
 =======
         for(let h = 0;h <= 15;h++){
                         sessionStorage.setItem("oitavas" + h, parseInt(entrada2[h]))
                         entrada[sequencia[h]] = parseInt(entrada2[h])
 >>>>>>> parent of 928cbb9 (javascript pronto)
-=======
->>>>>>> parent of 869fe3e (Merge branch 'main' of https://github.com/pedro3pv/ProjetoDAVI)
         }
 }
