@@ -302,3 +302,9 @@ function oitavas () {
     }
     window.location.href = "oitavas.html"
 }
+function mata () {
+    for (let u = 0; u <= 15; u++) {
+        localStorage.setItem("vencedores[" + u + "]", vencedores[u])
+    }
+    window.location.href = "index.html"
+}

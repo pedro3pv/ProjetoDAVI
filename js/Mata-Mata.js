@@ -146,3 +146,12 @@ function enter() {
                 entrada[sequencia[h]] = parseInt(entrada2[h])
         }
 }
+function vencedor(){
+        window.location.href = "vencedor.html"
+}
+function voltarGrupo(){
+        window.location.href = "index.html"  
+}
+function voltarMata(){
+        window.location.href = "oitavas.html"  
+}
