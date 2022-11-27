@@ -80,10 +80,10 @@ document.oninput = function () {
 
 function verificador(x, y, j) {
         enter()
-        if (entrada[x] > entrada[y] && entrada[y] != "" && entrada[x] != "") {
+        if (entrada[x] > entrada[y]) {
                 quartas[j] = vencedores[x]
                 document.getElementById("Q"+j+"T").innerHTML = quartas[j]
-        } else if (entrada[x] < entrada[y] && entrada[y] != "" && entrada[x] != "") {
+        } else if (entrada[x] < entrada[y]) {
                 quartas[j] = vencedores[y]
                 document.getElementById("Q"+j+"T").innerHTML = quartas[j]
         }
@@ -91,10 +91,10 @@ function verificador(x, y, j) {
 
 function verificadorQ(x,y,j){
         enter()
-        if (entradaQ[x] > entradaQ[y] && entradaQ[y] != "" && entradaQ[x] != "" && quartas[x] != undefined && quartas[x] != null) {
+        if (entradaQ[x] > entradaQ[y] && quartas[x] != undefined) {
                 semifinal[j] = quartas[x]
                 document.getElementById("S"+j+"T").innerHTML = semifinal[j]
-        } else if (entradaQ[x] < entradaQ[y] && entradaQ[y] != "" && entradaQ[x] != "" && quartas[y] != undefined && quartas[y] != null) {
+        } else if (entradaQ[x] < entradaQ[y] && quartas[y] != undefined) {
                 semifinal[j] = quartas[y]
                 document.getElementById("S"+j+"T").innerHTML = semifinal[j]
         }
@@ -102,12 +102,12 @@ function verificadorQ(x,y,j){
 
 function verificadorS(x,y,j){
         enter()
-        if (entradaS[x] > entradaS[y] && entradaS[y] != "" && entradaS[x] != "" && semifinal[x] != undefined && semifinal[x] != null) {
+        if (entradaS[x] > entradaS[y] && semifinal[x] != undefined) {
                 lugar3[j] = semifinal[y]
                 final[j] = semifinal[x]
                 document.getElementById("T"+j+"T").innerHTML = lugar3[j]
                 document.getElementById("F"+j+"T").innerHTML = final[j]
-        } else if (entradaS[x] < entradaS[y] && entradaS[y] != "" && entradaS[x] != "" && semifinal[y] != undefined && semifinal[y] != null) {
+        } else if (entradaS[x] < entradaS[y] && semifinal[y] != undefined) {
                 lugar3[j] = semifinal[x]
                 final[j] = semifinal[y]
                 document.getElementById("T"+j+"T").innerHTML = lugar3[j]
@@ -117,24 +117,24 @@ function verificadorS(x,y,j){
 
 function enter() {
         for (let q = 0; q <= 15; q++) {
-                if (document.getElementById("O" + q).value != null && document.getElementById("O" + q).value != "") {
+                if (document.getElementById("O" + q).value != "") {
                         entrada2[q] = document.getElementById("O" + q).value
                 }
         }
         for (let a = 0; a <= 7; a++) {
-                if (document.getElementById("Q" + a).value != null && document.getElementById("Q" + a).value != "") {
+                if (document.getElementById("Q" + a).value != "") {
                         entradaQ[a] = document.getElementById("Q" + a).value
                         sessionStorage.setItem("quartas" + a, parseInt(entradaQ[a]))
                 }
         }
         for (let a = 0; a <= 3; a++) {
-                if (document.getElementById("S" + a).value != null && document.getElementById("S" + a).value != "") {
+                if (document.getElementById("S" + a).value != "") {
                         entradaS[a] = document.getElementById("S" + a).value
                         sessionStorage.setItem("terceiro" + a, parseInt(entradaS[a]))
                 }
         }
         for (let a = 0; a <= 1; a++) {
-                if (document.getElementById("T" + a).value != null && document.getElementById("T" + a).value != "" && document.getElementById("F" + a).value != null && document.getElementById("F" + a).value != "") {
+                if (document.getElementById("T" + a).value != "" && document.getElementById("F" + a).value != null && document.getElementById("F" + a).value != "") {
                         entradaT[a] = document.getElementById("T" + a).value
                         sessionStorage.setItem("terceiroE" + a, parseInt(entradaT[a]))
                         entradaF[a] = document.getElementById("F" + a).value
