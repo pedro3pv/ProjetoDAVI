@@ -22,7 +22,7 @@ let pontosH = [0, 0, 0, 0];
 let entradaH = [];
 
 for (let z = 0; z <= 11; z++) {
-    entradaH[z] = sessionStorage.getItem("entradaH[" + z + "]")
+    entradaH[z] = localStorage.getItem("entradaH[" + z + "]")
 }
 document.getElementById("24/11UH").value = entradaH[0]
 document.getElementById("24/11CH").value = entradaH[1]
@@ -385,7 +385,7 @@ function calcH(x, y, j, i, i2) {
         }
     }
     for (let r = 0; r <= 11; r++) {
-        sessionStorage.setItem("entradaH[" + r + "]", entradaH[r])
+        localStorage.setItem("entradaH[" + r + "]", entradaH[r])
     }
 }
 function oitavas () {

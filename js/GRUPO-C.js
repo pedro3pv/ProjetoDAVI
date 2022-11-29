@@ -22,7 +22,7 @@ let pontosC = [0, 0, 0, 0];
 let entradaC = [];
 
 for(let z = 0; z <= 11;z++){
-    entradaC[z] = sessionStorage.getItem("entradaC["+z+"]")
+    entradaC[z] = localStorage.getItem("entradaC["+z+"]")
     }
     document.getElementById("22/11AC").value = entradaC[0]
     document.getElementById("22/11ARC").value = entradaC[1] 
@@ -389,6 +389,6 @@ function calcC(x, y, j, i, i2) {
     }
 }
 for(let r = 0; r <= 11;r++){
-    sessionStorage.setItem("entradaC["+r+"]",entradaC[r])
+    localStorage.setItem("entradaC["+r+"]",entradaC[r])
     }
 }

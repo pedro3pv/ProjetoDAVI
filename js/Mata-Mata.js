@@ -24,7 +24,7 @@ let aux2 = 0
 for (let u = 0; u <= 15; u++) {
         vencedores[u] = localStorage.getItem("vencedores[" + u + "]")
         document.getElementById(sequencia2[u]).innerHTML = vencedores[u]
-        entrada2[u] = sessionStorage.getItem("oitavas"+u)
+        entrada2[u] = localStorage.getItem("oitavas"+u)
         document.getElementById("O"+u).value = entrada2[u]
         if(sequencia[u] % 2 == 0){
                 divisao[aux] = sequencia[u]
@@ -35,19 +35,19 @@ for (let u = 0; u <= 15; u++) {
         }
 }
 for (let z = 0; z <= 7; z++) {
-        entradaQ[z] = sessionStorage.getItem("quartas"+z)
+        entradaQ[z] = localStorage.getItem("quartas"+z)
         document.getElementById("Q"+z).value = entradaQ[z]
 }
 for (let z = 0; z < 4; z++) {
-        entradaS[z] = sessionStorage.getItem("terceiro"+z)
+        entradaS[z] = localStorage.getItem("terceiro"+z)
         document.getElementById("S"+z).value = entradaS[z]
 }
 for (let z = 0; z < 2; z++) {
-        entradaT[z] = sessionStorage.getItem("terceiroE"+z)
+        entradaT[z] = localStorage.getItem("terceiroE"+z)
         document.getElementById("T"+z).value = entradaT[z]
 }
 for (let z = 0; z < 2; z++) {
-        entradaF[z] = sessionStorage.getItem("final"+z)
+        entradaF[z] = localStorage.getItem("final"+z)
         document.getElementById("F"+z).value = entradaF[z]
 }
 
@@ -159,25 +159,25 @@ function enter() {
         for (let a = 0; a <= 7; a++) {
                 if (document.getElementById("Q" + a).value != "") {
                         entradaQ[a] = document.getElementById("Q" + a).value
-                        sessionStorage.setItem("quartas" + a, parseInt(entradaQ[a]))
+                        localStorage.setItem("quartas" + a, parseInt(entradaQ[a]))
                 }
         }
         for (let a = 0; a <= 3; a++) {
                 if (document.getElementById("S" + a).value != "") {
                         entradaS[a] = document.getElementById("S" + a).value
-                        sessionStorage.setItem("terceiro" + a, parseInt(entradaS[a]))
+                        localStorage.setItem("terceiro" + a, parseInt(entradaS[a]))
                 }
         }
         for (let a = 0; a <= 1; a++) {
                 if (document.getElementById("T" + a).value != "" && document.getElementById("F" + a).value != null && document.getElementById("F" + a).value != "") {
                         entradaT[a] = document.getElementById("T" + a).value
-                        sessionStorage.setItem("terceiroE" + a, parseInt(entradaT[a]))
+                        localStorage.setItem("terceiroE" + a, parseInt(entradaT[a]))
                         entradaF[a] = document.getElementById("F" + a).value
-                        sessionStorage.setItem("final" + a, parseInt(entradaF[a]))
+                        localStorage.setItem("final" + a, parseInt(entradaF[a]))
                 }
         }
         for(let h = 0;h <= 15;h++){
-                sessionStorage.setItem("oitavas" + h, parseInt(entrada2[h]))
+                localStorage.setItem("oitavas" + h, parseInt(entrada2[h]))
                 entrada[sequencia[h]] = parseInt(entrada2[h])
         }
 }

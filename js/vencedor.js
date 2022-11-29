@@ -7,9 +7,9 @@ function voltarMata(){
     window.location.href = "oitavas.html"
 }
 function nova_tabela(){
-    sessionStorage.clear()
     localStorage.clear()
-    window.location.href = "index.js"
+    localStorage.clear()
+    window.location.href = "index.html"
 }
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));

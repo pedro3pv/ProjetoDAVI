@@ -22,7 +22,7 @@ let pontosD = [0, 0, 0, 0];
 let entradaD = [];
 
 for (let z = 0; z <= 11; z++) {
-    entradaD[z] = sessionStorage.getItem("entradaD[" + z + "]")
+    entradaD[z] = localStorage.getItem("entradaD[" + z + "]")
 }
 document.getElementById("22/11DD").value = entradaD[0]
 document.getElementById("22/11TD").value = entradaD[1]
@@ -389,6 +389,6 @@ function calcD(x, y, j, i, i2) {
         }
     }
     for (let r = 0; r <= 11; r++) {
-        sessionStorage.setItem("entradaD[" + r + "]", entradaD[r])
+        localStorage.setItem("entradaD[" + r + "]", entradaD[r])
     }
 }

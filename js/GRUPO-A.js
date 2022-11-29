@@ -23,7 +23,7 @@ let pontosA = [0, 0, 0, 0];
 
 let entradaA = [];
 
-for (let z = 0; z <= 11; z++) { entradaA[z] = sessionStorage.getItem("entradaA[" + z + "]") }
+for (let z = 0; z <= 11; z++) { entradaA[z] = localStorage.getItem("entradaA[" + z + "]") }
 document.getElementById("20/11QA").value = entradaA[0]
 document.getElementById("20/11EA").value = entradaA[1]
 document.getElementById("21/11SA").value = entradaA[2]
@@ -392,6 +392,6 @@ function calcA(x, y, j, i, i2) {
         }
     }
     for (let r = 0; r <= 11; r++) {
-        sessionStorage.setItem("entradaA[" + r + "]", entradaA[r])
+        localStorage.setItem("entradaA[" + r + "]", entradaA[r])
     }
 }

@@ -22,7 +22,7 @@ let pontosF = [0, 0, 0, 0];
 let entradaF = [];
 
 for (let z = 0; z <= 11; z++) {
-    entradaF[z] = sessionStorage.getItem("entradaF[" + z + "]")
+    entradaF[z] = localStorage.getItem("entradaF[" + z + "]")
 }
 document.getElementById("23/11MF").value = entradaF[0]
 document.getElementById("23/11CRF").value = entradaF[1]
@@ -389,6 +389,6 @@ function calcF(x, y, j, i, i2) {
         }
     }
     for (let r = 0; r <= 11; r++) {
-        sessionStorage.setItem("entradaF[" + r + "]", entradaF[r])
+        localStorage.setItem("entradaF[" + r + "]", entradaF[r])
     }
 }

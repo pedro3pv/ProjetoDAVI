@@ -22,7 +22,7 @@ let pontosG = [0, 0, 0, 0];
 let entradaG = [];
 
 for(let z = 0; z <= 11;z++){
-    entradaG[z] = sessionStorage.getItem("entradaG["+z+"]")
+    entradaG[z] = localStorage.getItem("entradaG["+z+"]")
     }
     document.getElementById("24/11SUG").value = entradaG[0]
     document.getElementById("24/11CG").value = entradaG[1] 
@@ -389,6 +389,6 @@ function calcG(x, y, j, i, i2) {
     }
 }
 for(let r = 0; r <= 11;r++){
-    sessionStorage.setItem("entradaG["+r+"]",entradaG[r])
+    localStorage.setItem("entradaG["+r+"]",entradaG[r])
     }
 }
