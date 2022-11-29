@@ -8,7 +8,7 @@ let derrotaH = [0, 0, 0, 0];
 let GPH = [0, 0, 0, 0];
 let GCH = [0, 0, 0, 0];
 let SGH = [0, 0, 0, 0];
-//para mais timesH coloque os nomes dos timesH na array timesH
+//para mais timesH coloque os nomes dos timesH n array timesH
 
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
@@ -275,6 +275,98 @@ function calcH(x, y, j, i, i2) {
                         SGH2[l + 1] = SGH2[l]
                         SGH2[l] = aux
                     }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGH2[l] = parseInt(SGH2[l])
+                    n[l] = parseInt(n[l])
+                    if (n[l] == n[l + 1]) {
+                        if (SGH2[l] < SGH2[l + 1]) {
+                            aux = n[l + 1]
+                            n[l + 1] = n[l]
+                            n[l] = aux
+
+                            aux = ts[l + 1]
+                            ts[l + 1] = ts[l]
+                            ts[l] = aux
+
+                            aux = jj[l + 1]
+                            jj[l + 1] = jj[l]
+                            jj[l] = aux
+
+                            aux = v[l + 1]
+                            v[l + 1] = v[l]
+                            v[l] = aux
+
+                            aux = ep[l + 1]
+                            ep[l + 1] = ep[l]
+                            ep[l] = aux
+
+                            aux = derr[l + 1]
+                            derr[l + 1] = derr[l]
+                            derr[l] = aux
+
+                            aux = GPH2[l + 1]
+                            GPH2[l + 1] = GPH2[l]
+                            GPH2[l] = aux
+
+                            aux = GCH2[l + 1]
+                            GCH2[l + 1] = GCH2[l]
+                            GCH2[l] = aux
+
+                            aux = SGH2[l + 1]
+                            SGH2[l + 1] = SGH2[l]
+                            SGH2[l] = aux
+                        }
+                    }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGH2[l] = parseInt(SGH2[l])
+                    n[l] = parseInt(n[l])
+                    if (n[l] == n[l + 1]) {
+                        if (SGH2[l] == SGH2[l + 1]) {
+                        if (GPH2[l] < GPH2[l + 1]) {
+                            aux = n[l + 1]
+                            n[l + 1] = n[l]
+                            n[l] = aux
+
+                            aux = ts[l + 1]
+                            ts[l + 1] = ts[l]
+                            ts[l] = aux
+
+                            aux = jj[l + 1]
+                            jj[l + 1] = jj[l]
+                            jj[l] = aux
+
+                            aux = v[l + 1]
+                            v[l + 1] = v[l]
+                            v[l] = aux
+
+                            aux = ep[l + 1]
+                            ep[l + 1] = ep[l]
+                            ep[l] = aux
+
+                            aux = derr[l + 1]
+                            derr[l + 1] = derr[l]
+                            derr[l] = aux
+
+                            aux = GPH2[l + 1]
+                            GPH2[l + 1] = GPH2[l]
+                            GPH2[l] = aux
+
+                            aux = GCH2[l + 1]
+                            GCH2[l + 1] = GCH2[l]
+                            GCH2[l] = aux
+
+                            aux = SGH2[l + 1]
+                            SGH2[l + 1] = SGH2[l]
+                            SGH2[l] = aux
+                        }
+                    }
+                }
                 }
             }
             for (let t = 0; t < timesH.length; t++) {

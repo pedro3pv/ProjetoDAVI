@@ -8,7 +8,7 @@ let derrotaF = [0, 0, 0, 0];
 let GPF = [0, 0, 0, 0];
 let GCF = [0, 0, 0, 0];
 let SGF = [0, 0, 0, 0];
-//para mais timesF coloque os nomes dos timesF na array timesF
+//para mais timesF coloque os nomes dos timesF n array timesF
 
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
@@ -279,6 +279,98 @@ function calcF(x, y, j, i, i2) {
                         SGF2[l + 1] = SGF2[l]
                         SGF2[l] = aux
                     }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGF2[l] = parseInt(SGF2[l])
+                    n[l] = parseInt(n[l])
+                    if (n[l] == n[l + 1]) {
+                        if (SGF2[l] < SGF2[l + 1]) {
+                            aux = n[l + 1]
+                            n[l + 1] = n[l]
+                            n[l] = aux
+
+                            aux = ts[l + 1]
+                            ts[l + 1] = ts[l]
+                            ts[l] = aux
+
+                            aux = jj[l + 1]
+                            jj[l + 1] = jj[l]
+                            jj[l] = aux
+
+                            aux = v[l + 1]
+                            v[l + 1] = v[l]
+                            v[l] = aux
+
+                            aux = ep[l + 1]
+                            ep[l + 1] = ep[l]
+                            ep[l] = aux
+
+                            aux = derr[l + 1]
+                            derr[l + 1] = derr[l]
+                            derr[l] = aux
+
+                            aux = GPF2[l + 1]
+                            GPF2[l + 1] = GPF2[l]
+                            GPF2[l] = aux
+
+                            aux = GCF2[l + 1]
+                            GCF2[l + 1] = GCF2[l]
+                            GCF2[l] = aux
+
+                            aux = SGF2[l + 1]
+                            SGF2[l + 1] = SGF2[l]
+                            SGF2[l] = aux
+                        }
+                    }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGF2[l] = parseInt(SGF2[l])
+                    n[l] = parseInt(n[l])
+                    if (n[l] == n[l + 1]) {
+                        if (SGF2[l] == SGF2[l + 1]) {
+                        if (GPF2[l] < GPF2[l + 1]) {
+                            aux = n[l + 1]
+                            n[l + 1] = n[l]
+                            n[l] = aux
+
+                            aux = ts[l + 1]
+                            ts[l + 1] = ts[l]
+                            ts[l] = aux
+
+                            aux = jj[l + 1]
+                            jj[l + 1] = jj[l]
+                            jj[l] = aux
+
+                            aux = v[l + 1]
+                            v[l + 1] = v[l]
+                            v[l] = aux
+
+                            aux = ep[l + 1]
+                            ep[l + 1] = ep[l]
+                            ep[l] = aux
+
+                            aux = derr[l + 1]
+                            derr[l + 1] = derr[l]
+                            derr[l] = aux
+
+                            aux = GPF2[l + 1]
+                            GPF2[l + 1] = GPF2[l]
+                            GPF2[l] = aux
+
+                            aux = GCF2[l + 1]
+                            GCF2[l + 1] = GCF2[l]
+                            GCF2[l] = aux
+
+                            aux = SGF2[l + 1]
+                            SGF2[l + 1] = SGF2[l]
+                            SGF2[l] = aux
+                        }
+                    }
+                }
                 }
             }
             for (let t = 0; t < timesF.length; t++) {

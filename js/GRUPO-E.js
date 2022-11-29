@@ -8,7 +8,7 @@ let derrotaE = [0, 0, 0, 0];
 let GPE = [0, 0, 0, 0];
 let GCE = [0, 0, 0, 0];
 let SGE = [0, 0, 0, 0];
-//para mais timesE coloque os nomes dos timesE na array timesE
+//para mais timesE coloque os nomes dos timesE n array timesE
 
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
@@ -279,6 +279,98 @@ function calcE(x, y, j, i, i2) {
                         SGE2[l + 1] = SGE2[l]
                         SGE2[l] = aux
                     }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGE2[l] = parseInt(SGE2[l])
+                    n[l] = parseInt(n[l])
+                    if (n[l] == n[l + 1]) {
+                        if (SGE2[l] < SGE2[l + 1]) {
+                            aux = n[l + 1]
+                            n[l + 1] = n[l]
+                            n[l] = aux
+
+                            aux = ts[l + 1]
+                            ts[l + 1] = ts[l]
+                            ts[l] = aux
+
+                            aux = jj[l + 1]
+                            jj[l + 1] = jj[l]
+                            jj[l] = aux
+
+                            aux = v[l + 1]
+                            v[l + 1] = v[l]
+                            v[l] = aux
+
+                            aux = ep[l + 1]
+                            ep[l + 1] = ep[l]
+                            ep[l] = aux
+
+                            aux = derr[l + 1]
+                            derr[l + 1] = derr[l]
+                            derr[l] = aux
+
+                            aux = GPE2[l + 1]
+                            GPE2[l + 1] = GPE2[l]
+                            GPE2[l] = aux
+
+                            aux = GCE2[l + 1]
+                            GCE2[l + 1] = GCE2[l]
+                            GCE2[l] = aux
+
+                            aux = SGE2[l + 1]
+                            SGE2[l + 1] = SGE2[l]
+                            SGE2[l] = aux
+                        }
+                    }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGE2[l] = parseInt(SGE2[l])
+                    n[l] = parseInt(n[l])
+                    if (n[l] == n[l + 1]) {
+                        if (SGE2[l] == SGE2[l + 1]) {
+                        if (GPE2[l] < GPE2[l + 1]) {
+                            aux = n[l + 1]
+                            n[l + 1] = n[l]
+                            n[l] = aux
+
+                            aux = ts[l + 1]
+                            ts[l + 1] = ts[l]
+                            ts[l] = aux
+
+                            aux = jj[l + 1]
+                            jj[l + 1] = jj[l]
+                            jj[l] = aux
+
+                            aux = v[l + 1]
+                            v[l + 1] = v[l]
+                            v[l] = aux
+
+                            aux = ep[l + 1]
+                            ep[l + 1] = ep[l]
+                            ep[l] = aux
+
+                            aux = derr[l + 1]
+                            derr[l + 1] = derr[l]
+                            derr[l] = aux
+
+                            aux = GPE2[l + 1]
+                            GPE2[l + 1] = GPE2[l]
+                            GPE2[l] = aux
+
+                            aux = GCE2[l + 1]
+                            GCE2[l + 1] = GCE2[l]
+                            GCE2[l] = aux
+
+                            aux = SGE2[l + 1]
+                            SGE2[l + 1] = SGE2[l]
+                            SGE2[l] = aux
+                        }
+                    }
+                }
                 }
             }
             for (let t = 0; t < timesE.length; t++) {

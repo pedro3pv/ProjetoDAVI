@@ -284,6 +284,98 @@ function calcA(x, y, j, i, i2) {
                     }
                 }
             }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGA2A[l] = parseInt(SGA2A[l])
+                    nA[l] = parseInt(nA[l])
+                    if (nA[l] == nA[l + 1]) {
+                        if (SGA2A[l] < SGA2A[l + 1]) {
+                            auxA = nA[l + 1]
+                            nA[l + 1] = nA[l]
+                            nA[l] = auxA
+
+                            auxA = tsA[l + 1]
+                            tsA[l + 1] = tsA[l]
+                            tsA[l] = auxA
+
+                            auxA = jjA[l + 1]
+                            jjA[l + 1] = jjA[l]
+                            jjA[l] = auxA
+
+                            auxA = vA[l + 1]
+                            vA[l + 1] = vA[l]
+                            vA[l] = auxA
+
+                            auxA = epA[l + 1]
+                            epA[l + 1] = epA[l]
+                            epA[l] = auxA
+
+                            auxA = derrA[l + 1]
+                            derrA[l + 1] = derrA[l]
+                            derrA[l] = auxA
+
+                            auxA = GPA2A[l + 1]
+                            GPA2A[l + 1] = GPA2A[l]
+                            GPA2A[l] = auxA
+
+                            auxA = GCA2A[l + 1]
+                            GCA2A[l + 1] = GCA2A[l]
+                            GCA2A[l] = auxA
+
+                            auxA = SGA2A[l + 1]
+                            SGA2A[l + 1] = SGA2A[l]
+                            SGA2A[l] = auxA
+                        }
+                    }
+                }
+            }
+            for (let k = 0; k < timesA.length; k++) {
+                for (let l = 0; l < timesA.length; l++) {
+                    SGA2A[l] = parseInt(SGA2A[l])
+                    nA[l] = parseInt(nA[l])
+                    if (nA[l] == nA[l + 1]) {
+                        if (SGA2A[l] == SGA2A[l + 1]) {
+                        if (GPA2A[l] < GPA2A[l + 1]) {
+                            auxA = nA[l + 1]
+                            nA[l + 1] = nA[l]
+                            nA[l] = auxA
+
+                            auxA = tsA[l + 1]
+                            tsA[l + 1] = tsA[l]
+                            tsA[l] = auxA
+
+                            auxA = jjA[l + 1]
+                            jjA[l + 1] = jjA[l]
+                            jjA[l] = auxA
+
+                            auxA = vA[l + 1]
+                            vA[l + 1] = vA[l]
+                            vA[l] = auxA
+
+                            auxA = epA[l + 1]
+                            epA[l + 1] = epA[l]
+                            epA[l] = auxA
+
+                            auxA = derrA[l + 1]
+                            derrA[l + 1] = derrA[l]
+                            derrA[l] = auxA
+
+                            auxA = GPA2A[l + 1]
+                            GPA2A[l + 1] = GPA2A[l]
+                            GPA2A[l] = auxA
+
+                            auxA = GCA2A[l + 1]
+                            GCA2A[l + 1] = GCA2A[l]
+                            GCA2A[l] = auxA
+
+                            auxA = SGA2A[l + 1]
+                            SGA2A[l + 1] = SGA2A[l]
+                            SGA2A[l] = auxA
+                        }
+                    }
+                }
+                }
+            }
             for (let t = 0; t < timesA.length; t++) {
                 document.getElementById("P" + t + "-textA").innerHTML = tsA[t]
                 document.getElementById("P" + t + "A").innerHTML = nA[t]

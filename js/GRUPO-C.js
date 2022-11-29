@@ -8,7 +8,7 @@ let derrotaC = [0, 0, 0, 0];
 let GPC = [0, 0, 0, 0];
 let GCC = [0, 0, 0, 0];
 let SGC = [0, 0, 0, 0];
-//para mais timesC coloque os nomes dos timesC na array timesC
+//para mais timesC coloque os nomes dos timesC n array timesC
 
 //o id dos inputs pode ser qualquer nome que voce saiba diferenciar
 
@@ -279,6 +279,98 @@ function calcC(x, y, j, i, i2) {
                     SGC2[l + 1] = SGC2[l]
                     SGC2[l] = aux
                 }
+            }
+        }
+        for (let k = 0; k < timesA.length; k++) {
+            for (let l = 0; l < timesA.length; l++) {
+                SGC2[l] = parseInt(SGC2[l])
+                n[l] = parseInt(n[l])
+                if (n[l] == n[l + 1]) {
+                    if (SGC2[l] < SGC2[l + 1]) {
+                        aux = n[l + 1]
+                        n[l + 1] = n[l]
+                        n[l] = aux
+
+                        aux = ts[l + 1]
+                        ts[l + 1] = ts[l]
+                        ts[l] = aux
+
+                        aux = jj[l + 1]
+                        jj[l + 1] = jj[l]
+                        jj[l] = aux
+
+                        aux = v[l + 1]
+                        v[l + 1] = v[l]
+                        v[l] = aux
+
+                        aux = ep[l + 1]
+                        ep[l + 1] = ep[l]
+                        ep[l] = aux
+
+                        aux = derr[l + 1]
+                        derr[l + 1] = derr[l]
+                        derr[l] = aux
+
+                        aux = GPC2[l + 1]
+                        GPC2[l + 1] = GPC2[l]
+                        GPC2[l] = aux
+
+                        aux = GCC2[l + 1]
+                        GCC2[l + 1] = GCC2[l]
+                        GCC2[l] = aux
+
+                        aux = SGC2[l + 1]
+                        SGC2[l + 1] = SGC2[l]
+                        SGC2[l] = aux
+                    }
+                }
+            }
+        }
+        for (let k = 0; k < timesA.length; k++) {
+            for (let l = 0; l < timesA.length; l++) {
+                SGC2[l] = parseInt(SGC2[l])
+                n[l] = parseInt(n[l])
+                if (n[l] == n[l + 1]) {
+                    if (SGC2[l] == SGC2[l + 1]) {
+                    if (GPC2[l] < GPC2[l + 1]) {
+                        aux = n[l + 1]
+                        n[l + 1] = n[l]
+                        n[l] = aux
+
+                        aux = ts[l + 1]
+                        ts[l + 1] = ts[l]
+                        ts[l] = aux
+
+                        aux = jj[l + 1]
+                        jj[l + 1] = jj[l]
+                        jj[l] = aux
+
+                        aux = v[l + 1]
+                        v[l + 1] = v[l]
+                        v[l] = aux
+
+                        aux = ep[l + 1]
+                        ep[l + 1] = ep[l]
+                        ep[l] = aux
+
+                        aux = derr[l + 1]
+                        derr[l + 1] = derr[l]
+                        derr[l] = aux
+
+                        aux = GPC2[l + 1]
+                        GPC2[l + 1] = GPC2[l]
+                        GPC2[l] = aux
+
+                        aux = GCC2[l + 1]
+                        GCC2[l + 1] = GCC2[l]
+                        GCC2[l] = aux
+
+                        aux = SGC2[l + 1]
+                        SGC2[l + 1] = SGC2[l]
+                        SGC2[l] = aux
+                    }
+                }
+            }
             }
         }
         for (let t = 0; t < timesC.length; t++) {
